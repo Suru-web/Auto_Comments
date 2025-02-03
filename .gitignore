@@ -1,0 +1,3 @@
+.venv/
+model/__pycache__/
+model/trained-code-comment-model/

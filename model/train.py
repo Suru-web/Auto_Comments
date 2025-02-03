@@ -6,7 +6,7 @@ from dataset_preprocessing import load_and_preprocess_data, CodeCommentDataset
 # Main training function
 def train_model():
     # Load data
-    data = load_and_preprocess_data("/Users/surajmeharwade/Projects/Auto-Comments-2/data/code-comments.json")
+    data = load_and_preprocess_data("/Users/surajmeharwade/Projects/Auto_Comments/data/code-comments.json")
     train_data, val_data = train_test_split(data, test_size=0.2, random_state=42)
 
     # Initialize model and tokenizer
@@ -15,7 +15,6 @@ def train_model():
     model = T5ForConditionalGeneration.from_pretrained(model_name)
     
     use_mps = torch.backends.mps.is_available()
-    use_cuda = torch.cuda.is_available()
     device = torch.device("mps" if use_mps else "cpu")
     model.to(device)
     
@@ -25,7 +24,7 @@ def train_model():
 
     # Training arguments
     training_args = TrainingArguments(
-        output_dir="/Users/surajmeharwade/Projects/Auto-Comments-2/model/trained-code-comment-model",
+        output_dir="/Users/surajmeharwade/Projects/Auto_Comments/model/trained-code-comment-model",
         num_train_epochs=10,
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
@@ -36,7 +35,7 @@ def train_model():
         evaluation_strategy="epoch",
         save_strategy="epoch",
         load_best_model_at_end=True,
-        fp16=use_cuda,  # Enable if using GPU
+        fp16=False,  # Enable if using GPU
     )
 
     # Create trainer

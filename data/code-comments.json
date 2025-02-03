@@ -763,5 +763,432 @@
   {
     "code": "def is_superset(lst1, lst2):\n    return set(lst1).issuperset(lst2)",
     "comments": "# This function checks if one list is a superset of another."
+  },
+  {
+    "code": "def binary_search(lst, target):\n    low, high = 0, len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+    "comments": "# This function implements binary search to find the index of a target value in a sorted list."
+  },
+  {
+    "code": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+    "comments": "# This function calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm."
+  },
+  {
+    "code": "def lcm(a, b):\n    return abs(a * b) // gcd(a, b)",
+    "comments": "# This function calculates the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "def count_substrings(s, substring):\n    return s.count(substring)",
+    "comments": "# This function counts the occurrences of a substring in a string."
+  },
+  {
+    "code": "def find_longest_substring_without_repeating_chars(s):\n    start, max_length = 0, 0\n    char_map = {}\n    for end in range(len(s)):\n        if s[end] in char_map:\n            start = max(start, char_map[s[end]] + 1)\n        char_map[s[end]] = end\n        max_length = max(max_length, end - start + 1)\n    return max_length",
+    "comments": "# This function finds the length of the longest substring without repeating characters."
+  },
+  {
+    "code": "def reverse_words_in_sentence(s):\n    return ' '.join(s.split()[::-1])",
+    "comments": "# This function reverses the words in a sentence."
+  },
+  {
+    "code": "def is_palindrome(s):\n    return s == s[::-1]",
+    "comments": "# This function checks if a string is a palindrome."
+  },
+  { "code": "age = 45", "comments": "# An integer assignment" },
+  { "code": "salary = 1456.8", "comments": "# A floating point assignment" },
+  { "code": "name = 'John'", "comments": "# A string assignment" },
+  { "code": "is_student = True", "comments": "# A boolean variable" },
+  { "code": "print(age)", "comments": "# Printing the value of age" },
+  { "code": "print(salary)", "comments": "# Printing the value of salary" },
+  { "code": "print(name)", "comments": "# Printing the value of name" },
+  { "code": "x, y = 5, 10", "comments": "# Assigning multiple variables" },
+  { "code": "z = x + y", "comments": "# Adding two variables" },
+  {
+    "code": "nums = [1, 2, 3, 4, 5]",
+    "comments": "# A list containing integers"
+  },
+  {
+    "code": "print(nums[0])",
+    "comments": "# Accessing the first element of the list"
+  },
+  {
+    "code": "nums.append(6)",
+    "comments": "# Appending an element to the list"
+  },
+  {
+    "code": "person = {'name': 'Alice', 'age': 30}",
+    "comments": "# A dictionary storing name and age"
+  },
+  {
+    "code": "print(person['name'])",
+    "comments": "# Accessing value from dictionary"
+  },
+  {
+    "code": "def greet():\n    print('Hello!')",
+    "comments": "# Defining a function to print a greeting"
+  },
+  { "code": "greet()", "comments": "# Calling the greet function" },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# Function to add two numbers"
+  },
+  {
+    "code": "result = add(3, 4)",
+    "comments": "# Storing the result of function call"
+  },
+  {
+    "code": "if age > 18:\n    print('Adult')",
+    "comments": "# Checking if age is greater than 18"
+  },
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Looping through numbers from 0 to 4"
+  },
+  {
+    "code": "while age < 60:\n    age += 5",
+    "comments": "# Incrementing age in a while loop"
+  },
+  {
+    "code": "class Car:\n    def __init__(self, model):\n        self.model = model",
+    "comments": "# A class representing a Car"
+  },
+  {
+    "code": "car1 = Car('Tesla')",
+    "comments": "# Creating an object of Car class"
+  },
+
+  { "code": "x = 10", "comments": "# Assigning an integer value to x" },
+  { "code": "y = 20.5", "comments": "# Assigning a floating-point value to y" },
+  {
+    "code": "name = \"Alice\"",
+    "comments": "# Assigning a string value to name"
+  },
+  { "code": "is_valid = False", "comments": "# Assigning a boolean value" },
+  {
+    "code": "numbers = [1, 2, 3, 4]",
+    "comments": "# Creating a list of numbers"
+  },
+  {
+    "code": "print(numbers[2])",
+    "comments": "# Accessing the third element of the list"
+  },
+  {
+    "code": "numbers.append(5)",
+    "comments": "# Adding an element to the list"
+  },
+  {
+    "code": "numbers.remove(3)",
+    "comments": "# Removing an element from the list"
+  },
+  {
+    "code": "numbers.sort()",
+    "comments": "# Sorting the list in ascending order"
+  },
+  {
+    "code": "info = {'name': 'Bob', 'age': 25}",
+    "comments": "# Creating a dictionary with key-value pairs"
+  },
+  {
+    "code": "print(info['age'])",
+    "comments": "# Accessing a value from a dictionary"
+  },
+  {
+    "code": "info['city'] = 'New York'",
+    "comments": "# Adding a new key-value pair to dictionary"
+  },
+  {
+    "code": "a, b = 5, 10",
+    "comments": "# Assigning multiple values in one line"
+  },
+  {
+    "code": "temp = a\n a = b\n b = temp",
+    "comments": "# Swapping two variables using a temporary variable"
+  },
+  {
+    "code": "a, b = b, a",
+    "comments": "# Swapping two variables without a temporary variable"
+  },
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Looping through numbers from 0 to 4"
+  },
+  {
+    "code": "for num in numbers:\n    print(num)",
+    "comments": "# Iterating through a list"
+  },
+  {
+    "code": "while x > 0:\n    x -= 1",
+    "comments": "# Decrementing x in a while loop"
+  },
+  {
+    "code": "if age >= 18:\n    print('Adult')",
+    "comments": "# Checking if age is 18 or more"
+  },
+  {
+    "code": "elif age > 12:\n    print('Teenager')",
+    "comments": "# Checking if age is between 13 and 17"
+  },
+  {
+    "code": "else:\n    print('Child')",
+    "comments": "# Executed if age is less than 13"
+  },
+  {
+    "code": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handling division by zero exception"
+  },
+  {
+    "code": "def greet():\n    print('Hello!')",
+    "comments": "# Defining a function to print a greeting"
+  },
+  {
+    "code": "def square(n):\n    return n * n",
+    "comments": "# Function to calculate square of a number"
+  },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# Function to add two numbers"
+  },
+  {
+    "code": "result = add(4, 6)",
+    "comments": "# Storing function result in a variable"
+  },
+  {
+    "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)",
+    "comments": "# Recursive function to calculate factorial"
+  },
+  {
+    "code": "class Animal:\n    def __init__(self, name):\n        self.name = name",
+    "comments": "# Defining a class with a constructor"
+  },
+  {
+    "code": "dog = Animal('Buddy')",
+    "comments": "# Creating an object of the Animal class"
+  },
+  {
+    "code": "class Dog(Animal):\n    def bark(self):\n        print('Woof!')",
+    "comments": "# Defining a subclass inheriting from Animal"
+  },
+  {
+    "code": "with open('file.txt', 'w') as f:\n    f.write('Hello, World!')",
+    "comments": "# Writing to a file using with statement"
+  },
+  {
+    "code": "with open('file.txt', 'r') as f:\n    content = f.read()",
+    "comments": "# Reading content from a file"
+  },
+  {
+    "code": "import math\nprint(math.sqrt(16))",
+    "comments": "# Importing math module and calculating square root"
+  },
+  {
+    "code": "import random\nprint(random.randint(1, 100))",
+    "comments": "# Generating a random number between 1 and 100"
+  },
+  {
+    "code": "import time\ntime.sleep(2)",
+    "comments": "# Pausing execution for 2 seconds"
+  },
+  {
+    "code": "lambda_square = lambda x: x * x",
+    "comments": "# Defining a lambda function to calculate square"
+  },
+  {
+    "code": "result = (lambda x, y: x + y)(4, 5)",
+    "comments": "# Using a lambda function to add two numbers"
+  },
+  {
+    "code": "nums = list(map(int, ['1', '2', '3']))",
+    "comments": "# Using map to convert string list to integer list"
+  },
+  {
+    "code": "filtered = list(filter(lambda x: x > 2, [1, 2, 3, 4]))",
+    "comments": "# Filtering elements greater than 2"
+  },
+  {
+    "code": "from functools import reduce\nsum_all = reduce(lambda x, y: x + y, [1, 2, 3, 4])",
+    "comments": "# Using reduce to calculate sum of a list"
+  },
+  {
+    "code": "import numpy as np\narr = np.array([1, 2, 3])",
+    "comments": "# Creating a NumPy array"
+  },
+  {
+    "code": "import pandas as pd\ndf = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})",
+    "comments": "# Creating a Pandas DataFrame"
+  },
+  {
+    "code": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "comments": "# Plotting a simple line graph"
+  },
+  {
+    "code": "import seaborn as sns\nsns.histplot([1, 2, 3, 3, 2, 1])",
+    "comments": "# Creating a histogram using seaborn"
+  },
+  {
+    "code": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super(Singleton, cls).__new__(cls)\n        return cls._instance",
+    "comments": "# Implementing Singleton pattern"
+  },
+  {
+    "code": "def decorator(func):\n    def wrapper():\n        print('Before function call')\n        func()\n        print('After function call')\n    return wrapper",
+    "comments": "# Defining a simple decorator"
+  },
+  {
+    "code": "@decorator\ndef say_hello():\n    print('Hello!')",
+    "comments": "# Applying a decorator to a function"
+  },
+  {
+    "code": "from threading import Thread\ndef run():\n    print('Thread running')\nth = Thread(target=run)\nth.start()",
+    "comments": "# Creating and starting a thread"
+  },
+  {
+    "code": "import asyncio\nasync def main():\n    print('Async function')\nasyncio.run(main())",
+    "comments": "# Running an asynchronous function"
+  },
+
+  {
+    "code": "counter = 100",
+    "comments": "# Assigning an integer value to counter"
+  },
+  {
+    "code": "temperature = 36.5",
+    "comments": "# Assigning a floating-point value"
+  },
+  { "code": "message = 'Hello, World!'", "comments": "# Assigning a string" },
+  { "code": "is_active = True", "comments": "# Assigning a boolean value" },
+
+  {
+    "code": "fruits = ['apple', 'banana', 'cherry']",
+    "comments": "# Creating a list of fruits"
+  },
+  {
+    "code": "fruits.append('orange')",
+    "comments": "# Adding an element to the list"
+  },
+  {
+    "code": "fruits.remove('banana')",
+    "comments": "# Removing an element from the list"
+  },
+  {
+    "code": "fruits.sort()",
+    "comments": "# Sorting the list in ascending order"
+  },
+  {
+    "code": "sliced_fruits = fruits[1:3]",
+    "comments": "# Slicing the list from index 1 to 2"
+  },
+
+  {
+    "code": "coordinates = (10.5, 20.3)",
+    "comments": "# Defining a tuple for coordinates"
+  },
+  {
+    "code": "x, y = coordinates",
+    "comments": "# Unpacking tuple values into variables"
+  },
+
+  {
+    "code": "person = {'name': 'Alice', 'age': 25}",
+    "comments": "# Creating a dictionary"
+  },
+  {
+    "code": "person['city'] = 'New York'",
+    "comments": "# Adding a new key-value pair"
+  },
+  { "code": "del person['age']", "comments": "# Removing a key-value pair" },
+
+  {
+    "code": "if score >= 90:\n    print('Excellent!')",
+    "comments": "# Checking if score is 90 or above"
+  },
+  {
+    "code": "elif score >= 50:\n    print('Pass')",
+    "comments": "# Checking if score is 50 or above"
+  },
+  {
+    "code": "else:\n    print('Fail')",
+    "comments": "# If score is below 50, print 'Fail'"
+  },
+
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Iterating over a range of numbers"
+  },
+  {
+    "code": "for char in 'Python':\n    print(char)",
+    "comments": "# Iterating over characters in a string"
+  },
+  {
+    "code": "while counter > 0:\n    counter -= 1",
+    "comments": "# Looping until counter reaches zero"
+  },
+
+  {
+    "code": "def greet(name):\n    return f'Hello, {name}!'",
+    "comments": "# Function to generate a greeting message"
+  },
+  {
+    "code": "def multiply(a, b):\n    return a * b",
+    "comments": "# Function to multiply two numbers"
+  },
+
+  {
+    "code": "with open('data.txt', 'r') as file:\n    content = file.read()",
+    "comments": "# Reading content from a file"
+  },
+  {
+    "code": "with open('output.txt', 'w') as file:\n    file.write('Hello, File!')",
+    "comments": "# Writing to a file"
+  },
+
+  {
+    "code": "class Car:\n    def __init__(self, brand, model):\n        self.brand = brand\n        self.model = model",
+    "comments": "# Defining a class with attributes"
+  },
+  {
+    "code": "my_car = Car('Toyota', 'Camry')",
+    "comments": "# Creating an instance of the Car class"
+  },
+
+  {
+    "code": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handling division by zero exception"
+  },
+
+  {
+    "code": "import re\npattern = re.compile(r'\\d+')",
+    "comments": "# Compiling a regex pattern to match digits"
+  },
+
+  {
+    "code": "import requests\nresponse = requests.get('https://api.github.com')",
+    "comments": "# Sending a GET request to GitHub API"
+  },
+
+  {
+    "code": "from bs4 import BeautifulSoup\nsoup = BeautifulSoup('<html></html>', 'html.parser')",
+    "comments": "# Parsing HTML with BeautifulSoup"
+  },
+
+  {
+    "code": "from threading import Thread\ndef task():\n    print('Thread running')\nth = Thread(target=task)\nth.start()",
+    "comments": "# Creating and starting a new thread"
+  },
+
+  {
+    "code": "from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()",
+    "comments": "# Creating a linear regression model"
+  },
+
+  {
+    "code": "import pandas as pd\ndf = pd.read_csv('data.csv')",
+    "comments": "# Loading a CSV file into a DataFrame"
+  },
+
+  {
+    "code": "import numpy as np\narr = np.array([1, 2, 3, 4])",
+    "comments": "# Creating a NumPy array"
+  },
+
+  {
+    "code": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "comments": "# Plotting a simple line graph"
   }
 ]

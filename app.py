@@ -3,7 +3,7 @@ import torch
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
 # Load the trained model and tokenizer
-model_path = "/Users/surajmeharwade/Projects/Auto-Comments-2/model/trained-code-comment-model"
+model_path = "/Users/surajmeharwade/Projects/Auto_Comments/model/trained-code-comment-model"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = T5ForConditionalGeneration.from_pretrained(model_path)
 
