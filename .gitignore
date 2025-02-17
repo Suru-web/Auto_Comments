@@ -1,3 +1,4 @@
 .venv/
-model/__pycache__/
-model/trained-code-comment-model/
+python/model/__pycache__/
+python/model/trained-code-comment-model/
+.DS_Store
