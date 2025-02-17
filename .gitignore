@@ -2,3 +2,4 @@
 python/model/__pycache__/
 python/model/trained-code-comment-model/
 .DS_Store
+.gitignore
