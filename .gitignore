@@ -5,3 +5,4 @@ python/model/trained-code-comment-model/
 .gitignore
 trained-code-comment-model
 trained-code-comment-model.zip
+model_cpp_small

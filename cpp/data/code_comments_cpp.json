@@ -1,0 +1,1214 @@
+[
+  {
+    "code": "int subtract(int a, int b) { return a - b; }",
+    "comment": "Subtracts the second integer from the first and returns the result."
+  },
+  {
+    "code": "int multiply(int a, int b) { return a * b; }",
+    "comment": "Multiplies two integers and returns the result."
+  },
+  {
+    "code": "double divide(double a, double b) { return b != 0 ? a / b : 0; }",
+    "comment": "Divides the first number by the second, returns 0 if divisor is zero."
+  },
+  {
+    "code": "int max(int a, int b) { return a > b ? a : b; }",
+    "comment": "Returns the greater of two integers."
+  },
+  {
+    "code": "bool isEven(int num) { return num % 2 == 0; }",
+    "comment": "Checks if a number is even."
+  },
+  {
+    "code": "int factorial(int n) { return (n <= 1) ? 1 : n * factorial(n - 1); }",
+    "comment": "Calculates the factorial of a number recursively."
+  },
+  {
+    "code": "int fibonacci(int n) { return (n <= 1) ? n : fibonacci(n - 1) + fibonacci(n - 2); }",
+    "comment": "Returns the nth Fibonacci number using recursion."
+  },
+  {
+    "code": "bool isPrime(int n) { if (n <= 1) return false; for (int i = 2; i * i <= n; ++i) if (n % i == 0) return false; return true; }",
+    "comment": "Checks whether a given number is a prime."
+  },
+  {
+    "code": "void swap(int &a, int &b) { int temp = a; a = b; b = temp; }",
+    "comment": "Swaps the values of two integers using reference."
+  },
+  {
+    "code": "int sumArray(int arr[], int size) { int sum = 0; for (int i = 0; i < size; ++i) sum += arr[i]; return sum; }",
+    "comment": "Calculates and returns the sum of all elements in an array."
+  },
+  {
+    "code": "int findMax(int arr[], int size) { int max = arr[0]; for (int i = 1; i < size; ++i) if (arr[i] > max) max = arr[i]; return max; }",
+    "comment": "Finds and returns the maximum element in an array."
+  },
+  {
+    "code": "void reverseArray(int arr[], int size) { for (int i = 0; i < size / 2; ++i) swap(arr[i], arr[size - i - 1]); }",
+    "comment": "Reverses the elements of an array in place."
+  },
+  {
+    "code": "bool isPalindrome(string s) { int l = 0, r = s.size() - 1; while (l < r) if (s[l++] != s[r--]) return false; return true; }",
+    "comment": "Checks if a string is a palindrome."
+  },
+  {
+    "code": "int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }",
+    "comment": "Computes the Greatest Common Divisor of two integers."
+  },
+  {
+    "code": "int lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comment": "Calculates the Least Common Multiple using GCD."
+  },
+  {
+    "code": "void bubbleSort(int arr[], int n) { for (int i = 0; i < n - 1; ++i) for (int j = 0; j < n - i - 1; ++j) if (arr[j] > arr[j + 1]) swap(arr[j], arr[j + 1]); }",
+    "comment": "Sorts an array using the Bubble Sort algorithm."
+  },
+  {
+    "code": "int binarySearch(int arr[], int l, int r, int x) { while (l <= r) { int m = l + (r - l) / 2; if (arr[m] == x) return m; if (arr[m] < x) l = m + 1; else r = m - 1; } return -1; }",
+    "comment": "Performs binary search on a sorted array to find an element."
+  },
+  {
+    "code": "void printMatrix(int mat[3][3]) { for (int i = 0; i < 3; ++i) { for (int j = 0; j < 3; ++j) cout << mat[i][j] << ' '; cout << endl; } }",
+    "comment": "Prints a 3x3 matrix."
+  },
+  {
+    "code": "int countDigits(int n) { int count = 0; while (n != 0) { n /= 10; count++; } return count; }",
+    "comment": "Counts the number of digits in an integer."
+  },
+  {
+    "code": "bool isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }",
+    "comment": "Checks if a given year is a leap year."
+  },
+  {
+    "code": "int power(int base, int exp) { int result = 1; while (exp--) result *= base; return result; }",
+    "comment": "Raises a base to the power of exponent using a loop."
+  },
+  {
+    "code": "int square(int n) { return n * n; }",
+    "comment": "Returns the square of a number."
+  },
+  {
+    "code": "int cube(int n) { return n * n * n; }",
+    "comment": "Returns the cube of a number."
+  },
+  {
+    "code": "bool isPerfectSquare(int x) { int s = sqrt(x); return s * s == x; }",
+    "comment": "Checks if a number is a perfect square."
+  },
+  {
+    "code": "bool isArmstrong(int n) { int sum = 0, temp = n; while (temp) { int d = temp % 10; sum += d * d * d; temp /= 10; } return sum == n; }",
+    "comment": "Checks whether a number is an Armstrong number."
+  },
+  {
+    "code": "void printStars(int n) { for (int i = 0; i < n; ++i) { for (int j = 0; j <= i; ++j) cout << '*'; cout << endl; } }",
+    "comment": "Prints a right-angled triangle pattern of stars."
+  },
+  {
+    "code": "int sumOfSquares(int n) { int sum = 0; for (int i = 1; i <= n; ++i) sum += i * i; return sum; }",
+    "comment": "Calculates the sum of squares of the first n natural numbers."
+  },
+  {
+    "code": "int sumOfCubes(int n) { int sum = 0; for (int i = 1; i <= n; ++i) sum += i * i * i; return sum; }",
+    "comment": "Calculates the sum of cubes of the first n natural numbers."
+  },
+  {
+    "code": "bool isVowel(char c) { c = tolower(c); return c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'; }",
+    "comment": "Checks whether a character is a vowel."
+  },
+  {
+    "code": "void toUpperCase(string &s) { for (char &c : s) c = toupper(c); }",
+    "comment": "Converts all characters in a string to uppercase."
+  },
+  {
+    "code": "void toLowerCase(string &s) { for (char &c : s) c = tolower(c); }",
+    "comment": "Converts all characters in a string to lowercase."
+  },
+  {
+    "code": "int stringLength(string s) { return s.length(); }",
+    "comment": "Returns the length of a string."
+  },
+  {
+    "code": "bool isAlphabet(char c) { return isalpha(c); }",
+    "comment": "Checks if a character is an alphabet letter."
+  },
+  {
+    "code": "bool isDigit(char c) { return isdigit(c); }",
+    "comment": "Checks if a character is a digit."
+  },
+  {
+    "code": "int sumDigits(int n) { int sum = 0; while (n > 0) { sum += n % 10; n /= 10; } return sum; }",
+    "comment": "Returns the sum of digits of an integer."
+  },
+  {
+    "code": "string reverseString(string s) { reverse(s.begin(), s.end()); return s; }",
+    "comment": "Reverses the given string and returns it."
+  },
+  {
+    "code": "int min(int a, int b) { return a < b ? a : b; }",
+    "comment": "Returns the smaller of two integers."
+  },
+  {
+    "code": "bool isPowerOfTwo(int n) { return n > 0 && (n & (n - 1)) == 0; }",
+    "comment": "Checks whether a number is a power of two using bit manipulation."
+  },
+  {
+    "code": "int mod(int a, int b) { return ((a % b) + b) % b; }",
+    "comment": "Computes positive modulo to avoid negative results."
+  },
+  {
+    "code": "int absDiff(int a, int b) { return abs(a - b); }",
+    "comment": "Returns the absolute difference between two integers."
+  },
+  {
+    "code": "void selectionSort(int arr[], int n) { for (int i = 0; i < n - 1; ++i) { int minIdx = i; for (int j = i + 1; j < n; ++j) if (arr[j] < arr[minIdx]) minIdx = j; swap(arr[i], arr[minIdx]); } }",
+    "comment": "Sorts an array using the Selection Sort algorithm."
+  },
+  {
+    "code": "bool containsDigit(int n, int d) { while (n) { if (n % 10 == d) return true; n /= 10; } return false; }",
+    "comment": "Checks if a given digit exists in the number."
+  },
+  {
+    "code": "int countVowels(string s) { int count = 0; for (char c : s) if (isVowel(c)) count++; return count; }",
+    "comment": "Counts the number of vowels in a string."
+  },
+  {
+    "code": "string removeSpaces(string s) { s.erase(remove(s.begin(), s.end(), ' '), s.end()); return s; }",
+    "comment": "Removes all spaces from a string."
+  },
+  {
+    "code": "int countWords(string s) { int count = 0; istringstream iss(s); string word; while (iss >> word) count++; return count; }",
+    "comment": "Counts the number of words in a sentence."
+  },
+  {
+    "code": "void printFibonacci(int n) { int a = 0, b = 1; for (int i = 0; i < n; ++i) { cout << a << ' '; int temp = a + b; a = b; b = temp; } }",
+    "comment": "Prints the first n Fibonacci numbers iteratively."
+  },
+  {
+    "code": "bool isEven(int num) { return num % 2 == 0; }",
+    "comment": "Checks if a number is even."
+  },
+  {
+    "code": "int factorial(int n) { return (n <= 1) ? 1 : n * factorial(n - 1); }",
+    "comment": "Calculates the factorial of a number using recursion."
+  },
+  {
+    "code": "int max(int a, int b) { return (a > b) ? a : b; }",
+    "comment": "Returns the maximum of two integers."
+  },
+  {
+    "code": "void swap(int &a, int &b) { int temp = a; a = b; b = temp; }",
+    "comment": "Swaps the values of two integers using reference."
+  },
+  {
+    "code": "int sumArray(int arr[], int size) { int sum = 0; for(int i = 0; i < size; i++) sum += arr[i]; return sum; }",
+    "comment": "Calculates the sum of elements in an array."
+  },
+  {
+    "code": "bool isPrime(int n) { if(n <= 1) return false; for(int i = 2; i * i <= n; i++) if(n % i == 0) return false; return true; }",
+    "comment": "Checks if a number is a prime number."
+  },
+  {
+    "code": "int fibonacci(int n) { return (n <= 1) ? n : fibonacci(n - 1) + fibonacci(n - 2); }",
+    "comment": "Calculates the nth Fibonacci number using recursion."
+  },
+  {
+    "code": "int findLargest(int arr[], int size) { int max = arr[0]; for(int i = 1; i < size; i++) if(arr[i] > max) max = arr[i]; return max; }",
+    "comment": "Finds the largest number in an array."
+  },
+  {
+    "code": "int countOccurrences(int arr[], int size, int x) { int count = 0; for(int i = 0; i < size; i++) if(arr[i] == x) count++; return count; }",
+    "comment": "Counts how many times a value appears in an array."
+  },
+  {
+    "code": "bool isPalindrome(string s) { int i = 0, j = s.length() - 1; while(i < j) if(s[i++] != s[j--]) return false; return true; }",
+    "comment": "Checks whether a string is a palindrome."
+  },
+  {
+    "code": "void bubbleSort(int arr[], int n) { for(int i = 0; i < n - 1; i++) for(int j = 0; j < n - i - 1; j++) if(arr[j] > arr[j + 1]) swap(arr[j], arr[j + 1]); }",
+    "comment": "Implements bubble sort to sort an array in ascending order."
+  },
+  {
+    "code": "void selectionSort(int arr[], int n) { for(int i = 0; i < n - 1; i++) { int minIdx = i; for(int j = i + 1; j < n; j++) if(arr[j] < arr[minIdx]) minIdx = j; swap(arr[i], arr[minIdx]); } }",
+    "comment": "Sorts an array using selection sort algorithm."
+  },
+  {
+    "code": "void writeFile(const string &filename, const string &data) { ofstream file(filename); if(file.is_open()) { file << data; file.close(); } }",
+    "comment": "Writes a string to a file with the given filename."
+  },
+  {
+    "code": "string readFile(const string &filename) { ifstream file(filename); string content((istreambuf_iterator<char>(file)), istreambuf_iterator<char>()); return content; }",
+    "comment": "Reads the contents of a file and returns it as a string."
+  },
+  {
+    "code": "class Rectangle { public: int width, height; Rectangle(int w, int h) : width(w), height(h) {} int area() { return width * height; } };",
+    "comment": "Defines a Rectangle class with width, height, and a method to calculate area."
+  },
+  {
+    "code": "void quickSort(int arr[], int low, int high) { if(low < high) { int pivot = partition(arr, low, high); quickSort(arr, low, pivot - 1); quickSort(arr, pivot + 1, high); } }",
+    "comment": "Implements the quick sort algorithm on an array."
+  },
+  {
+    "code": "int binarySearch(int arr[], int l, int r, int x) { while(l <= r) { int mid = l + (r - l) / 2; if(arr[mid] == x) return mid; if(arr[mid] < x) l = mid + 1; else r = mid - 1; } return -1; }",
+    "comment": "Performs binary search on a sorted array to find an element."
+  },
+  {
+    "code": "bool areAnagrams(string s1, string s2) { sort(s1.begin(), s1.end()); sort(s2.begin(), s2.end()); return s1 == s2; }",
+    "comment": "Checks if two strings are anagrams of each other."
+  },
+  {
+    "code": "vector<int> mergeSortedArrays(vector<int> &a, vector<int> &b) { vector<int> result; int i = 0, j = 0; while(i < a.size() && j < b.size()) { if(a[i] < b[j]) result.push_back(a[i++]); else result.push_back(b[j++]); } while(i < a.size()) result.push_back(a[i++]); while(j < b.size()) result.push_back(b[j++]); return result; }",
+    "comment": "Merges two sorted arrays into a single sorted array."
+  },
+  {
+    "code": "bool isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }",
+    "comment": "Determines whether a given year is a leap year."
+  },
+  {
+    "code": "#include <stack>\nbool areBracketsBalanced(string expr) { stack<char> s; for(char ch : expr) { if(ch == '(' || ch == '{' || ch == '[') s.push(ch); else if(ch == ')' && (s.empty() || s.top() != '(')) return false; else if(ch == '}' && (s.empty() || s.top() != '{')) return false; else if(ch == ']' && (s.empty() || s.top() != '[')) return false; else s.pop(); } return s.empty(); }",
+    "comment": "Checks if the brackets in a string are balanced using a stack."
+  },
+  {
+    "code": "#include <queue>\nvoid printQueue(queue<int> q) { while(!q.empty()) { cout << q.front() << ' '; q.pop(); } }",
+    "comment": "Prints all elements in a queue."
+  },
+  {
+    "code": "struct Node { int data; Node* next; Node(int val) : data(val), next(nullptr) {} };",
+    "comment": "Defines a basic structure for a node in a singly linked list."
+  },
+  {
+    "code": "void insertAtHead(Node* &head, int val) { Node* newNode = new Node(val); newNode->next = head; head = newNode; }",
+    "comment": "Inserts a new node at the beginning of a singly linked list."
+  },
+  {
+    "code": "void printLinkedList(Node* head) { while(head) { cout << head->data << ' '; head = head->next; } }",
+    "comment": "Prints all the elements in a singly linked list."
+  },
+  {
+    "code": "int lengthOfLinkedList(Node* head) { int count = 0; while(head) { count++; head = head->next; } return count; }",
+    "comment": "Returns the number of nodes in a singly linked list."
+  },
+  {
+    "code": "bool isPalindromeString(string str) { string rev = str; reverse(rev.begin(), rev.end()); return str == rev; }",
+    "comment": "Checks if a string is a palindrome by reversing and comparing."
+  },
+  {
+    "code": "#include <stack>\nvoid reverseStack(stack<int> &s) { vector<int> temp; while(!s.empty()) { temp.push_back(s.top()); s.pop(); } for(int val : temp) s.push(val); }",
+    "comment": "Reverses the elements in a stack using an auxiliary array."
+  },
+  {
+    "code": "int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }",
+    "comment": "Computes the Greatest Common Divisor of two numbers using recursion."
+  },
+  {
+    "code": "#include <map>\nmap<char, int> countCharacters(string s) { map<char, int> freq; for(char c : s) freq[c]++; return freq; }",
+    "comment": "Counts the frequency of each character in a string and returns a map."
+  },
+  {
+    "code": "struct TreeNode { int val; TreeNode *left, *right; TreeNode(int x) : val(x), left(NULL), right(NULL) {} };",
+    "comment": "Defines a binary tree node with left and right child pointers."
+  },
+  {
+    "code": "int maxDepth(TreeNode* root) { if(!root) return 0; return 1 + max(maxDepth(root->left), maxDepth(root->right)); }",
+    "comment": "Calculates the maximum depth of a binary tree using recursion."
+  },
+  {
+    "code": "bool searchBST(TreeNode* root, int val) { if(!root) return false; if(root->val == val) return true; return val < root->val ? searchBST(root->left, val) : searchBST(root->right, val); }",
+    "comment": "Searches for a value in a Binary Search Tree."
+  },
+  {
+    "code": "int factorial(int n) { return (n == 0 || n == 1) ? 1 : n * factorial(n - 1); }",
+    "comment": "Computes factorial of a number using recursion."
+  },
+  {
+    "code": "void generateFibonacci(int n) { int a = 0, b = 1; for(int i = 0; i < n; i++) { cout << a << ' '; int temp = a + b; a = b; b = temp; } }",
+    "comment": "Prints the first n numbers of the Fibonacci sequence."
+  },
+  {
+    "code": "#include <set>\nset<int> findUniqueElements(const vector<int>& nums) { return set<int>(nums.begin(), nums.end()); }",
+    "comment": "Finds unique elements from a vector using a set."
+  },
+  {
+    "code": "#include <unordered_map>\nbool hasDuplicate(const vector<int>& nums) { unordered_map<int, bool> seen; for(int n : nums) { if(seen[n]) return true; seen[n] = true; } return false; }",
+    "comment": "Checks if a vector contains duplicate elements."
+  },
+  {
+    "code": "#include <algorithm>\nint findKthLargest(vector<int>& nums, int k) { sort(nums.begin(), nums.end(), greater<int>()); return nums[k - 1]; }",
+    "comment": "Finds the k-th largest element in a vector."
+  },
+  {
+    "code": "#include <deque>\nbool isPalindromeDeque(string s) { deque<char> dq(s.begin(), s.end()); while(dq.size() > 1) { if(dq.front() != dq.back()) return false; dq.pop_front(); dq.pop_back(); } return true; }",
+    "comment": "Checks if a string is a palindrome using a deque."
+  },
+  {
+    "code": "#include <numeric>\nint sumVector(const vector<int>& nums) { return accumulate(nums.begin(), nums.end(), 0); }",
+    "comment": "Returns the sum of all elements in a vector using STL accumulate."
+  },
+  {
+    "code": "int square(int x) { return x * x; }",
+    "comment": "Returns the square of a given integer."
+  },
+  {
+    "code": "bool isEven(int n) { return n % 2 == 0; }",
+    "comment": "Checks if a number is even."
+  },
+  {
+    "code": "void swap(int &a, int &b) { int temp = a; a = b; b = temp; }",
+    "comment": "Swaps two integers using a temporary variable."
+  },
+  {
+    "code": "#include <vector>\nint findMax(const vector<int>& arr) { return *max_element(arr.begin(), arr.end()); }",
+    "comment": "Finds the maximum element in a vector."
+  },
+  {
+    "code": "#include <vector>\nint findMin(const vector<int>& arr) { return *min_element(arr.begin(), arr.end()); }",
+    "comment": "Finds the minimum element in a vector."
+  },
+  {
+    "code": "bool isPrime(int n) { if (n <= 1) return false; for (int i = 2; i * i <= n; i++) if (n % i == 0) return false; return true; }",
+    "comment": "Checks whether a number is a prime."
+  },
+  {
+    "code": "#include <cmath>\ndouble hypotenuse(double a, double b) { return sqrt(a*a + b*b); }",
+    "comment": "Calculates the hypotenuse using the Pythagorean theorem."
+  },
+  {
+    "code": "#include <vector>\nint binarySearch(const vector<int>& arr, int target) { int left = 0, right = arr.size() - 1; while (left <= right) { int mid = left + (right - left) / 2; if (arr[mid] == target) return mid; else if (arr[mid] < target) left = mid + 1; else right = mid - 1; } return -1; }",
+    "comment": "Performs binary search to find a target value in a sorted vector."
+  },
+  {
+    "code": "int factorialIterative(int n) { int result = 1; for (int i = 2; i <= n; i++) result *= i; return result; }",
+    "comment": "Computes factorial of a number using iteration."
+  },
+  {
+    "code": "#include <string>\nbool isSubstring(const string &str, const string &sub) { return str.find(sub) != string::npos; }",
+    "comment": "Checks if one string is a substring of another."
+  },
+  {
+    "code": "int sumArray(const int arr[], int size) { int sum = 0; for (int i = 0; i < size; ++i) sum += arr[i]; return sum; }",
+    "comment": "Returns the sum of elements in an array."
+  },
+  {
+    "code": "#include <vector>\nvector<int> reverseVector(const vector<int>& arr) { vector<int> reversed(arr.rbegin(), arr.rend()); return reversed; }",
+    "comment": "Returns a reversed copy of the given vector."
+  },
+  {
+    "code": "#include <string>\nstring toUpperCase(string str) { for (char &c : str) c = toupper(c); return str; }",
+    "comment": "Converts all characters in a string to uppercase."
+  },
+  {
+    "code": "#include <string>\nstring toLowerCase(string str) { for (char &c : str) c = tolower(c); return str; }",
+    "comment": "Converts all characters in a string to lowercase."
+  },
+  {
+    "code": "#include <vector>\nvoid bubbleSort(vector<int>& arr) { int n = arr.size(); for (int i = 0; i < n-1; i++) for (int j = 0; j < n-i-1; j++) if (arr[j] > arr[j+1]) swap(arr[j], arr[j+1]); }",
+    "comment": "Sorts a vector using the bubble sort algorithm."
+  },
+  {
+    "code": "int powerIterative(int base, int exp) { int result = 1; for (int i = 0; i < exp; i++) result *= base; return result; }",
+    "comment": "Calculates base raised to the power of exp using iteration."
+  },
+  {
+    "code": "#include <cmath>\ndouble distance(double x1, double y1, double x2, double y2) { return sqrt((x2 - x1)*(x2 - x1) + (y2 - y1)*(y2 - y1)); }",
+    "comment": "Calculates Euclidean distance between two points."
+  },
+  {
+    "code": "#include <string>\nbool isDigitOnly(const string& s) { for (char c : s) if (!isdigit(c)) return false; return true; }",
+    "comment": "Checks if a string contains only digits."
+  },
+  {
+    "code": "int countDigits(int num) { int count = 0; while (num) { num /= 10; count++; } return count; }",
+    "comment": "Counts the number of digits in an integer."
+  },
+  {
+    "code": "bool isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }",
+    "comment": "Determines if a given year is a leap year."
+  },
+  {
+    "code": "int reverseNumber(int n) { int rev = 0; while (n != 0) { rev = rev * 10 + n % 10; n /= 10; } return rev; }",
+    "comment": "Reverses the digits of an integer."
+  },
+  {
+    "code": "#include <vector>\nbool isSorted(const vector<int>& arr) { for (int i = 1; i < arr.size(); ++i) if (arr[i] < arr[i-1]) return false; return true; }",
+    "comment": "Checks if a vector is sorted in non-decreasing order."
+  },
+  {
+    "code": "#include <string>\nint countVowels(const string& s) { int count = 0; for (char c : s) if (strchr(\"aeiouAEIOU\", c)) count++; return count; }",
+    "comment": "Counts the number of vowels in a string."
+  },
+  {
+    "code": "bool isPowerOfTwo(int n) { return n > 0 && (n & (n - 1)) == 0; }",
+    "comment": "Checks if a number is a power of two using bitwise operations."
+  },
+  {
+    "code": "#include <vector>\nint findSecondLargest(const vector<int>& nums) { int first = INT_MIN, second = INT_MIN; for (int n : nums) { if (n > first) { second = first; first = n; } else if (n > second && n != first) second = n; } return second; }",
+    "comment": "Finds the second largest element in a vector."
+  },
+  {
+    "code": "#include <unordered_set>\nbool hasDuplicates(const vector<int>& arr) { unordered_set<int> seen; for (int n : arr) if (!seen.insert(n).second) return true; return false; }",
+    "comment": "Checks if a vector contains duplicate elements using a hash set."
+  },
+  {
+    "code": "#include <string>\nbool areAnagrams(const string& a, const string& b) { string sa = a, sb = b; sort(sa.begin(), sa.end()); sort(sb.begin(), sb.end()); return sa == sb; }",
+    "comment": "Checks if two strings are anagrams."
+  },
+  {
+    "code": "#include <stack>\nstring reverseStringWithStack(const string& str) { stack<char> s; for (char c : str) s.push(c); string rev; while (!s.empty()) { rev += s.top(); s.pop(); } return rev; }",
+    "comment": "Reverses a string using a stack."
+  },
+  {
+    "code": "#include <stack>\nbool isValidParentheses(string s) { stack<char> stk; for (char c : s) { if (c == '(' || c == '{' || c == '[') stk.push(c); else { if (stk.empty()) return false; if ((c == ')' && stk.top() != '(') || (c == '}' && stk.top() != '{') || (c == ']' && stk.top() != '[')) return false; stk.pop(); } } return stk.empty(); }",
+    "comment": "Checks if a string has valid matching parentheses."
+  },
+  {
+    "code": "#include <vector>\nint countOccurrences(const vector<int>& arr, int target) { int count = 0; for (int val : arr) if (val == target) count++; return count; }",
+    "comment": "Counts how many times a target value appears in a vector."
+  },
+  {
+    "code": "#include <vector>\nint findMissingNumber(const vector<int>& nums, int n) { int total = n * (n + 1) / 2; for (int num : nums) total -= num; return total; }",
+    "comment": "Finds the missing number in a sequence from 1 to n."
+  },
+  {
+    "code": "#include <cmath>\nbool isPerfectSquare(int num) { int root = sqrt(num); return root * root == num; }",
+    "comment": "Checks whether a number is a perfect square."
+  },
+  {
+    "code": "#include <vector>\nint findPeakElement(const vector<int>& nums) { for (int i = 1; i < nums.size() - 1; i++) if (nums[i] > nums[i - 1] && nums[i] > nums[i + 1]) return i; return -1; }",
+    "comment": "Finds a peak element index in the array where the element is greater than its neighbors."
+  },
+  {
+    "code": "#include <algorithm>\nint gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }",
+    "comment": "Calculates the greatest common divisor (GCD) using recursion."
+  },
+  {
+    "code": "#include <algorithm>\nint lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comment": "Calculates the least common multiple (LCM) using GCD."
+  },
+  {
+    "code": "#include <vector>\nvector<int> mergeSortedArrays(const vector<int>& a, const vector<int>& b) { vector<int> result(a.size() + b.size()); merge(a.begin(), a.end(), b.begin(), b.end(), result.begin()); return result; }",
+    "comment": "Merges two sorted vectors into a single sorted vector."
+  },
+  {
+    "code": "#include <map>\nmap<char, int> charFrequency(const string& str) { map<char, int> freq; for (char c : str) freq[c]++; return freq; }",
+    "comment": "Builds a frequency map of characters in a string."
+  },
+  {
+    "code": "#include <vector>\nint maxSubArraySum(const vector<int>& nums) { int maxSum = nums[0], current = nums[0]; for (int i = 1; i < nums.size(); ++i) { current = max(nums[i], current + nums[i]); maxSum = max(maxSum, current); } return maxSum; }",
+    "comment": "Finds the maximum subarray sum using Kadane’s algorithm."
+  },
+  {
+    "code": "#include <string>\nbool isPalindrome(const string& str) { int left = 0, right = str.length() - 1; while (left < right) { if (str[left++] != str[right--]) return false; } return true; }",
+    "comment": "Checks if a given string is a palindrome."
+  },
+  {
+    "code": "#include <stack>\nstring removeAdjacentDuplicates(string s) { stack<char> stk; for (char c : s) { if (!stk.empty() && stk.top() == c) stk.pop(); else stk.push(c); } string result; while (!stk.empty()) { result = stk.top() + result; stk.pop(); } return result; }",
+    "comment": "Removes adjacent duplicate characters from a string using a stack."
+  },
+  {
+    "code": "#include <vector>\nint majorityElement(const vector<int>& nums) { int count = 0, candidate = 0; for (int num : nums) { if (count == 0) candidate = num; count += (num == candidate) ? 1 : -1; } return candidate; }",
+    "comment": "Finds the majority element using Boyer-Moore Voting Algorithm."
+  },
+  {
+    "code": "#include <vector>\nvector<int> twoSum(const vector<int>& nums, int target) { unordered_map<int, int> map; for (int i = 0; i < nums.size(); ++i) { int complement = target - nums[i]; if (map.count(complement)) return {map[complement], i}; map[nums[i]] = i; } return {}; }",
+    "comment": "Finds two indices such that their elements add up to a given target."
+  },
+  {
+    "code": "#include <string>\nstring intToBinary(int n) { string binary; while (n > 0) { binary = to_string(n % 2) + binary; n /= 2; } return binary.empty() ? \"0\" : binary; }",
+    "comment": "Converts an integer to its binary string representation."
+  },
+  {
+    "code": "#include <vector>\nvector<int> rotateLeft(const vector<int>& arr, int k) { vector<int> result(arr.begin() + k, arr.end()); result.insert(result.end(), arr.begin(), arr.begin() + k); return result; }",
+    "comment": "Rotates a vector to the left by k positions."
+  },
+  {
+    "code": "#include <vector>\nvoid insertionSort(vector<int>& arr) { for (int i = 1; i < arr.size(); i++) { int key = arr[i], j = i - 1; while (j >= 0 && arr[j] > key) arr[j + 1] = arr[j--]; arr[j + 1] = key; } }",
+    "comment": "Sorts a vector using the insertion sort algorithm."
+  },
+  {
+    "code": "#include <set>\nset<int> getUniqueElements(const vector<int>& arr) { return set<int>(arr.begin(), arr.end()); }",
+    "comment": "Returns a set of unique elements from a vector."
+  },
+  {
+    "code": "#include <vector>\nint findFirstPositiveMissing(vector<int>& nums) { int n = nums.size(); for (int i = 0; i < n; i++) while (nums[i] > 0 && nums[i] <= n && nums[nums[i] - 1] != nums[i]) swap(nums[i], nums[nums[i] - 1]); for (int i = 0; i < n; i++) if (nums[i] != i + 1) return i + 1; return n + 1; }",
+    "comment": "Finds the first missing positive number in an unsorted array."
+  },
+  {
+    "code": "#include <queue>\nint findKthLargest(vector<int>& nums, int k) { priority_queue<int, vector<int>, greater<int>> minHeap; for (int num : nums) { minHeap.push(num); if (minHeap.size() > k) minHeap.pop(); } return minHeap.top(); }",
+    "comment": "Finds the kth largest element in an array using a min heap."
+  },
+  {
+    "code": "#include <algorithm>\nvoid nextPermutation(vector<int>& nums) { int i = nums.size() - 2; while (i >= 0 && nums[i] >= nums[i + 1]) i--; if (i >= 0) { int j = nums.size() - 1; while (nums[j] <= nums[i]) j--; swap(nums[i], nums[j]); } reverse(nums.begin() + i + 1, nums.end()); }",
+    "comment": "Transforms a sequence into its next lexicographical permutation."
+  },
+  {
+    "code": "bool isEven(int num) { return num % 2 == 0; }",
+    "comment": "Checks if a number is even."
+  },
+  {
+    "code": "bool isOdd(int num) { return num % 2 != 0; }",
+    "comment": "Checks if a number is odd."
+  },
+  {
+    "code": "int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }",
+    "comment": "Calculates factorial of a number using recursion."
+  },
+  {
+    "code": "bool isPrime(int n) { if (n <= 1) return false; for (int i = 2; i*i <= n; ++i) if (n % i == 0) return false; return true; }",
+    "comment": "Determines whether a number is a prime."
+  },
+  {
+    "code": "int sumDigits(int n) { int sum = 0; while (n > 0) { sum += n % 10; n /= 10; } return sum; }",
+    "comment": "Calculates the sum of the digits of a number."
+  },
+  {
+    "code": "int power(int base, int exp) { int result = 1; while (exp--) result *= base; return result; }",
+    "comment": "Computes base raised to the power of exponent."
+  },
+  {
+    "code": "bool isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }",
+    "comment": "Checks whether a year is a leap year."
+  },
+  {
+    "code": "#include <string>\nstring reverseString(string s) { reverse(s.begin(), s.end()); return s; }",
+    "comment": "Reverses a given string using STL."
+  },
+  {
+    "code": "#include <string>\nbool isAnagram(string a, string b) { sort(a.begin(), a.end()); sort(b.begin(), b.end()); return a == b; }",
+    "comment": "Checks if two strings are anagrams of each other."
+  },
+  {
+    "code": "#include <vector>\nint findMax(const vector<int>& v) { return *max_element(v.begin(), v.end()); }",
+    "comment": "Returns the maximum element in a vector."
+  },
+  {
+    "code": "#include <vector>\nint findMin(const vector<int>& v) { return *min_element(v.begin(), v.end()); }",
+    "comment": "Returns the minimum element in a vector."
+  },
+  {
+    "code": "#include <vector>\ndouble average(const vector<int>& v) { double sum = 0; for (int x : v) sum += x; return v.empty() ? 0 : sum / v.size(); }",
+    "comment": "Calculates the average of elements in a vector."
+  },
+  {
+    "code": "#include <string>\nint countVowels(const string& s) { int count = 0; for (char c : s) if (string(\"aeiouAEIOU\").find(c) != string::npos) count++; return count; }",
+    "comment": "Counts the number of vowels in a string."
+  },
+  {
+    "code": "#include <vector>\nint binarySearch(const vector<int>& v, int target) { int low = 0, high = v.size() - 1; while (low <= high) { int mid = (low + high) / 2; if (v[mid] == target) return mid; else if (v[mid] < target) low = mid + 1; else high = mid - 1; } return -1; }",
+    "comment": "Performs binary search on a sorted vector."
+  },
+  {
+    "code": "#include <vector>\nvoid bubbleSort(vector<int>& v) { for (int i = 0; i < v.size() - 1; i++) for (int j = 0; j < v.size() - i - 1; j++) if (v[j] > v[j + 1]) swap(v[j], v[j + 1]); }",
+    "comment": "Sorts a vector using bubble sort algorithm."
+  },
+  {
+    "code": "#include <vector>\nvoid selectionSort(vector<int>& v) { for (int i = 0; i < v.size(); i++) { int minIdx = i; for (int j = i + 1; j < v.size(); j++) if (v[j] < v[minIdx]) minIdx = j; swap(v[i], v[minIdx]); } }",
+    "comment": "Sorts a vector using selection sort algorithm."
+  },
+  {
+    "code": "#include <vector>\nvoid reverseVector(vector<int>& v) { reverse(v.begin(), v.end()); }",
+    "comment": "Reverses the elements of a vector."
+  },
+  {
+    "code": "#include <vector>\nbool containsDuplicate(vector<int>& v) { unordered_set<int> seen; for (int x : v) if (!seen.insert(x).second) return true; return false; }",
+    "comment": "Checks for duplicate values in a vector."
+  },
+  {
+    "code": "#include <stack>\nbool isValidParentheses(string s) { stack<char> st; for (char c : s) { if (c == '(' || c == '[' || c == '{') st.push(c); else { if (st.empty()) return false; char top = st.top(); st.pop(); if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) return false; } } return st.empty(); }",
+    "comment": "Checks if parentheses in a string are valid and balanced."
+  },
+  {
+    "code": "#include <vector>\nint sumArray(const vector<int>& arr) { int sum = 0; for (int num : arr) sum += num; return sum; }",
+    "comment": "Calculates the sum of all elements in an array."
+  },
+  {
+    "code": "#include <vector>\nvector<int> filterEven(const vector<int>& nums) { vector<int> result; for (int n : nums) if (n % 2 == 0) result.push_back(n); return result; }",
+    "comment": "Returns a new vector containing only the even numbers."
+  },
+  {
+    "code": "#include <cmath>\nbool isArmstrong(int n) { int original = n, sum = 0, digits = log10(n) + 1; while (n) { sum += pow(n % 10, digits); n /= 10; } return sum == original; }",
+    "comment": "Checks whether a number is an Armstrong number."
+  },
+  {
+    "code": "#include <vector>\nint countNegatives(const vector<int>& arr) { return count_if(arr.begin(), arr.end(), [](int x) { return x < 0; }); }",
+    "comment": "Counts the number of negative integers in a vector."
+  },
+  {
+    "code": "#include <string>\nbool isLowercase(char c) { return c >= 'a' && c <= 'z'; }",
+    "comment": "Checks if a character is lowercase."
+  },
+  {
+    "code": "#include <string>\nbool isUppercase(char c) { return c >= 'A' && c <= 'Z'; }",
+    "comment": "Checks if a character is uppercase."
+  },
+  {
+    "code": "#include <string>\nint countWords(const string& str) { istringstream ss(str); string word; int count = 0; while (ss >> word) count++; return count; }",
+    "comment": "Counts the number of words in a sentence."
+  },
+  {
+    "code": "#include <vector>\nvector<int> prefixSums(const vector<int>& nums) { vector<int> prefix(nums.size()); prefix[0] = nums[0]; for (int i = 1; i < nums.size(); ++i) prefix[i] = prefix[i - 1] + nums[i]; return prefix; }",
+    "comment": "Computes the prefix sums of a vector."
+  },
+  {
+    "code": "#include <vector>\nint secondLargest(const vector<int>& v) { int max1 = INT_MIN, max2 = INT_MIN; for (int x : v) { if (x > max1) { max2 = max1; max1 = x; } else if (x > max2 && x != max1) max2 = x; } return max2; }",
+    "comment": "Finds the second largest element in a vector."
+  },
+  {
+    "code": "#include <vector>\nint countZeros(const vector<int>& arr) { return count(arr.begin(), arr.end(), 0); }",
+    "comment": "Counts the number of zeros in an array."
+  },
+  {
+    "code": "#include <vector>\nvector<int> removeDuplicates(vector<int>& nums) { sort(nums.begin(), nums.end()); nums.erase(unique(nums.begin(), nums.end()), nums.end()); return nums; }",
+    "comment": "Removes duplicate elements from a sorted vector."
+  },
+  {
+    "code": "#include <cmath>\nbool isPowerOfTwo(int n) { return n > 0 && (n & (n - 1)) == 0; }",
+    "comment": "Checks if a number is a power of two."
+  },
+  {
+    "code": "#include <cmath>\nbool isPowerOfThree(int n) { while (n > 1 && n % 3 == 0) n /= 3; return n == 1; }",
+    "comment": "Checks if a number is a power of three."
+  },
+  {
+    "code": "#include <cmath>\nint countDigits(int n) { return n == 0 ? 1 : log10(abs(n)) + 1; }",
+    "comment": "Counts the number of digits in an integer."
+  },
+  {
+    "code": "#include <vector>\nbool isSorted(const vector<int>& arr) { return is_sorted(arr.begin(), arr.end()); }",
+    "comment": "Checks whether a vector is sorted in ascending order."
+  },
+  {
+    "code": "#include <vector>\nvector<int> squareArray(const vector<int>& nums) { vector<int> result; for (int x : nums) result.push_back(x * x); return result; }",
+    "comment": "Returns a new vector with squares of all elements."
+  },
+  {
+    "code": "#include <vector>\nint findIndex(const vector<int>& arr, int target) { for (int i = 0; i < arr.size(); i++) if (arr[i] == target) return i; return -1; }",
+    "comment": "Finds the index of the target element in a vector."
+  },
+  {
+    "code": "#include <cmath>\nbool isPalindromeNumber(int n) { int original = n, reversed = 0; while (n > 0) { reversed = reversed * 10 + n % 10; n /= 10; } return original == reversed; }",
+    "comment": "Checks whether an integer is a palindrome."
+  },
+  {
+    "code": "#include <string>\nstring toUpperCase(string s) { transform(s.begin(), s.end(), s.begin(), ::toupper); return s; }",
+    "comment": "Converts all characters in a string to uppercase."
+  },
+  {
+    "code": "#include <string>\nstring toLowerCase(string s) { transform(s.begin(), s.end(), s.begin(), ::tolower); return s; }",
+    "comment": "Converts all characters in a string to lowercase."
+  },
+  {
+    "code": "#include <cmath>\nbool isPerfectCube(int n) { int root = round(cbrt(n)); return root * root * root == n; }",
+    "comment": "Checks whether a number is a perfect cube."
+  },
+  {
+    "code": "#include <vector>\nint minIndex(const vector<int>& v) { return min_element(v.begin(), v.end()) - v.begin(); }",
+    "comment": "Returns the index of the minimum element in a vector."
+  },
+  {
+    "code": "#include <vector>\nint maxIndex(const vector<int>& v) { return max_element(v.begin(), v.end()) - v.begin(); }",
+    "comment": "Returns the index of the maximum element in a vector."
+  },
+  {
+    "code": "#include <cmath>\ndouble areaOfCircle(double r) { return M_PI * r * r; }",
+    "comment": "Calculates the area of a circle given the radius."
+  },
+  {
+    "code": "#include <cmath>\ndouble distance(int x1, int y1, int x2, int y2) { return sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2)); }",
+    "comment": "Computes the Euclidean distance between two points."
+  },
+  {
+    "code": "#include <string>\nbool endsWith(const string& str, const string& suffix) { return str.size() >= suffix.size() && str.compare(str.size() - suffix.size(), suffix.size(), suffix) == 0; }",
+    "comment": "Checks if a string ends with the given suffix."
+  },
+  {
+    "code": "#include <string>\nbool startsWith(const string& str, const string& prefix) { return str.rfind(prefix, 0) == 0; }",
+    "comment": "Checks if a string starts with the given prefix."
+  },
+  {
+    "code": "int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }",
+    "comment": "Computes the greatest common divisor (GCD) using recursion."
+  },
+  {
+    "code": "int lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comment": "Computes the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "#include <vector>\nint sumRange(const vector<int>& nums, int l, int r) { int sum = 0; for (int i = l; i <= r; ++i) sum += nums[i]; return sum; }",
+    "comment": "Sums elements in a vector between two indices."
+  },
+  {
+    "code": "bool isPalindromeString(const string& s) { int l = 0, r = s.size() - 1; while (l < r) if (s[l++] != s[r--]) return false; return true; }",
+    "comment": "Checks whether a string is a palindrome."
+  },
+  {
+    "code": "#include <cmath>\ndouble fahrenheitToCelsius(double f) { return (f - 32) * 5 / 9; }",
+    "comment": "Converts Fahrenheit temperature to Celsius."
+  },
+  {
+    "code": "double celsiusToFahrenheit(double c) { return (c * 9 / 5) + 32; }",
+    "comment": "Converts Celsius temperature to Fahrenheit."
+  },
+  {
+    "code": "#include <vector>\nvector<int> rotateLeft(vector<int> v, int d) { rotate(v.begin(), v.begin() + d % v.size(), v.end()); return v; }",
+    "comment": "Rotates a vector to the left by d positions."
+  },
+  {
+    "code": "#include <vector>\nvector<int> rotateRight(vector<int> v, int d) { rotate(v.rbegin(), v.rbegin() + d % v.size(), v.rend()); return v; }",
+    "comment": "Rotates a vector to the right by d positions."
+  },
+  {
+    "code": "#include <string>\nstring removeSpaces(const string& s) { string res; for (char c : s) if (c != ' ') res += c; return res; }",
+    "comment": "Removes all spaces from a string."
+  },
+  {
+    "code": "#include <string>\nbool isDigit(char c) { return c >= '0' && c <= '9'; }",
+    "comment": "Checks if a character is a digit."
+  },
+  {
+    "code": "#include <string>\nint countConsonants(const string& s) { int count = 0; for (char c : s) if (isalpha(c) && string(\"aeiouAEIOU\").find(c) == string::npos) count++; return count; }",
+    "comment": "Counts the number of consonants in a string."
+  },
+  {
+    "code": "#include <string>\nstring removeVowels(const string& s) { string res; for (char c : s) if (string(\"aeiouAEIOU\").find(c) == string::npos) res += c; return res; }",
+    "comment": "Removes all vowels from a string."
+  },
+  {
+    "code": "#include <string>\nchar mostFrequentChar(const string& s) { vector<int> freq(256, 0); for (char c : s) freq[c]++; return max_element(freq.begin(), freq.end()) - freq.begin(); }",
+    "comment": "Finds the most frequent character in a string."
+  },
+  {
+    "code": "#include <string>\nbool isAlpha(char c) { return (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'); }",
+    "comment": "Checks if a character is an alphabet letter."
+  },
+  {
+    "code": "#include <vector>\nvector<int> mergeSortedArrays(const vector<int>& a, const vector<int>& b) { vector<int> result; merge(a.begin(), a.end(), b.begin(), b.end(), back_inserter(result)); return result; }",
+    "comment": "Merges two sorted arrays into one sorted array."
+  },
+  {
+    "code": "#include <vector>\nvector<int> intersectArrays(const vector<int>& a, const vector<int>& b) { vector<int> result; unordered_set<int> setA(a.begin(), a.end()); for (int x : b) if (setA.count(x)) result.push_back(x); return result; }",
+    "comment": "Finds the intersection of two arrays."
+  },
+  {
+    "code": "#include <vector>\nvector<int> differenceArrays(const vector<int>& a, const vector<int>& b) { vector<int> result; unordered_set<int> setB(b.begin(), b.end()); for (int x : a) if (!setB.count(x)) result.push_back(x); return result; }",
+    "comment": "Finds the difference between two arrays."
+  },
+  {
+    "code": "#include <vector>\nint countOccurrences(const vector<int>& arr, int val) { return count(arr.begin(), arr.end(), val); }",
+    "comment": "Counts the occurrences of a value in an array."
+  },
+  {
+    "code": "#include <vector>\nint findFirstPositive(const vector<int>& arr) { for (int x : arr) if (x > 0) return x; return -1; }",
+    "comment": "Finds the first positive integer in an array."
+  },
+  {
+    "code": "#include <vector>\nbool allPositive(const vector<int>& arr) { return all_of(arr.begin(), arr.end(), [](int x) { return x > 0; }); }",
+    "comment": "Checks if all elements in an array are positive."
+  },
+  {
+    "code": "#include <string>\nint asciiSum(const string& s) { int sum = 0; for (char c : s) sum += c; return sum; }",
+    "comment": "Calculates the sum of ASCII values of a string."
+  },
+  {
+    "code": "#include <string>\nbool isBinary(const string& s) { return all_of(s.begin(), s.end(), [](char c){ return c == '0' || c == '1'; }); }",
+    "comment": "Checks if a string is a valid binary number."
+  },
+  {
+    "code": "#include <string>\nbool isPalindromeIgnoreCase(string s) { transform(s.begin(), s.end(), s.begin(), ::tolower); return isPalindromeString(s); }",
+    "comment": "Checks if a string is a case-insensitive palindrome."
+  },
+  {
+    "code": "#include <vector>\nint countEven(const vector<int>& arr) { return count_if(arr.begin(), arr.end(), [](int x){ return x % 2 == 0; }); }",
+    "comment": "Counts even numbers in a vector."
+  },
+  {
+    "code": "#include <vector>\nint countOdd(const vector<int>& arr) { return count_if(arr.begin(), arr.end(), [](int x){ return x % 2 != 0; }); }",
+    "comment": "Counts odd numbers in a vector."
+  },
+  {
+    "code": "#include <vector>\nvector<int> findPrimes(const vector<int>& nums) { vector<int> primes; for (int x : nums) if (isPrime(x)) primes.push_back(x); return primes; }",
+    "comment": "Finds all prime numbers in a vector."
+  },
+  {
+    "code": "#include <vector>\nbool isPerfectSquare(int n) { int root = sqrt(n); return root * root == n; }",
+    "comment": "Checks if a number is a perfect square."
+  },
+  {
+    "code": "#include <cmath>\nbool isPerfectNumber(int n) { int sum = 1; for (int i = 2; i <= sqrt(n); i++) if (n % i == 0) sum += i + (i != n / i ? n / i : 0); return sum == n && n != 1; }",
+    "comment": "Checks if a number is a perfect number."
+  },
+  {
+    "code": "#include <string>\nint hexToDec(const string& hex) { return stoi(hex, nullptr, 16); }",
+    "comment": "Converts a hexadecimal string to decimal."
+  },
+  {
+    "code": "#include <string>\nstring decToHex(int dec) { stringstream ss; ss << hex << dec; return ss.str(); }",
+    "comment": "Converts a decimal number to hexadecimal string."
+  },
+  {
+    "code": "#include <string>\nstring reverseWords(const string& s) { istringstream ss(s); string word, result; while (ss >> word) result = word + ' ' + result; result.pop_back(); return result; }",
+    "comment": "Reverses the words in a sentence."
+  },
+  {
+    "code": "#include <vector>\nbool hasIncreasingTriplet(const vector<int>& nums) { int first = INT_MAX, second = INT_MAX; for (int n : nums) { if (n <= first) first = n; else if (n <= second) second = n; else return true; } return false; }",
+    "comment": "Checks if an increasing triplet subsequence exists."
+  },
+  {
+    "code": "#include <vector>\nbool isMountainArray(const vector<int>& arr) { int n = arr.size(), i = 0; while (i + 1 < n && arr[i] < arr[i + 1]) i++; if (i == 0 || i == n - 1) return false; while (i + 1 < n && arr[i] > arr[i + 1]) i++; return i == n - 1; }",
+    "comment": "Checks if an array is a valid mountain array."
+  },
+  {
+    "code": "#include <vector>\nint maxSubArraySum(const vector<int>& nums) { int maxSum = nums[0], currSum = nums[0]; for (int i = 1; i < nums.size(); i++) { currSum = max(nums[i], currSum + nums[i]); maxSum = max(maxSum, currSum); } return maxSum; }",
+    "comment": "Finds the maximum sum of a contiguous subarray (Kadane's Algorithm)."
+  },
+  {
+    "code": "#include <vector>\nbool containsElement(const vector<int>& arr, int target) { return find(arr.begin(), arr.end(), target) != arr.end(); }",
+    "comment": "Checks if an element exists in a vector."
+  },
+  {
+    "code": "#include <string>\nbool isValidEmail(const string& email) { return email.find('@') != string::npos && email.find('.') != string::npos; }",
+    "comment": "Performs basic validation of an email string."
+  },
+  {
+    "code": "#include <string>\nint countUpperCase(const string& s) { return count_if(s.begin(), s.end(), ::isupper); }",
+    "comment": "Counts the number of uppercase letters in a string."
+  },
+  {
+    "code": "#include <string>\nint countLowerCase(const string& s) { return count_if(s.begin(), s.end(), ::islower); }",
+    "comment": "Counts the number of lowercase letters in a string."
+  },
+  {
+    "code": "#include <cmath>\nbool isHarshadNumber(int n) { int sum = 0, temp = n; while (temp > 0) { sum += temp % 10; temp /= 10; } return n % sum == 0; }",
+    "comment": "Checks if a number is a Harshad number (divisible by sum of its digits)."
+  },
+  {
+    "code": "#include <string>\nstring longestWord(const string& s) { istringstream ss(s); string word, longest; while (ss >> word) if (word.length() > longest.length()) longest = word; return longest; }",
+    "comment": "Finds the longest word in a sentence."
+  },
+  {
+    "code": "#include <cmath>\nint power(int base, int exp) { return exp == 0 ? 1 : base * power(base, exp - 1); }",
+    "comment": "Calculates the power of a number using recursion."
+  },
+  {
+    "code": "#include <string>\nbool isSubsequence(const string& s, const string& t) { int m = s.size(), n = t.size(); int i = 0, j = 0; while (i < m && j < n) if (s[i] == t[j]) i++; j++; return i == m; }",
+    "comment": "Checks if string s is a subsequence of string t."
+  },
+  {
+    "code": "#include <vector>\nint findMax(const vector<int>& arr) { return *max_element(arr.begin(), arr.end()); }",
+    "comment": "Finds the maximum value in an array."
+  },
+  {
+    "code": "#include <string>\nstring toLowerCase(const string& s) { string res = s; transform(res.begin(), res.end(), res.begin(), ::tolower); return res; }",
+    "comment": "Converts a string to lowercase."
+  },
+  {
+    "code": "#include <cmath>\nbool isPrime(int n) { if (n <= 1) return false; for (int i = 2; i <= sqrt(n); ++i) if (n % i == 0) return false; return true; }",
+    "comment": "Checks if a number is prime."
+  },
+  {
+    "code": "#include <cmath>\ndouble squareRoot(double n) { return sqrt(n); }",
+    "comment": "Returns the square root of a number."
+  },
+  {
+    "code": "#include <vector>\nvector<int> reverseArray(const vector<int>& arr) { vector<int> reversed(arr.rbegin(), arr.rend()); return reversed; }",
+    "comment": "Reverses the order of elements in an array."
+  },
+  {
+    "code": "#include <algorithm>\nbool isSorted(const vector<int>& arr) { return is_sorted(arr.begin(), arr.end()); }",
+    "comment": "Checks if an array is sorted."
+  },
+  {
+    "code": "#include <vector>\nvector<int> mergeArrays(const vector<int>& a, const vector<int>& b) { vector<int> merged = a; merged.insert(merged.end(), b.begin(), b.end()); return merged; }",
+    "comment": "Merges two arrays into one."
+  },
+  {
+    "code": "#include <vector>\nvector<int> bubbleSort(vector<int> arr) { for (int i = 0; i < arr.size(); i++) for (int j = 0; j < arr.size() - 1; j++) if (arr[j] > arr[j + 1]) swap(arr[j], arr[j + 1]); return arr; }",
+    "comment": "Sorts an array using the bubble sort algorithm."
+  },
+  {
+    "code": "#include <string>\nstring reverseString(const string& s) { return string(s.rbegin(), s.rend()); }",
+    "comment": "Reverses a string."
+  },
+  {
+    "code": "#include <vector>\nvector<int> uniqueElements(const vector<int>& arr) { unordered_set<int> set(arr.begin(), arr.end()); return vector<int>(set.begin(), set.end()); }",
+    "comment": "Removes duplicate elements from an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printHelloWorld() { std::cout << \"Hello, World!\" << std::endl; }",
+    "comment": "Prints 'Hello, World!' to the console."
+  },
+  {
+    "code": "#include <iostream>\nvoid printNumbers(int n) { for (int i = 1; i <= n; ++i) std::cout << i << ' '; std::cout << std::endl; }",
+    "comment": "Prints numbers from 1 to n."
+  },
+  {
+    "code": "#include <string>\nstring concatenateStrings(const string& s1, const string& s2) { return s1 + s2; }",
+    "comment": "Concatenates two strings."
+  },
+  {
+    "code": "#include <cmath>\ndouble calculateHypotenuse(double a, double b) { return sqrt(a * a + b * b); }",
+    "comment": "Calculates the length of the hypotenuse in a right triangle."
+  },
+  {
+    "code": "#include <vector>\nvector<int> filterEven(const vector<int>& arr) { vector<int> result; for (int x : arr) if (x % 2 == 0) result.push_back(x); return result; }",
+    "comment": "Filters even numbers from an array."
+  },
+  {
+    "code": "#include <vector>\nvector<int> filterOdd(const vector<int>& arr) { vector<int> result; for (int x : arr) if (x % 2 != 0) result.push_back(x); return result; }",
+    "comment": "Filters odd numbers from an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printStars(int n) { for (int i = 0; i < n; i++) std::cout << \"*\"; std::cout << std::endl; }",
+    "comment": "Prints a row of stars of length n."
+  },
+  {
+    "code": "#include <iostream>\nvoid printRectangle(int rows, int cols) { for (int i = 0; i < rows; i++) { for (int j = 0; j < cols; j++) std::cout << \"* \"; std::cout << std::endl; } }",
+    "comment": "Prints a rectangle of stars with specified number of rows and columns."
+  },
+  {
+    "code": "#include <vector>\nint sumArray(const vector<int>& arr) { int sum = 0; for (int x : arr) sum += x; return sum; }",
+    "comment": "Calculates the sum of elements in an array."
+  },
+  {
+    "code": "#include <vector>\nint productArray(const vector<int>& arr) { int product = 1; for (int x : arr) product *= x; return product; }",
+    "comment": "Calculates the product of elements in an array."
+  },
+  {
+    "code": "#include <cmath>\nbool isPerfectSquare(int num) { int root = sqrt(num); return root * root == num; }",
+    "comment": "Checks if a number is a perfect square."
+  },
+  {
+    "code": "#include <cmath>\nbool isArmstrong(int num) { int sum = 0, temp = num, digits = log10(num) + 1; while (temp > 0) { sum += pow(temp % 10, digits); temp /= 10; } return sum == num; }",
+    "comment": "Checks if a number is an Armstrong number."
+  },
+  {
+    "code": "#include <cmath>\nbool isFibonacci(int n) { int x = 5 * n * n + 4, y = 5 * n * n - 4; return isPerfectSquare(x) || isPerfectSquare(y); }",
+    "comment": "Checks if a number is part of the Fibonacci sequence."
+  },
+  {
+    "code": "#include <iostream>\nvoid printEvenNumbers(int n) { for (int i = 2; i <= n; i += 2) std::cout << i << ' '; std::cout << std::endl; }",
+    "comment": "Prints all even numbers up to n."
+  },
+  {
+    "code": "#include <iostream>\nvoid printOddNumbers(int n) { for (int i = 1; i <= n; i += 2) std::cout << i << ' '; std::cout << std::endl; }",
+    "comment": "Prints all odd numbers up to n."
+  },
+  {
+    "code": "#include <iostream>\nvoid printMultiples(int n, int m) { for (int i = 1; i <= m; i++) std::cout << n * i << ' '; std::cout << std::endl; }",
+    "comment": "Prints the first m multiples of n."
+  },
+  {
+    "code": "#include <vector>\nvector<int> generateFibonacci(int n) { vector<int> fib = {0, 1}; for (int i = 2; i < n; i++) fib.push_back(fib[i - 1] + fib[i - 2]); return fib; }",
+    "comment": "Generates the first n Fibonacci numbers."
+  },
+  {
+    "code": "#include <vector>\nint findMaxProduct(const vector<int>& arr) { int maxProd = INT_MIN; for (int i = 0; i < arr.size(); i++) for (int j = i + 1; j < arr.size(); j++) maxProd = max(maxProd, arr[i] * arr[j]); return maxProd; }",
+    "comment": "Finds the maximum product of two numbers in an array."
+  },
+  {
+    "code": "#include <vector>\nint findMinProduct(const vector<int>& arr) { int minProd = INT_MAX; for (int i = 0; i < arr.size(); i++) for (int j = i + 1; j < arr.size(); j++) minProd = min(minProd, arr[i] * arr[j]); return minProd; }",
+    "comment": "Finds the minimum product of two numbers in an array."
+  },
+  {
+    "code": "#include <vector>\nint sumOddNumbers(const vector<int>& arr) { int sum = 0; for (int x : arr) if (x % 2 != 0) sum += x; return sum; }",
+    "comment": "Calculates the sum of all odd numbers in an array."
+  },
+  {
+    "code": "#include <vector>\nint sumEvenNumbers(const vector<int>& arr) { int sum = 0; for (int x : arr) if (x % 2 == 0) sum += x; return sum; }",
+    "comment": "Calculates the sum of all even numbers in an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printPyramid(int rows) { for (int i = 1; i <= rows; i++) { for (int j = 1; j <= rows - i; j++) std::cout << \" \"; for (int k = 1; k <= (2 * i - 1); k++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints a pyramid pattern with stars."
+  },
+  {
+    "code": "#include <iostream>\nvoid printTriangle(int rows) { for (int i = 1; i <= rows; i++) { for (int j = 1; j <= i; j++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints a right-angled triangle pattern with stars."
+  },
+  {
+    "code": "#include <vector>\nvector<int> generateMultiples(int n, int count) { vector<int> multiples; for (int i = 1; i <= count; i++) multiples.push_back(n * i); return multiples; }",
+    "comment": "Generates the first 'count' multiples of a given number."
+  },
+  {
+    "code": "#include <vector>\nvector<int> generatePrimes(int n) { vector<int> primes; for (int i = 2; i <= n; i++) if (isPrime(i)) primes.push_back(i); return primes; }",
+    "comment": "Generates all prime numbers up to n."
+  },
+  {
+    "code": "#include <iostream>\nvoid printFibonacci(int n) { int a = 0, b = 1; for (int i = 0; i < n; i++) { std::cout << a << \" \"; int next = a + b; a = b; b = next; } std::cout << std::endl; }",
+    "comment": "Prints the first n Fibonacci numbers."
+  },
+  {
+    "code": "#include <iostream>\nvoid printNumbersInReverse(int n) { for (int i = n; i >= 1; i--) std::cout << i << ' '; std::cout << std::endl; }",
+    "comment": "Prints numbers from n to 1 in reverse order."
+  },
+  {
+    "code": "#include <vector>\nvector<int> evenNumbersInRange(int start, int end) { vector<int> evens; for (int i = start; i <= end; i++) if (i % 2 == 0) evens.push_back(i); return evens; }",
+    "comment": "Finds all even numbers between a given range."
+  },
+  {
+    "code": "#include <iostream>\nvoid printFactorial(int n) { int result = 1; for (int i = 1; i <= n; i++) result *= i; std::cout << \"Factorial of \" << n << \" is: \" << result << std::endl; }",
+    "comment": "Calculates and prints the factorial of a number."
+  },
+  {
+    "code": "#include <iostream>\nvoid printPyramidPattern(int rows) { for (int i = 1; i <= rows; i++) { for (int j = 1; j <= rows - i; j++) std::cout << \" \"; for (int k = 1; k <= 2 * i - 1; k++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints a pyramid pattern with stars."
+  },
+  {
+    "code": "#include <vector>\nvector<int> getDivisibleBy(int divisor, const vector<int>& arr) { vector<int> result; for (int x : arr) if (x % divisor == 0) result.push_back(x); return result; }",
+    "comment": "Finds all elements in an array divisible by a given number."
+  },
+  {
+    "code": "#include <iostream>\nvoid printDiamond(int rows) { int n = rows / 2; for (int i = 1; i <= n; i++) { for (int j = 1; j <= n - i; j++) std::cout << \" \"; for (int k = 1; k <= (2 * i - 1); k++) std::cout << \"*\"; std::cout << std::endl; } for (int i = n - 1; i >= 1; i--) { for (int j = 1; j <= n - i; j++) std::cout << \" \"; for (int k = 1; k <= (2 * i - 1); k++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints a diamond pattern with stars."
+  },
+  {
+    "code": "#include <vector>\nvector<int> findDuplicates(const vector<int>& arr) { unordered_map<int, int> freq; vector<int> duplicates; for (int x : arr) freq[x]++; for (const auto& p : freq) if (p.second > 1) duplicates.push_back(p.first); return duplicates; }",
+    "comment": "Finds all duplicate elements in an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printAsciiValues(const string& s) { for (char c : s) std::cout << \"ASCII of \" << c << \": \" << int(c) << std::endl; }",
+    "comment": "Prints ASCII values of all characters in a string."
+  },
+  {
+    "code": "#include <iostream>\nint gcd(int a, int b) { while (b != 0) { int temp = b; b = a % b; a = temp; } return a; }",
+    "comment": "Finds the greatest common divisor (GCD) of two numbers."
+  },
+  {
+    "code": "#include <iostream>\nint lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comment": "Finds the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "#include <vector>\nint findMaxInRange(const vector<int>& arr, int start, int end) { return *max_element(arr.begin() + start, arr.begin() + end + 1); }",
+    "comment": "Finds the maximum value in a specific range of an array."
+  },
+  {
+    "code": "#include <vector>\nint findMinInRange(const vector<int>& arr, int start, int end) { return *min_element(arr.begin() + start, arr.begin() + end + 1); }",
+    "comment": "Finds the minimum value in a specific range of an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printReversePyramid(int rows) { for (int i = rows; i >= 1; i--) { for (int j = 1; j <= rows - i; j++) std::cout << \" \"; for (int k = 1; k <= (2 * i - 1); k++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints an inverted pyramid pattern with stars."
+  },
+  {
+    "code": "#include <vector>\nint findSecondLargest(const vector<int>& arr) { int largest = INT_MIN, secondLargest = INT_MIN; for (int x : arr) { if (x > largest) { secondLargest = largest; largest = x; } else if (x > secondLargest) secondLargest = x; } return secondLargest; }",
+    "comment": "Finds the second largest element in an array."
+  },
+  {
+    "code": "#include <vector>\nint countOccurrences(const vector<int>& arr, int num) { return count(arr.begin(), arr.end(), num); }",
+    "comment": "Counts the number of occurrences of a specific number in an array."
+  },
+  {
+    "code": "#include <vector>\nint findSmallestIndex(const vector<int>& arr) { return distance(arr.begin(), min_element(arr.begin(), arr.end())); }",
+    "comment": "Finds the index of the smallest element in an array."
+  },
+  {
+    "code": "#include <vector>\nint findLargestIndex(const vector<int>& arr) { return distance(arr.begin(), max_element(arr.begin(), arr.end())); }",
+    "comment": "Finds the index of the largest element in an array."
+  },
+  {
+    "code": "#include <vector>\nvector<int> getIntersection(const vector<int>& arr1, const vector<int>& arr2) { vector<int> intersection; for (int x : arr1) if (find(arr2.begin(), arr2.end(), x) != arr2.end()) intersection.push_back(x); return intersection; }",
+    "comment": "Finds the intersection of two arrays."
+  },
+  {
+    "code": "#include <iostream>\nint fibonacci(int n) { if (n <= 1) return n; return fibonacci(n - 1) + fibonacci(n - 2); }",
+    "comment": "Calculates the nth Fibonacci number using recursion."
+  },
+  {
+    "code": "#include <vector>\nint sumArray(const vector<int>& arr) { int sum = 0; for (int x : arr) sum += x; return sum; }",
+    "comment": "Calculates the sum of all elements in an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printSum(int a, int b) { std::cout << \"Sum: \" << a + b << std::endl; }",
+    "comment": "Prints the sum of two numbers."
+  },
+  {
+    "code": "#include <iostream>\nvoid printMultiplicationTable(int n) { for (int i = 1; i <= 10; i++) std::cout << n << \" * \" << i << \" = \" << n * i << std::endl; }",
+    "comment": "Prints the multiplication table for a given number."
+  },
+  {
+    "code": "#include <vector>\nvector<int> removeDuplicates(const vector<int>& arr) { unordered_set<int> set(arr.begin(), arr.end()); return vector<int>(set.begin(), set.end()); }",
+    "comment": "Removes duplicates from an array."
+  },
+  {
+    "code": "#include <vector>\nint findMin(const vector<int>& arr) { return *min_element(arr.begin(), arr.end()); }",
+    "comment": "Finds the minimum element in an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printNumberInWords(int num) { switch (num) { case 1: std::cout << \"One\"; break; case 2: std::cout << \"Two\"; break; case 3: std::cout << \"Three\"; break; default: std::cout << \"Invalid\"; break; } std::cout << std::endl; }",
+    "comment": "Prints the number in words for the numbers 1, 2, and 3."
+  },
+  {
+    "code": "#include <vector>\nvector<int> evenNumbers(const vector<int>& arr) { vector<int> even; for (int x : arr) if (x % 2 == 0) even.push_back(x); return even; }",
+    "comment": "Filters even numbers from an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid reverseNumber(int n) { int reversed = 0; while (n != 0) { reversed = reversed * 10 + n % 10; n /= 10; } std::cout << \"Reversed: \" << reversed << std::endl; }",
+    "comment": "Reverses a given number."
+  },
+  {
+    "code": "#include <iostream>\nvoid printStarPattern(int rows) { for (int i = 1; i <= rows; i++) { for (int j = 1; j <= i; j++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints a right-aligned star pattern."
+  },
+  {
+    "code": "#include <iostream>\nvoid printSquare(int n) { for (int i = 0; i < n; i++) { for (int j = 0; j < n; j++) std::cout << \"* \"; std::cout << std::endl; } }",
+    "comment": "Prints a square pattern of stars of size n."
+  },
+  {
+    "code": "#include <vector>\nint findFirstOccurrence(const vector<int>& arr, int value) { return find(arr.begin(), arr.end(), value) != arr.end() ? distance(arr.begin(), find(arr.begin(), arr.end(), value)) : -1; }",
+    "comment": "Finds the first occurrence of a value in an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printReverse(int n) { while (n > 0) { std::cout << n % 10 << \" \"; n /= 10; } std::cout << std::endl; }",
+    "comment": "Prints the digits of a number in reverse order."
+  },
+  {
+    "code": "#include <vector>\nvector<int> generateRange(int start, int end) { vector<int> range; for (int i = start; i <= end; i++) range.push_back(i); return range; }",
+    "comment": "Generates an array containing numbers in a given range."
+  },
+  {
+    "code": "#include <iostream>\nvoid printDiamond(int rows) { int n = rows / 2; for (int i = 1; i <= n; i++) { for (int j = 1; j <= n - i; j++) std::cout << \" \"; for (int k = 1; k <= (2 * i - 1); k++) std::cout << \"*\"; std::cout << std::endl; } for (int i = n - 1; i >= 1; i--) { for (int j = 1; j <= n - i; j++) std::cout << \" \"; for (int k = 1; k <= (2 * i - 1); k++) std::cout << \"*\"; std::cout << std::endl; } }",
+    "comment": "Prints a diamond pattern of stars."
+  },
+  {
+    "code": "#include <iostream>\nint power(int base, int exp) { int result = 1; for (int i = 0; i < exp; i++) result *= base; return result; }",
+    "comment": "Calculates base raised to the power of exp."
+  },
+  {
+    "code": "#include <iostream>\nvoid printFibonacci(int n) { int a = 0, b = 1; for (int i = 0; i < n; i++) { std::cout << a << \" \"; int next = a + b; a = b; b = next; } std::cout << std::endl; }",
+    "comment": "Prints the first n Fibonacci numbers."
+  },
+  {
+    "code": "#include <iostream>\nvoid printMultiplicationTable(int n) { for (int i = 1; i <= 10; i++) std::cout << n << \" * \" << i << \" = \" << n * i << std::endl; }",
+    "comment": "Prints the multiplication table for a given number."
+  },
+  {
+    "code": "#include <iostream>\nint gcd(int a, int b) { while (b != 0) { int temp = b; b = a % b; a = temp; } return a; }",
+    "comment": "Calculates the greatest common divisor of two numbers."
+  },
+  {
+    "code": "#include <iostream>\nint lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comment": "Calculates the least common multiple of two numbers."
+  },
+  {
+    "code": "#include <vector>\nvector<int> getEvenNumbers(const vector<int>& arr) { vector<int> even; for (int x : arr) if (x % 2 == 0) even.push_back(x); return even; }",
+    "comment": "Returns the even numbers from an array."
+  },
+  {
+    "code": "#include <iostream>\nint factorial(int n) { if (n <= 1) return 1; return n * factorial(n - 1); }",
+    "comment": "Calculates the factorial of a number recursively."
+  },
+  {
+    "code": "#include <iostream>\nvoid printNumberInWords(int num) { switch (num) { case 1: std::cout << \"One\"; break; case 2: std::cout << \"Two\"; break; case 3: std::cout << \"Three\"; break; default: std::cout << \"Invalid\"; break; } std::cout << std::endl; }",
+    "comment": "Prints numbers in words (1, 2, 3)."
+  },
+  {
+    "code": "#include <vector>\nint countOccurrences(const vector<int>& arr, int x) { return count(arr.begin(), arr.end(), x); }",
+    "comment": "Counts the occurrences of a number in an array."
+  },
+  {
+    "code": "#include <iostream>\nint findMax(int arr[], int size) { int maxVal = arr[0]; for (int i = 1; i < size; i++) if (arr[i] > maxVal) maxVal = arr[i]; return maxVal; }",
+    "comment": "Finds the maximum value in an array."
+  },
+  {
+    "code": "#include <iostream>\nvoid printReverseOrder(int n) { for (int i = n; i >= 1; i--) std::cout << i << \" \"; std::cout << std::endl; }",
+    "comment": "Prints numbers from n to 1 in reverse order."
+  }
+]
