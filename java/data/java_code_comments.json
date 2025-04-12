@@ -1,0 +1,1286 @@
+[
+  {
+    "code": "int add(int a, int b) { return a + b; }",
+    "comments": "This function adds two integers and returns their sum"
+  },
+  {
+    "code": "boolean isEven(int number) { return number % 2 == 0; }",
+    "comments": "Checks if the given number is even"
+  },
+  {
+    "code": "String reverseString(String str) { StringBuilder sb = new StringBuilder(str); return sb.reverse().toString(); }",
+    "comments": "Reverses the input string using StringBuilder"
+  },
+  {
+    "code": "int factorial(int n) { if (n <= 1) return 1; return n * factorial(n-1); }",
+    "comments": "Recursively calculates the factorial of a number"
+  },
+  {
+    "code": "void bubbleSort(int[] arr) { int n = arr.length; for (int i = 0; i < n-1; i++) { for (int j = 0; j < n-i-1; j++) { if (arr[j] > arr[j+1]) { int temp = arr[j]; arr[j] = arr[j+1]; arr[j+1] = temp; } } } }",
+    "comments": "Implements bubble sort algorithm to sort an integer array in ascending order"
+  },
+  {
+    "code": "int binarySearch(int[] arr, int target) { int left = 0; int right = arr.length - 1; while (left <= right) { int mid = left + (right - left) / 2; if (arr[mid] == target) return mid; if (arr[mid] < target) left = mid + 1; else right = mid - 1; } return -1; }",
+    "comments": "Performs binary search on a sorted array to find the target value"
+  },
+  {
+    "code": "int fibonacci(int n) { if (n <= 1) return n; return fibonacci(n-1) + fibonacci(n-2); }",
+    "comments": "Calculates the nth Fibonacci number using recursion"
+  },
+  {
+    "code": "double calculateAverage(int[] numbers) { int sum = 0; for (int num : numbers) { sum += num; } return (double) sum / numbers.length; }",
+    "comments": "Calculates the average value of an integer array"
+  },
+  {
+    "code": "int findMax(int[] arr) { int max = arr[0]; for (int i = 1; i < arr.length; i++) { if (arr[i] > max) { max = arr[i]; } } return max; }",
+    "comments": "Finds the maximum value in an integer array"
+  },
+  {
+    "code": "int countOccurrences(String text, char target) { int count = 0; for (char c : text.toCharArray()) { if (c == target) { count++; } } return count; }",
+    "comments": "Counts the number of occurrences of a specific character in a string"
+  },
+  {
+    "code": "boolean isPalindrome(String str) { String reversed = new StringBuilder(str).reverse().toString(); return str.equals(reversed); }",
+    "comments": "Checks if a string is a palindrome (reads the same backward as forward)"
+  },
+  {
+    "code": "boolean isPrime(int n) { if (n <= 1) return false; for (int i = 2; i <= Math.sqrt(n); i++) { if (n % i == 0) return false; } return true; }",
+    "comments": "Determines if a number is prime using trial division up to square root"
+  },
+  {
+    "code": "void swap(int[] arr, int i, int j) { int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; }",
+    "comments": "Swaps two elements in an array at the specified indices"
+  },
+  {
+    "code": "String padLeft(String input, int length, char padChar) { StringBuilder sb = new StringBuilder(); for (int i = input.length(); i < length; i++) { sb.append(padChar); } sb.append(input); return sb.toString(); }",
+    "comments": "Pads the left side of a string with a specified character to reach the desired length"
+  },
+  {
+    "code": "String[] splitString(String str, char delimiter) { return str.split(String.valueOf(delimiter)); }",
+    "comments": "Splits a string into an array of substrings based on the specified delimiter"
+  },
+  {
+    "code": "List<Integer> filterEvenNumbers(List<Integer> numbers) { List<Integer> result = new ArrayList<>(); for (int num : numbers) { if (num % 2 == 0) { result.add(num); } } return result; }",
+    "comments": "Filters a list to keep only even numbers"
+  },
+  {
+    "code": "int calculateGCD(int a, int b) { while (b != 0) { int temp = b; b = a % b; a = temp; } return a; }",
+    "comments": "Calculates the greatest common divisor of two integers using Euclidean algorithm"
+  },
+  {
+    "code": "int calculateLCM(int a, int b) { return (a * b) / calculateGCD(a, b); }",
+    "comments": "Calculates the least common multiple of two integers"
+  },
+  {
+    "code": "double celsiusToFahrenheit(double celsius) { return (celsius * 9/5) + 32; }",
+    "comments": "Converts temperature from Celsius to Fahrenheit"
+  },
+  {
+    "code": "double fahrenheitToCelsius(double fahrenheit) { return (fahrenheit - 32) * 5/9; }",
+    "comments": "Converts temperature from Fahrenheit to Celsius"
+  },
+  {
+    "code": "boolean checkAnagram(String str1, String str2) { if (str1.length() != str2.length()) return false; char[] array1 = str1.toLowerCase().toCharArray(); char[] array2 = str2.toLowerCase().toCharArray(); Arrays.sort(array1); Arrays.sort(array2); return Arrays.equals(array1, array2); }",
+    "comments": "Checks if two strings are anagrams of each other"
+  },
+  {
+    "code": "int sumOfDigits(int number) { int sum = 0; while (number > 0) { sum += number % 10; number /= 10; } return sum; }",
+    "comments": "Calculates the sum of all digits in a number"
+  },
+  {
+    "code": "String capitalizeFirstLetter(String str) { if (str == null || str.isEmpty()) return str; return Character.toUpperCase(str.charAt(0)) + str.substring(1); }",
+    "comments": "Capitalizes the first letter of a string while leaving the rest unchanged"
+  },
+  {
+    "code": "Map<Character, Integer> getCharFrequency(String str) { Map<Character, Integer> frequency = new HashMap<>(); for (char c : str.toCharArray()) { frequency.put(c, frequency.getOrDefault(c, 0) + 1); } return frequency; }",
+    "comments": "Creates a map of character frequencies in a string"
+  },
+  {
+    "code": "int[] removeDuplicates(int[] array) { return Arrays.stream(array).distinct().toArray(); }",
+    "comments": "Removes duplicate elements from an integer array using Java streams"
+  },
+  {
+    "code": "boolean containsSubstring(String main, String sub) { return main.contains(sub); }",
+    "comments": "Checks if a string contains a specific substring"
+  },
+  {
+    "code": "String joinStrings(String[] strings, String delimiter) { return String.join(delimiter, strings); }",
+    "comments": "Joins an array of strings with a specified delimiter"
+  },
+  {
+    "code": "long factorial2(int n) { long result = 1; for (int i = 2; i <= n; i++) { result *= i; } return result; }",
+    "comments": "Calculates factorial iteratively to avoid stack overflow with large numbers"
+  },
+  {
+    "code": "void selectionSort(int[] arr) { int n = arr.length; for (int i = 0; i < n-1; i++) { int minIdx = i; for (int j = i+1; j < n; j++) { if (arr[j] < arr[minIdx]) { minIdx = j; } } int temp = arr[minIdx]; arr[minIdx] = arr[i]; arr[i] = temp; } }",
+    "comments": "Implements selection sort algorithm to sort an array in ascending order"
+  },
+  {
+    "code": "void insertionSort(int[] arr) { int n = arr.length; for (int i = 1; i < n; ++i) { int key = arr[i]; int j = i - 1; while (j >= 0 && arr[j] > key) { arr[j + 1] = arr[j]; j = j - 1; } arr[j + 1] = key; } }",
+    "comments": "Performs insertion sort on an array by building a sorted array one element at a time"
+  },
+  {
+    "code": "String decimalToBinary(int decimal) { return Integer.toBinaryString(decimal); }",
+    "comments": "Converts a decimal number to its binary representation"
+  },
+  {
+    "code": "int binaryToDecimal(String binary) { return Integer.parseInt(binary, 2); }",
+    "comments": "Converts a binary string to its decimal value"
+  },
+  {
+    "code": "String repeatString(String str, int times) { return str.repeat(times); }",
+    "comments": "Repeats a string a specified number of times"
+  },
+  {
+    "code": "boolean isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }",
+    "comments": "Determines if a given year is a leap year according to the Gregorian calendar"
+  },
+  {
+    "code": "int countWords(String text) { if (text == null || text.isEmpty()) return 0; String[] words = text.split(\"\\s+\"); return words.length; }",
+    "comments": "Counts the number of words in a text string"
+  },
+  {
+    "code": "List<Integer> findCommonElements(int[] arr1, int[] arr2) { List<Integer> common = new ArrayList<>(); Set<Integer> set = new HashSet<>(); for (int num : arr1) { set.add(num); } for (int num : arr2) { if (set.contains(num)) { common.add(num); } } return common; }",
+    "comments": "Finds common elements between two integer arrays"
+  },
+  {
+    "code": "String reverseWords(String sentence) { String[] words = sentence.split(\" \"); StringBuilder result = new StringBuilder(); for (int i = words.length - 1; i >= 0; i--) { result.append(words[i]); if (i > 0) result.append(\" \"); } return result.toString(); }",
+    "comments": "Reverses the order of words in a sentence while maintaining word integrity"
+  },
+  {
+    "code": "int findSecondLargest(int[] arr) { int first = Integer.MIN_VALUE; int second = Integer.MIN_VALUE; for (int num : arr) { if (num > first) { second = first; first = num; } else if (num > second && num != first) { second = num; } } return second; }",
+    "comments": "Finds the second largest element in an integer array"
+  },
+  {
+    "code": "double calculateDistance(int x1, int y1, int x2, int y2) { return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2)); }",
+    "comments": "Calculates the Euclidean distance between two points in 2D space"
+  },
+  {
+    "code": "String removeSpaces(String str) { return str.replaceAll(\"\\s+\", \"\"); }",
+    "comments": "Removes all whitespace characters from a string"
+  },
+  {
+    "code": "boolean areArraysEqual(int[] arr1, int[] arr2) { if (arr1.length != arr2.length) return false; Arrays.sort(arr1); Arrays.sort(arr2); return Arrays.equals(arr1, arr2); }",
+    "comments": "Checks if two arrays contain the same elements (order-independent)"
+  },
+  {
+    "code": "List<Integer> generatePrimes(int n) { List<Integer> primes = new ArrayList<>(); for (int i = 2; i <= n; i++) { boolean isPrime = true; for (int j = 2; j <= Math.sqrt(i); j++) { if (i % j == 0) { isPrime = false; break; } } if (isPrime) { primes.add(i); } } return primes; }",
+    "comments": "Generates a list of all prime numbers up to n using trial division"
+  },
+  {
+    "code": "int power(int base, int exponent) { int result = 1; for (int i = 0; i < exponent; i++) { result *= base; } return result; }",
+    "comments": "Calculates the power of a number using iteration"
+  },
+  {
+    "code": "int findIndex(int[] arr, int element) { for (int i = 0; i < arr.length; i++) { if (arr[i] == element) { return i; } } return -1; }",
+    "comments": "Finds the index of an element in an array, or returns -1 if not found"
+  },
+  {
+    "code": "double calculateMedian(int[] arr) { Arrays.sort(arr); int n = arr.length; if (n % 2 == 0) { return (arr[n/2 - 1] + arr[n/2]) / 2.0; } else { return arr[n/2]; } }",
+    "comments": "Calculates the median value of an integer array"
+  },
+  {
+    "code": "String toUpperCase(String str) { return str.toUpperCase(); }",
+    "comments": "Converts all characters in a string to uppercase"
+  },
+  {
+    "code": "String toLowerCase(String str) { return str.toLowerCase(); }",
+    "comments": "Converts all characters in a string to lowercase"
+  },
+  {
+    "code": "String trimString(String str) { return str.trim(); }",
+    "comments": "Removes leading and trailing whitespace from a string"
+  },
+  {
+    "code": "String getMimeType(String fileName) { String extension = fileName.substring(fileName.lastIndexOf('.') + 1); switch (extension.toLowerCase()) { case \"jpg\": case \"jpeg\": return \"image/jpeg\"; case \"png\": return \"image/png\"; case \"pdf\": return \"application/pdf\"; default: return \"application/octet-stream\"; } }",
+    "comments": "Determines the MIME type of a file based on its extension"
+  },
+  {
+    "code": "int randomInt(int min, int max) { return min + (int)(Math.random() * ((max - min) + 1)); }",
+    "comments": "Generates a random integer between the specified minimum and maximum values (inclusive)"
+  },
+  {
+    "code": "void mergeSort(int[] arr, int left, int right) { if (left < right) { int mid = (left + right) / 2; mergeSort(arr, left, mid); mergeSort(arr, mid + 1, right); merge(arr, left, mid, right); } }",
+    "comments": "Implements the recursive part of merge sort algorithm, dividing the array into halves"
+  },
+  {
+    "code": "boolean isValidEmail(String email) { String regex = \"^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$\"; return email.matches(regex); }",
+    "comments": "Validates if a string is in email format using regular expression"
+  },
+  {
+    "code": "String formatCurrency(double amount) { return String.format(\"$%.2f\", amount); }",
+    "comments": "Formats a number as a currency string with dollar sign and two decimal places"
+  },
+  {
+    "code": "String encodeURL(String url) { try { return URLEncoder.encode(url, StandardCharsets.UTF_8.toString()); } catch (Exception e) { return url; } }",
+    "comments": "Encodes a URL string by replacing unsafe characters with percent-encoded values"
+  },
+  {
+    "code": "boolean isNumeric(String str) { return str.matches(\"-?\\d+(\\.\\d+)?\"); }",
+    "comments": "Checks if a string contains only numeric characters (including decimal point and negative sign)"
+  },
+  {
+    "code": "String reverseCase(String str) { StringBuilder result = new StringBuilder(); for (char c : str.toCharArray()) { if (Character.isUpperCase(c)) { result.append(Character.toLowerCase(c)); } else if (Character.isLowerCase(c)) { result.append(Character.toUpperCase(c)); } else { result.append(c); } } return result.toString(); }",
+    "comments": "Reverses the case of each letter in a string (uppercase to lowercase and vice versa)"
+  },
+  {
+    "code": "void quickSort(int[] arr, int low, int high) { if (low < high) { int pi = partition(arr, low, high); quickSort(arr, low, pi - 1); quickSort(arr, pi + 1, high); } }",
+    "comments": "Implements the recursive part of quicksort algorithm to sort an array"
+  },
+  {
+    "code": "int partition(int[] arr, int low, int high) { int pivot = arr[high]; int i = (low - 1); for (int j = low; j < high; j++) { if (arr[j] <= pivot) { i++; int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; } } int temp = arr[i + 1]; arr[i + 1] = arr[high]; arr[high] = temp; return i + 1; }",
+    "comments": "Partitions an array for quicksort by selecting a pivot and moving elements around it"
+  },
+  {
+    "code": "String formatDate(Date date, String pattern) { SimpleDateFormat sdf = new SimpleDateFormat(pattern); return sdf.format(date); }",
+    "comments": "Formats a date object as a string according to the specified pattern"
+  },
+  {
+    "code": "String limitString(String text, int maxLength) { if (text.length() <= maxLength) return text; return text.substring(0, maxLength) + \"...\"; }",
+    "comments": "Limits a string to a maximum length and adds an ellipsis if truncated"
+  },
+  {
+    "code": "List<Integer> mergeArrays(int[] arr1, int[] arr2) { List<Integer> result = new ArrayList<>(); for (int num : arr1) { result.add(num); } for (int num : arr2) { result.add(num); } return result; }",
+    "comments": "Merges two integer arrays into a list containing all elements from both arrays"
+  },
+  {
+    "code": "boolean hasUniqueChars(String str) { Set<Character> charSet = new HashSet<>(); for (char c : str.toCharArray()) { if (charSet.contains(c)) return false; charSet.add(c); } return true; }",
+    "comments": "Checks if a string contains only unique characters with no duplicates"
+  },
+  {
+    "code": "String[] splitByLength(String str, int length) { int arrayLength = (int) Math.ceil((double) str.length() / length); String[] result = new String[arrayLength]; for (int i = 0; i < arrayLength; i++) { int start = i * length; int end = Math.min(str.length(), (i + 1) * length); result[i] = str.substring(start, end); } return result; }",
+    "comments": "Splits a string into an array of strings of specified length"
+  },
+  {
+    "code": "String snakeToCamel(String snake) { String[] parts = snake.split(\"_\"); StringBuilder camel = new StringBuilder(parts[0]); for (int i = 1; i < parts.length; i++) { camel.append(parts[i].substring(0, 1).toUpperCase()).append(parts[i].substring(1)); } return camel.toString(); }",
+    "comments": "Converts a snake_case string to camelCase"
+  },
+  {
+    "code": "String camelToSnake(String camel) { return camel.replaceAll(\"([a-z])([A-Z])\", \"$1_$2\").toLowerCase(); }",
+    "comments": "Converts a camelCase string to snake_case"
+  },
+  {
+    "code": "String extractNumbers(String text) { return text.replaceAll(\"[^0-9]\", \"\"); }",
+    "comments": "Extracts only numeric characters from a string"
+  },
+  {
+    "code": "String extractLetters(String text) { return text.replaceAll(\"[^a-zA-Z]\", \"\"); }",
+    "comments": "Extracts only alphabetic characters from a string"
+  },
+  {
+    "code": "int countVowels(String str) { return str.toLowerCase().replaceAll(\"[^aeiou]\", \"\").length(); }",
+    "comments": "Counts the number of vowels in a string"
+  },
+  {
+    "code": "int countConsonants(String str) { return str.toLowerCase().replaceAll(\"[^a-z]\", \"\").replaceAll(\"[aeiou]\", \"\").length(); }",
+    "comments": "Counts the number of consonants in a string"
+  },
+  {
+    "code": "String centerAlign(String text, int width, char padChar) { int padding = width - text.length(); if (padding <= 0) return text; int leftPad = padding / 2; int rightPad = padding - leftPad; StringBuilder sb = new StringBuilder(); for (int i = 0; i < leftPad; i++) { sb.append(padChar); } sb.append(text); for (int i = 0; i < rightPad; i++) { sb.append(padChar); } return sb.toString(); }",
+    "comments": "Centers a text string within a field of specified width by padding with a character"
+  },
+  {
+    "code": "double roundToDecimalPlaces(double value, int places) { double scale = Math.pow(10, places); return Math.round(value * scale) / scale; }",
+    "comments": "Rounds a decimal number to a specified number of decimal places"
+  },
+  {
+    "code": "Optional<Double> calculateAverage2(List<Integer> numbers) { if (numbers == null || numbers.isEmpty()) { return Optional.empty(); } double sum = 0; for (int num : numbers) { sum += num; } return Optional.of(sum / numbers.size()); }",
+    "comments": "Calculates the average of a list of integers, returning an Optional to handle empty lists"
+  },
+  {
+    "code": "String timeToString(int hours, int minutes) { return String.format(\"%02d:%02d\", hours, minutes); }",
+    "comments": "Formats hours and minutes as a time string in HH:MM format"
+  },
+  {
+    "code": "Object findObjectById(List<Object> objects, String id, Function<Object, String> idExtractor) { return objects.stream().filter(obj -> idExtractor.apply(obj).equals(id)).findFirst().orElse(null); }",
+    "comments": "Finds an object in a list by its ID using a function to extract the ID from each object"
+  },
+  {
+    "code": "boolean isSubset(int[] arr1, int[] arr2) { Set<Integer> set = new HashSet<>(); for (int num : arr2) { set.add(num); } for (int num : arr1) { if (!set.contains(num)) { return false; } } return true; }",
+    "comments": "Checks if the first array is a subset of the second array"
+  },
+  {
+    "code": "void shuffle(int[] arr) { Random rand = new Random(); for (int i = arr.length - 1; i > 0; i--) { int j = rand.nextInt(i + 1); int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; } }",
+    "comments": "Shuffles the elements of an array randomly using the Fisher-Yates algorithm"
+  },
+  {
+    "code": "List<String> getAllSubstrings(String str) { List<String> substrings = new ArrayList<>(); for (int i = 0; i < str.length(); i++) { for (int j = i + 1; j <= str.length(); j++) { substrings.add(str.substring(i, j)); } } return substrings; }",
+    "comments": "Generates all possible substrings of a given string"
+  },
+  {
+    "code": "int hammingDistance(String str1, String str2) { if (str1.length() != str2.length()) throw new IllegalArgumentException(\"Strings must be of the same length\"); int distance = 0; for (int i = 0; i < str1.length(); i++) { if (str1.charAt(i) != str2.charAt(i)) { distance++; } } return distance; }",
+    "comments": "Calculates the Hamming distance between two strings of equal length"
+  },
+  {
+    "code": "String rot13(String input) { StringBuilder result = new StringBuilder(); for (char c : input.toCharArray()) { if (c >= 'a' && c <= 'z') { result.append((char) ('a' + (c - 'a' + 13) % 26)); } else if (c >= 'A' && c <= 'Z') { result.append((char) ('A' + (c - 'A' + 13) % 26)); } else { result.append(c); } } return result.toString(); }",
+    "comments": "Applies ROT13 cipher to a string, shifting each letter 13 positions in the alphabet"
+  },
+  {
+    "code": "int getFileSize(File file) { return (int) file.length(); }",
+    "comments": "Returns the size of a file in bytes"
+  },
+  {
+    "code": "List<String> getFileLines(String filePath) throws IOException { return Files.readAllLines(Paths.get(filePath)); }",
+    "comments": "Reads all lines from a file into a list of strings"
+  },
+  {
+    "code": "void writeToFile(String filePath, String content) throws IOException { Files.write(Paths.get(filePath), content.getBytes()); }",
+    "comments": "Writes a string to a file, creating the file if it doesn't exist"
+  },
+  {
+    "code": "boolean deleteFile(String filePath) { return new File(filePath).delete(); }",
+    "comments": "Deletes a file from the filesystem if it exists"
+  },
+  {
+    "code": "void appendToFile(String filePath, String content) throws IOException { Files.write(Paths.get(filePath), content.getBytes(), StandardOpenOption.APPEND); }",
+    "comments": "Appends text to the end of an existing file"
+  },
+  {
+    "code": "List<File> listFiles(String directoryPath) { File directory = new File(directoryPath); return Arrays.asList(directory.listFiles()); }",
+    "comments": "Lists all files in a directory"
+  },
+  {
+    "code": "String readResource(String resourcePath) throws IOException { try (InputStream is = getClass().getResourceAsStream(resourcePath)) { return new String(is.readAllBytes()); } }",
+    "comments": "Reads the content of a resource file from the classpath"
+  },
+  {
+    "code": "boolean createDirectory(String directoryPath) { return new File(directoryPath).mkdirs(); }",
+    "comments": "Creates a directory including any necessary but nonexistent parent directories"
+  },
+  {
+    "code": "String getExtension(String fileName) { int dotIndex = fileName.lastIndexOf('.'); return (dotIndex == -1) ? \"\" : fileName.substring(dotIndex + 1); }",
+    "comments": "Extracts the file extension from a filename"
+  },
+  {
+    "code": "byte[] readBytes(String filePath) throws IOException { return Files.readAllBytes(Paths.get(filePath)); }",
+    "comments": "Reads all bytes from a file into a byte array"
+  },
+  {
+    "code": "Map<String, Long> wordFrequency(String text) { return Arrays.stream(text.split(\"\\s+\")).collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting())); }",
+    "comments": "Calculates the frequency of each word in a text string"
+  },
+  {
+    "code": "LocalDate parseDate(String dateStr, String pattern) { DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern); return LocalDate.parse(dateStr, formatter); }",
+    "comments": "Parses a date string into a LocalDate object using the specified pattern"
+  },
+  {
+    "code": "int daysBetween(LocalDate start, LocalDate end) { return (int) ChronoUnit.DAYS.between(start, end); }",
+    "comments": "Calculates the number of days between two dates"
+  },
+  {
+    "code": "LocalDate addDays(LocalDate date, int days) { return date.plusDays(days); }",
+    "comments": "Adds a specified number of days to a date"
+  },
+  {
+    "code": "String formatFileSize(long bytes) { String[] units = {\"B\", \"KB\", \"MB\", \"GB\", \"TB\"}; int unitIndex = 0; double size = bytes; while (size >= 1024 && unitIndex < units.length - 1) { size /= 1024; unitIndex++; } return String.format(\"%.2f %s\", size, units[unitIndex]); }",
+    "comments": "Formats a file size in bytes to a human-readable format with appropriate units"
+  },
+  {
+    "code": "List<Integer> range(int start, int end, int step) { List<Integer> result = new ArrayList<>(); for (int i = start; i < end; i += step) { result.add(i); } return result; }",
+    "comments": "Generates a list of integers within a range with a specified step"
+  },
+  {
+    "code": "public static void main(String[] args) { Scanner reader = new Scanner(System.in); System.out.print(\"Enter a number: \"); int number = reader.nextInt(); System.out.println(\"You entered: \" + number); }",
+    "comments": "Reads an integer from user input and prints it to the console"
+  },
+  {
+    "code": "public int add(int a, int b) { return a + b; }",
+    "comments": "Adds two integers and returns their sum"
+  },
+  {
+    "code": "public int subtract(int a, int b) { return a - b; }",
+    "comments": "Subtracts the second integer from the first and returns the difference"
+  },
+  {
+    "code": "public int multiply(int a, int b) { return a * b; }",
+    "comments": "Multiplies two integers and returns their product"
+  },
+  {
+    "code": "public double divide(double a, double b) { if (b == 0) { throw new ArithmeticException(\"Division by zero\"); } return a / b; }",
+    "comments": "Divides the first number by the second and throws an exception if the divisor is zero"
+  },
+  {
+    "code": "public boolean isPrime(int n) { if (n <= 1) return false; if (n <= 3) return true; if (n % 2 == 0 || n % 3 == 0) return false; for (int i = 5; i * i <= n; i += 6) { if (n % i == 0 || n % (i + 2) == 0) return false; } return true; }",
+    "comments": "Checks if a number is prime using an optimized trial division algorithm"
+  },
+  {
+    "code": "public static int fibonacci(int n) { if (n <= 1) return n; return fibonacci(n-1) + fibonacci(n-2); }",
+    "comments": "Recursively calculates the nth Fibonacci number"
+  },
+  {
+    "code": "public static int iterativeFibonacci(int n) { if (n <= 1) return n; int fib = 1; int prevFib = 1; for (int i = 2; i < n; i++) { int temp = fib; fib += prevFib; prevFib = temp; } return fib; }",
+    "comments": "Iteratively calculates the nth Fibonacci number with O(n) time complexity"
+  },
+  {
+    "code": "public void bubbleSort(int[] arr) { int n = arr.length; for (int i = 0; i < n-1; i++) { for (int j = 0; j < n-i-1; j++) { if (arr[j] > arr[j+1]) { int temp = arr[j]; arr[j] = arr[j+1]; arr[j+1] = temp; } } } }",
+    "comments": "Implements bubble sort algorithm to sort an array of integers in ascending order"
+  },
+  {
+    "code": "public int binarySearch(int[] arr, int target) { int left = 0; int right = arr.length - 1; while (left <= right) { int mid = left + (right - left) / 2; if (arr[mid] == target) return mid; if (arr[mid] < target) left = mid + 1; else right = mid - 1; } return -1; }",
+    "comments": "Performs binary search on a sorted array to find the index of a target value"
+  },
+  {
+    "code": "public String reverseString(String str) { StringBuilder sb = new StringBuilder(str); return sb.reverse().toString(); }",
+    "comments": "Reverses a string using StringBuilder's reverse method"
+  },
+  {
+    "code": "public boolean isPalindrome(String str) { String clean = str.replaceAll(\"\\\\s+\", \"\").toLowerCase(); int length = clean.length(); int forward = 0; int backward = length - 1; while (backward > forward) { char forwardChar = clean.charAt(forward++); char backwardChar = clean.charAt(backward--); if (forwardChar != backwardChar) return false; } return true; }",
+    "comments": "Checks if a string is a palindrome by comparing characters from both ends"
+  },
+  {
+    "code": "public List<Integer> findDuplicates(int[] nums) { List<Integer> result = new ArrayList<>(); for (int i = 0; i < nums.length; i++) { int index = Math.abs(nums[i]) - 1; if (nums[index] < 0) result.add(Math.abs(nums[i])); else nums[index] = -nums[index]; } return result; }",
+    "comments": "Finds all duplicates in an array where elements are in range [1, n] with O(n) time complexity and O(1) space"
+  },
+  {
+    "code": "public int factorial(int n) { if (n < 0) throw new IllegalArgumentException(\"Factorial not defined for negative numbers\"); if (n == 0 || n == 1) return 1; return n * factorial(n - 1); }",
+    "comments": "Recursively calculates the factorial of a non-negative integer"
+  },
+  {
+    "code": "public int gcd(int a, int b) { if (b == 0) return a; return gcd(b, a % b); }",
+    "comments": "Calculates the greatest common divisor of two integers using Euclidean algorithm"
+  },
+  {
+    "code": "public int lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comments": "Calculates the least common multiple of two integers using GCD"
+  },
+  {
+    "code": "public Map<Character, Integer> characterFrequency(String str) { Map<Character, Integer> frequencies = new HashMap<>(); for (char c : str.toCharArray()) { frequencies.put(c, frequencies.getOrDefault(c, 0) + 1); } return frequencies; }",
+    "comments": "Creates a frequency map of characters in a string"
+  },
+  {
+    "code": "public void mergeSort(int[] arr, int l, int r) { if (l < r) { int m = l + (r - l) / 2; mergeSort(arr, l, m); mergeSort(arr, m + 1, r); merge(arr, l, m, r); } }",
+    "comments": "Recursively implements merge sort algorithm to sort an array"
+  },
+  {
+    "code": "private void merge(int[] arr, int l, int m, int r) { int n1 = m - l + 1; int n2 = r - m; int[] L = new int[n1]; int[] R = new int[n2]; for (int i = 0; i < n1; i++) L[i] = arr[l + i]; for (int j = 0; j < n2; j++) R[j] = arr[m + 1 + j]; int i = 0, j = 0, k = l; while (i < n1 && j < n2) { if (L[i] <= R[j]) arr[k++] = L[i++]; else arr[k++] = R[j++]; } while (i < n1) arr[k++] = L[i++]; while (j < n2) arr[k++] = R[j++]; }",
+    "comments": "Merges two sorted subarrays as part of the merge sort algorithm"
+  },
+  {
+    "code": "public void quickSort(int[] arr, int low, int high) { if (low < high) { int pi = partition(arr, low, high); quickSort(arr, low, pi - 1); quickSort(arr, pi + 1, high); } }",
+    "comments": "Recursively implements quicksort algorithm to sort an array"
+  },
+  {
+    "code": "private int partition(int[] arr, int low, int high) { int pivot = arr[high]; int i = low - 1; for (int j = low; j < high; j++) { if (arr[j] < pivot) { i++; int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; } } int temp = arr[i + 1]; arr[i + 1] = arr[high]; arr[high] = temp; return i + 1; }",
+    "comments": "Partitions an array around a pivot element as part of the quicksort algorithm"
+  },
+  {
+    "code": "public void printMatrix(int[][] matrix) { for (int i = 0; i < matrix.length; i++) { for (int j = 0; j < matrix[0].length; j++) { System.out.print(matrix[i][j] + \" \"); } System.out.println(); } }",
+    "comments": "Prints a 2D matrix row by row to the console"
+  },
+  {
+    "code": "public int[][] matrixMultiply(int[][] A, int[][] B) { int rowsA = A.length; int colsA = A[0].length; int colsB = B[0].length; int[][] C = new int[rowsA][colsB]; for (int i = 0; i < rowsA; i++) { for (int j = 0; j < colsB; j++) { for (int k = 0; k < colsA; k++) { C[i][j] += A[i][k] * B[k][j]; } } } return C; }",
+    "comments": "Multiplies two matrices A and B and returns the resulting matrix"
+  },
+  {
+    "code": "public int[] twoSum(int[] nums, int target) { Map<Integer, Integer> map = new HashMap<>(); for (int i = 0; i < nums.length; i++) { int complement = target - nums[i]; if (map.containsKey(complement)) { return new int[] { map.get(complement), i }; } map.put(nums[i], i); } throw new IllegalArgumentException(\"No solution\"); }",
+    "comments": "Finds two numbers in an array that add up to a specific target using a hash map"
+  },
+  {
+    "code": "public boolean isValidParentheses(String s) { Stack<Character> stack = new Stack<>(); for (char c : s.toCharArray()) { if (c == '(' || c == '[' || c == '{') { stack.push(c); } else { if (stack.isEmpty()) return false; char top = stack.pop(); if ((c == ')' && top != '(') || (c == ']' && top != '[') || (c == '}' && top != '{')) return false; } } return stack.isEmpty(); }",
+    "comments": "Checks if a string of parentheses, brackets, and curly braces is valid using a stack"
+  },
+  {
+    "code": "public ListNode mergeTwoLists(ListNode l1, ListNode l2) { ListNode dummy = new ListNode(0); ListNode current = dummy; while (l1 != null && l2 != null) { if (l1.val < l2.val) { current.next = l1; l1 = l1.next; } else { current.next = l2; l2 = l2.next; } current = current.next; } current.next = (l1 != null) ? l1 : l2; return dummy.next; }",
+    "comments": "Merges two sorted linked lists into a single sorted linked list"
+  },
+  {
+    "code": "public int maxSubArraySum(int[] nums) { int maxSoFar = nums[0]; int maxEndingHere = nums[0]; for (int i = 1; i < nums.length; i++) { maxEndingHere = Math.max(nums[i], maxEndingHere + nums[i]); maxSoFar = Math.max(maxSoFar, maxEndingHere); } return maxSoFar; }",
+    "comments": "Finds the contiguous subarray with the largest sum using Kadane's algorithm"
+  },
+  {
+    "code": "public TreeNode invertBinaryTree(TreeNode root) { if (root == null) return null; TreeNode left = invertBinaryTree(root.left); TreeNode right = invertBinaryTree(root.right); root.left = right; root.right = left; return root; }",
+    "comments": "Recursively inverts a binary tree by swapping left and right children"
+  },
+  {
+    "code": "public boolean containsDuplicate(int[] nums) { Set<Integer> set = new HashSet<>(); for (int num : nums) { if (set.contains(num)) return true; set.add(num); } return false; }",
+    "comments": "Checks if an array contains any duplicate elements using a HashSet"
+  },
+  {
+    "code": "public List<String> generateParenthesis(int n) { List<String> result = new ArrayList<>(); backtrack(result, \"\", 0, 0, n); return result; }",
+    "comments": "Generates all valid combinations of n pairs of parentheses"
+  },
+  {
+    "code": "private void backtrack(List<String> result, String current, int open, int close, int max) { if (current.length() == max * 2) { result.add(current); return; } if (open < max) backtrack(result, current + \"(\", open + 1, close, max); if (close < open) backtrack(result, current + \")\", open, close + 1, max); }",
+    "comments": "Helper method for parentheses generation using backtracking"
+  },
+  {
+    "code": "public int singleNumber(int[] nums) { int result = 0; for (int num : nums) { result ^= num; } return result; }",
+    "comments": "Finds the single number that appears only once in an array where all other elements appear twice"
+  },
+  {
+    "code": "public int hammingDistance(int x, int y) { return Integer.bitCount(x ^ y); }",
+    "comments": "Calculates the Hamming distance between two integers (number of positions at which bits differ)"
+  },
+  {
+    "code": "public int missingNumber(int[] nums) { int n = nums.length; int expectedSum = n * (n + 1) / 2; int actualSum = 0; for (int num : nums) { actualSum += num; } return expectedSum - actualSum; }",
+    "comments": "Finds the missing number in an array containing n distinct numbers in range [0, n]"
+  },
+  {
+    "code": "public int climbStairs(int n) { if (n <= 2) return n; int[] dp = new int[n + 1]; dp[1] = 1; dp[2] = 2; for (int i = 3; i <= n; i++) { dp[i] = dp[i - 1] + dp[i - 2]; } return dp[n]; }",
+    "comments": "Calculates the number of distinct ways to climb n stairs when taking 1 or 2 steps at a time"
+  },
+  {
+    "code": "public int rob(int[] nums) { if (nums.length == 0) return 0; if (nums.length == 1) return nums[0]; int[] dp = new int[nums.length]; dp[0] = nums[0]; dp[1] = Math.max(nums[0], nums[1]); for (int i = 2; i < nums.length; i++) { dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]); } return dp[nums.length - 1]; }",
+    "comments": "Solves the house robber problem where adjacent houses cannot be robbed using dynamic programming"
+  },
+  {
+    "code": "public int coinChange(int[] coins, int amount) { int[] dp = new int[amount + 1]; Arrays.fill(dp, amount + 1); dp[0] = 0; for (int i = 1; i <= amount; i++) { for (int coin : coins) { if (coin <= i) { dp[i] = Math.min(dp[i], dp[i - coin] + 1); } } } return dp[amount] > amount ? -1 : dp[amount]; }",
+    "comments": "Finds the minimum number of coins needed to make up a given amount using dynamic programming"
+  },
+  {
+    "code": "public int numIslands(char[][] grid) { if (grid == null || grid.length == 0) return 0; int count = 0; for (int i = 0; i < grid.length; i++) { for (int j = 0; j < grid[0].length; j++) { if (grid[i][j] == '1') { count++; dfs(grid, i, j); } } } return count; }",
+    "comments": "Counts the number of islands in a 2D grid where '1' represents land and '0' represents water"
+  },
+  {
+    "code": "private void dfs(char[][] grid, int i, int j) { if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] != '1') return; grid[i][j] = '0'; dfs(grid, i + 1, j); dfs(grid, i - 1, j); dfs(grid, i, j + 1); dfs(grid, i, j - 1); }",
+    "comments": "Performs depth-first search to mark connected land cells as visited during island counting"
+  },
+  {
+    "code": "public boolean isAnagram(String s, String t) { if (s.length() != t.length()) return false; int[] count = new int[26]; for (char c : s.toCharArray()) { count[c - 'a']++; } for (char c : t.toCharArray()) { count[c - 'a']--; if (count[c - 'a'] < 0) return false; } return true; }",
+    "comments": "Determines if two strings are anagrams of each other using character frequency counting"
+  },
+  {
+    "code": "public ListNode reverseList(ListNode head) { ListNode prev = null; ListNode current = head; while (current != null) { ListNode next = current.next; current.next = prev; prev = current; current = next; } return prev; }",
+    "comments": "Reverses a singly linked list iteratively"
+  },
+  {
+    "code": "public boolean hasCycle(ListNode head) { if (head == null || head.next == null) return false; ListNode slow = head; ListNode fast = head; while (fast != null && fast.next != null) { slow = slow.next; fast = fast.next.next; if (slow == fast) return true; } return false; }",
+    "comments": "Detects a cycle in a linked list using Floyd's cycle-finding algorithm (tortoise and hare)"
+  },
+  {
+    "code": "public int maxDepth(TreeNode root) { if (root == null) return 0; return 1 + Math.max(maxDepth(root.left), maxDepth(root.right)); }",
+    "comments": "Calculates the maximum depth (height) of a binary tree recursively"
+  },
+  {
+    "code": "public boolean isValidBST(TreeNode root) { return isValidBSTHelper(root, null, null); }",
+    "comments": "Checks if a binary tree is a valid binary search tree"
+  },
+  {
+    "code": "private boolean isValidBSTHelper(TreeNode node, Integer lower, Integer upper) { if (node == null) return true; if (lower != null && node.val <= lower) return false; if (upper != null && node.val >= upper) return false; return isValidBSTHelper(node.left, lower, node.val) && isValidBSTHelper(node.right, node.val, upper); }",
+    "comments": "Helper method to validate a binary search tree by checking value constraints recursively"
+  },
+  {
+    "code": "public int longestPalindrome(String s) { int[] count = new int[128]; for (char c : s.toCharArray()) { count[c]++; } int result = 0; for (int i : count) { result += i / 2 * 2; } return result < s.length() ? result + 1 : result; }",
+    "comments": "Finds the length of the longest palindrome that can be built with the letters from a string"
+  },
+  {
+    "code": "public int findKthLargest(int[] nums, int k) { PriorityQueue<Integer> minHeap = new PriorityQueue<>(); for (int num : nums) { minHeap.add(num); if (minHeap.size() > k) minHeap.poll(); } return minHeap.peek(); }",
+    "comments": "Finds the kth largest element in an array using a min heap"
+  },
+  {
+    "code": "public int lengthOfLIS(int[] nums) { if (nums.length == 0) return 0; int[] dp = new int[nums.length]; dp[0] = 1; int maxLen = 1; for (int i = 1; i < nums.length; i++) { dp[i] = 1; for (int j = 0; j < i; j++) { if (nums[i] > nums[j]) { dp[i] = Math.max(dp[i], dp[j] + 1); } } maxLen = Math.max(maxLen, dp[i]); } return maxLen; }",
+    "comments": "Finds the length of the longest increasing subsequence in an array using dynamic programming"
+  },
+  {
+    "code": "public int countPrimes(int n) { boolean[] isPrime = new boolean[n]; Arrays.fill(isPrime, true); for (int i = 2; i * i < n; i++) { if (isPrime[i]) { for (int j = i * i; j < n; j += i) { isPrime[j] = false; } } } int count = 0; for (int i = 2; i < n; i++) { if (isPrime[i]) count++; } return count; }",
+    "comments": "Counts the number of prime numbers less than n using the Sieve of Eratosthenes algorithm"
+  },
+  {
+    "code": "public String longestCommonPrefix(String[] strs) { if (strs.length == 0) return \"\"; String prefix = strs[0]; for (int i = 1; i < strs.length; i++) { while (strs[i].indexOf(prefix) != 0) { prefix = prefix.substring(0, prefix.length() - 1); if (prefix.isEmpty()) return \"\"; } } return prefix; }",
+    "comments": "Finds the longest common prefix string amongst an array of strings"
+  },
+  {
+    "code": "public int maxProfit(int[] prices) { int maxProfit = 0; int minPrice = Integer.MAX_VALUE; for (int price : prices) { if (price < minPrice) { minPrice = price; } else { maxProfit = Math.max(maxProfit, price - minPrice); } } return maxProfit; }",
+    "comments": "Calculates the maximum profit from buying and selling a stock once (buy low, sell high)"
+  },
+  {
+    "code": "public int romanToInt(String s) { Map<Character, Integer> map = new HashMap<>(); map.put('I', 1); map.put('V', 5); map.put('X', 10); map.put('L', 50); map.put('C', 100); map.put('D', 500); map.put('M', 1000); int result = 0; for (int i = 0; i < s.length(); i++) { if (i > 0 && map.get(s.charAt(i)) > map.get(s.charAt(i - 1))) { result += map.get(s.charAt(i)) - 2 * map.get(s.charAt(i - 1)); } else { result += map.get(s.charAt(i)); } } return result; }",
+    "comments": "Converts a Roman numeral string to an integer value"
+  },
+  {
+    "code": "public void rotate(int[][] matrix) { int n = matrix.length; for (int i = 0; i < n / 2; i++) { for (int j = i; j < n - i - 1; j++) { int temp = matrix[i][j]; matrix[i][j] = matrix[n - j - 1][i]; matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1]; matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1]; matrix[j][n - i - 1] = temp; } } }",
+    "comments": "Rotates a square matrix 90 degrees clockwise in-place"
+  },
+  {
+    "code": "public int findPeakElement(int[] nums) { int left = 0; int right = nums.length - 1; while (left < right) { int mid = left + (right - left) / 2; if (nums[mid] > nums[mid + 1]) { right = mid; } else { left = mid + 1; } } return left; }",
+    "comments": "Finds a peak element in an array (an element greater than its neighbors) using binary search"
+  },
+  {
+    "code": "public ListNode getIntersectionNode(ListNode headA, ListNode headB) { if (headA == null || headB == null) return null; ListNode a = headA; ListNode b = headB; while (a != b) { a = (a == null) ? headB : a.next; b = (b == null) ? headA : b.next; } return a; }",
+    "comments": "Finds the node where two linked lists intersect using a two-pointer technique"
+  },
+  {
+    "code": "public void moveZeroes(int[] nums) { int insertPos = 0; for (int num : nums) { if (num != 0) { nums[insertPos++] = num; } } while (insertPos < nums.length) { nums[insertPos++] = 0; } }",
+    "comments": "Moves all zeros in an array to the end while maintaining the relative order of non-zero elements"
+  },
+  {
+    "code": "public String addBinary(String a, String b) { StringBuilder result = new StringBuilder(); int i = a.length() - 1, j = b.length() - 1, carry = 0; while (i >= 0 || j >= 0) { int sum = carry; if (i >= 0) sum += a.charAt(i--) - '0'; if (j >= 0) sum += b.charAt(j--) - '0'; result.append(sum % 2); carry = sum / 2; } if (carry != 0) result.append(carry); return result.reverse().toString(); }",
+    "comments": "Adds two binary strings and returns their sum as a binary string"
+  },
+  {
+    "code": "public boolean canPartition(int[] nums) { int sum = 0; for (int num : nums) sum += num; if (sum % 2 != 0) return false; sum /= 2; boolean[] dp = new boolean[sum + 1]; dp[0] = true; for (int num : nums) { for (int i = sum; i >= num; i--) { dp[i] = dp[i] || dp[i - num]; } } return dp[sum]; }",
+    "comments": "Determines if an array can be partitioned into two subsets with equal sum using dynamic programming"
+  },
+  {
+    "code": "public String countAndSay(int n) { if (n == 1) return \"1\"; String prev = countAndSay(n - 1); StringBuilder result = new StringBuilder(); int count = 1; char say = prev.charAt(0); for (int i = 1; i < prev.length(); i++) { if (prev.charAt(i) != say) { result.append(count).append(say); count = 1; say = prev.charAt(i); } else { count++; } } result.append(count).append(say); return result.toString(); }",
+    "comments": "Implements the count-and-say sequence recursively, where each term describes the previous term"
+  },
+  {
+    "code": "public boolean wordBreak(String s, List<String> wordDict) { Set<String> wordSet = new HashSet<>(wordDict); boolean[] dp = new boolean[s.length() + 1]; dp[0] = true; for (int i = 1; i <= s.length(); i++) { for (int j = 0; j < i; j++) { if (dp[j] && wordSet.contains(s.substring(j, i))) { dp[i] = true; break; } } } return dp[s.length()]; }",
+    "comments": "Determines if a string can be segmented into words from a dictionary using dynamic programming"
+  },
+  {
+    "code": "public int findDuplicate(int[] nums) { int slow = nums[0]; int fast = nums[0]; do { slow = nums[slow]; fast = nums[nums[fast]]; } while (slow != fast); fast = nums[0]; while (slow != fast) { slow = nums[slow]; fast = nums[fast]; } return slow; }",
+    "comments": "Finds the duplicate number in an array using Floyd's cycle detection algorithm"
+  },
+  {
+    "code": "public List<List<Integer>> permute(int[] nums) { List<List<Integer>> result = new ArrayList<>(); backtrack(result, new ArrayList<>(), nums); return result; }",
+    "comments": "Generates all possible permutations of an array of distinct integers"
+  },
+  {
+    "code": "private void backtrack(List<List<Integer>> result, List<Integer> tempList, int[] nums) { if (tempList.size() == nums.length) { result.add(new ArrayList<>(tempList)); } else { for (int i = 0; i < nums.length; i++) { if (tempList.contains(nums[i])) continue; tempList.add(nums[i]); backtrack(result, tempList, nums); tempList.remove(tempList.size() - 1); } } }",
+    "comments": "Helper method for generating permutations using backtracking"
+  },
+  {
+    "code": "public int lengthOfLongestSubstring(String s) { Map<Character, Integer> map = new HashMap<>(); int start = 0, maxLen = 0; for (int end = 0; end < s.length(); end++) { char c = s.charAt(end); if (map.containsKey(c)) { start = Math.max(start, map.get(c) + 1); } map.put(c, end); maxLen = Math.max(maxLen, end - start + 1); } return maxLen; }",
+    "comments": "Finds the length of the longest substring without repeating characters using sliding window"
+  },
+  {
+    "code": "public String minWindow(String s, String t) { if (s.length() == 0 || t.length() == 0) return \"\"; Map<Character, Integer> dictT = new HashMap<>(); for (char c : t.toCharArray()) dictT.put(c, dictT.getOrDefault(c, 0) + 1); int required = dictT.size(), formed = 0; Map<Character, Integer> windowCounts = new HashMap<>(); int[] ans = {-1, 0, 0}; int l = 0, r = 0; while (r < s.length()) { char c = s.charAt(r); windowCounts.put(c, windowCounts.getOrDefault(c, 0) + 1); if (dictT.containsKey(c) && windowCounts.get(c).intValue() == dictT.get(c).intValue()) formed++; while (l <= r && formed == required) { c = s.charAt(l); if (ans[0] == -1 || r - l + 1 < ans[0]) { ans[0] = r - l + 1; ans[1] = l; ans[2] = r; } windowCounts.put(c, windowCounts.get(c) - 1); if (dictT.containsKey(c) && windowCounts.get(c).intValue() < dictT.get(c).intValue()) formed--; l++; } r++; } return ans[0] == -1 ? \"\" : s.substring(ans[1], ans[2] + 1); }",
+    "comments": "Finds the minimum window substring that contains all characters from string t in string s"
+  },
+  {
+    "code": "public int trap(int[] height) { if (height.length == 0) return 0; int left = 0, right = height.length - 1; int leftMax = 0, rightMax = 0; int water = 0; while (left < right) { if (height[left] < height[right]) { if (height[left] >= leftMax) leftMax = height[left]; else water += leftMax - height[left]; left++; } else { if (height[right] >= rightMax) rightMax = height[right]; else water += rightMax - height[right]; right--; } } return water; }",
+    "comments": "Calculates how much water can be trapped after raining using two-pointer technique"
+  },
+  {
+    "code": "public boolean isValidSudoku(char[][] board) { Set<String> seen = new HashSet<>(); for (int i = 0; i < 9; i++) { for (int j = 0; j < 9; j++) { char number = board[i][j]; if (number != '.') { if (!seen.add(number + \" in row \" + i) || !seen.add(number + \" in column \" + j) || !seen.add(number + \" in block \" + i/3 + \"-\" + j/3)) return false; } } } return true; }",
+    "comments": "Validates if a 9x9 Sudoku board is valid (no repeated digits in rows, columns, or 3x3 sub-boxes)"
+  },
+  {
+    "code": "public int evalRPN(String[] tokens) { Stack<Integer> stack = new Stack<>(); for (String token : tokens) { if (token.equals(\"+\")) stack.push(stack.pop() + stack.pop()); else if (token.equals(\"-\")) { int b = stack.pop(); int a = stack.pop(); stack.push(a - b); } else if (token.equals(\"*\")) stack.push(stack.pop() * stack.pop()); else if (token.equals(\"/\")) { int b = stack.pop(); int a = stack.pop(); stack.push(a / b); } else stack.push(Integer.parseInt(token)); } return stack.pop(); }",
+    "comments": "Evaluates a Reverse Polish Notation (postfix) expression using a stack"
+  },
+  {
+    "code": "public boolean canFinish(int numCourses, int[][] prerequisites) { List<Integer>[] adj = new ArrayList[numCourses]; for (int i = 0; i < numCourses; i++) adj[i] = new ArrayList<>(); int[] inDegree = new int[numCourses]; for (int[] prerequisite : prerequisites) { adj[prerequisite[1]].add(prerequisite[0]); inDegree[prerequisite[0]]++; } Queue<Integer> queue = new LinkedList<>(); for (int i = 0; i < numCourses; i++) { if (inDegree[i] == 0) queue.offer(i); } int count = 0; while (!queue.isEmpty()) { int curr = queue.poll(); count++; for (int next : adj[curr]) { inDegree[next]--; if (inDegree[next] == 0) queue.offer(next); } } return count == numCourses; }",
+    "comments": "Determines if it's possible to finish all courses given prerequisites (cycle detection in a directed graph)"
+  },
+  {
+    "code": "public int findCircleNum(int[][] isConnected) { int n = isConnected.length; boolean[] visited = new boolean[n]; int count = 0; for (int i = 0; i < n; i++) { if (!visited[i]) { dfs(isConnected, visited, i); count++; } } return count; }",
+    "comments": "Counts the number of provinces (connected components) in an undirected graph represented by an adjacency matrix"
+  },
+  {
+    "code": "private void dfs(int[][] isConnected, boolean[] visited, int node) { visited[node] = true; for (int i = 0; i < isConnected.length; i++) { if (isConnected[node][i] == 1 && !visited[i]) { dfs(isConnected, visited, i); } } }",
+    "comments": "Helper method for depth-first search traversal of a graph represented as an adjacency matrix"
+  },
+  {
+    "code": "public boolean isMatch(String s, String p) { boolean[][] dp = new boolean[s.length() + 1][p.length() + 1]; dp[0][0] = true; for (int j = 1; j <= p.length(); j++) { if (p.charAt(j - 1) == '*') dp[0][j] = dp[0][j - 2]; } for (int i = 1; i <= s.length(); i++) { for (int j = 1; j <= p.length(); j++) { char pc = p.charAt(j - 1); if (pc == '*') { dp[i][j] = dp[i][j - 2]; if (p.charAt(j - 2) == '.' || p.charAt(j - 2) == s.charAt(i - 1)) { dp[i][j] = dp[i][j] || dp[i - 1][j]; } } else { if (pc == '.' || pc == s.charAt(i - 1)) { dp[i][j] = dp[i - 1][j - 1]; } } } } return dp[s.length()][p.length()]; }",
+    "comments": "Implements regular expression matching with support for '.' and '*' using dynamic programming"
+  },
+  {
+    "code": "public double myPow(double x, int n) { if (n == 0) return 1; if (n < 0) { return 1 / myPow(x, -n); } if (n % 2 == 1) { return x * myPow(x, n - 1); } return myPow(x * x, n / 2); }",
+    "comments": "Efficiently calculates x raised to the power of n using recursion and divide-and-conquer"
+  },
+  {
+    "code": "public int[] productExceptSelf(int[] nums) { int n = nums.length; int[] result = new int[n]; result[0] = 1; for (int i = 1; i < n; i++) { result[i] = result[i - 1] * nums[i - 1]; } int right = 1; for (int i = n - 1; i >= 0; i--) { result[i] *= right; right *= nums[i]; } return result; }",
+    "comments": "Computes an array where each element is the product of all elements in the input array except itself"
+  },
+  {
+    "code": "public List<List<String>> groupAnagrams(String[] strs) { Map<String, List<String>> map = new HashMap<>(); for (String str : strs) { char[] chars = str.toCharArray(); Arrays.sort(chars); String key = new String(chars); map.putIfAbsent(key, new ArrayList<>()); map.get(key).add(str); } return new ArrayList<>(map.values()); }",
+    "comments": "Groups anagrams together from an array of strings using sorted strings as keys"
+  },
+  {
+    "code": "public List<Integer> spiralOrder(int[][] matrix) { List<Integer> result = new ArrayList<>(); if (matrix.length == 0) return result; int rowBegin = 0, rowEnd = matrix.length - 1; int colBegin = 0, colEnd = matrix[0].length - 1; while (rowBegin <= rowEnd && colBegin <= colEnd) { for (int j = colBegin; j <= colEnd; j++) { result.add(matrix[rowBegin][j]); } rowBegin++; for (int j = rowBegin; j <= rowEnd; j++) { result.add(matrix[j][colEnd]); } colEnd--; if (rowBegin <= rowEnd) { for (int j = colEnd; j >= colBegin; j--) { result.add(matrix[rowEnd][j]); } } rowEnd--; if (colBegin <= colEnd) { for (int j = rowEnd; j >= rowBegin; j--) { result.add(matrix[j][colBegin]); } } colBegin++; } return result; }",
+    "comments": "Returns all elements of a matrix in spiral order (clockwise from outside to inside)"
+  },
+  {
+    "code": "public String simplifyPath(String path) { Stack<String> stack = new Stack<>(); for (String dir : path.split(\"/\")) { if (dir.equals(\".\") || dir.isEmpty()) continue; if (dir.equals(\"..\")) { if (!stack.isEmpty()) stack.pop(); } else { stack.push(dir); } } StringBuilder result = new StringBuilder(); for (String dir : stack) { result.append(\"/\").append(dir); } return result.length() == 0 ? \"/\" : result.toString(); }",
+    "comments": "Simplifies a Unix-style file path by resolving '.' and '..' references"
+  },
+  {
+    "code": "public int uniquePaths(int m, int n) { int[][] dp = new int[m][n]; for (int i = 0; i < m; i++) dp[i][0] = 1; for (int j = 0; j < n; j++) dp[0][j] = 1; for (int i = 1; i < m; i++) { for (int j = 1; j < n; j++) { dp[i][j] = dp[i - 1][j] + dp[i][j - 1]; } } return dp[m - 1][n - 1]; }",
+    "comments": "Calculates the number of unique paths from top-left to bottom-right in a grid using dynamic programming"
+  },
+  {
+    "code": "public int search(int[] nums, int target) { int left = 0, right = nums.length - 1; while (left <= right) { int mid = left + (right - left) / 2; if (nums[mid] == target) return mid; if (nums[left] <= nums[mid]) { if (nums[left] <= target && target < nums[mid]) right = mid - 1; else left = mid + 1; } else { if (nums[mid] < target && target <= nums[right]) left = mid + 1; else right = mid - 1; } } return -1; }",
+    "comments": "Searches for a target value in a rotated sorted array using modified binary search"
+  },
+  {
+    "code": "public void nextPermutation(int[] nums) { int i = nums.length - 2; while (i >= 0 && nums[i] >= nums[i + 1]) i--; if (i >= 0) { int j = nums.length - 1; while (nums[j] <= nums[i]) j--; swap(nums, i, j); } reverse(nums, i + 1, nums.length - 1); }",
+    "comments": "Rearranges an array to the next lexicographically greater permutation in-place"
+  },
+  {
+    "code": "private void swap(int[] nums, int i, int j) { int temp = nums[i]; nums[i] = nums[j]; nums[j] = temp; }",
+    "comments": "Helper method to swap two elements in an array"
+  },
+  {
+    "code": "private void reverse(int[] nums, int start, int end) { while (start < end) { swap(nums, start++, end--); } }",
+    "comments": "Helper method to reverse a portion of an array between start and end indices"
+  },
+  {
+    "code": "int add(int a, int b) { return a + b; }",
+    "comments": "Adds two integers and returns the result"
+  },
+  {
+    "code": "boolean isEven(int number) { return number % 2 == 0; }",
+    "comments": "Checks if a number is even"
+  },
+  {
+    "code": "String reverseString(String str) { return new StringBuilder(str).reverse().toString(); }",
+    "comments": "Reverses a given string and returns the result"
+  },
+  {
+    "code": "int factorial(int n) { return n <= 1 ? 1 : n * factorial(n - 1); }",
+    "comments": "Computes the factorial of a number using recursion"
+  },
+  {
+    "code": "int max(int a, int b) { return a > b ? a : b; }",
+    "comments": "Returns the maximum of two integers"
+  },
+  {
+    "code": "boolean isPrime(int n) { if(n<=1) return false; for(int i=2;i<=Math.sqrt(n);i++) if(n%i==0) return false; return true; }",
+    "comments": "Checks if a number is prime"
+  },
+  {
+    "code": "int[] bubbleSort(int[] arr) { for(int i=0;i<arr.length-1;i++) for(int j=0;j<arr.length-i-1;j++) if(arr[j]>arr[j+1]) { int temp=arr[j]; arr[j]=arr[j+1]; arr[j+1]=temp; } return arr; }",
+    "comments": "Sorts an array of integers using bubble sort"
+  },
+  {
+    "code": "int countVowels(String str) { int count=0; for(char c:str.toLowerCase().toCharArray()) if(\"aeiou\".indexOf(c)>=0) count++; return count; }",
+    "comments": "Counts the number of vowels in a string"
+  },
+  {
+    "code": "boolean isPalindrome(String str) { String reversed = new StringBuilder(str).reverse().toString(); return str.equals(reversed); }",
+    "comments": "Checks if a string is a palindrome"
+  },
+  {
+    "code": "int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }",
+    "comments": "Calculates the greatest common divisor using recursion"
+  },
+  {
+    "code": "int power11(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 11)"
+  },
+  {
+    "code": "int power12(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 12)"
+  },
+  {
+    "code": "int power13(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 13)"
+  },
+  {
+    "code": "int power14(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 14)"
+  },
+  {
+    "code": "int power15(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 15)"
+  },
+  {
+    "code": "int power16(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 16)"
+  },
+  {
+    "code": "int power17(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 17)"
+  },
+  {
+    "code": "int power18(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 18)"
+  },
+  {
+    "code": "int power19(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 19)"
+  },
+  {
+    "code": "int power20(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 20)"
+  },
+  {
+    "code": "int power21(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 21)"
+  },
+  {
+    "code": "int power22(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 22)"
+  },
+  {
+    "code": "int power23(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 23)"
+  },
+  {
+    "code": "int power24(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 24)"
+  },
+  {
+    "code": "int power25(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 25)"
+  },
+  {
+    "code": "int power26(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 26)"
+  },
+  {
+    "code": "int power27(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 27)"
+  },
+  {
+    "code": "int power28(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 28)"
+  },
+  {
+    "code": "int power29(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 29)"
+  },
+  {
+    "code": "int power30(int base, int exp) { int result = 1; for(int i=0;i<exp;i++) result *= base; return result; }",
+    "comments": "Computes the power of a number (example function 30)"
+  },
+  {
+    "code": "int subtract(int a, int b) { return a - b; }",
+    "comments": "Subtracts the second integer from the first"
+  },
+  {
+    "code": "int multiply(int a, int b) { return a * b; }",
+    "comments": "Multiplies two integers and returns the result"
+  },
+  {
+    "code": "int divide(int a, int b) { if (b == 0) throw new ArithmeticException(\"Divide by zero\"); return a / b; }",
+    "comments": "Performs integer division with error handling for divide-by-zero"
+  },
+  {
+    "code": "int sumArray(int[] arr) { int sum = 0; for (int num : arr) sum += num; return sum; }",
+    "comments": "Calculates the sum of all elements in an array"
+  },
+  {
+    "code": "int findMin(int[] arr) { int min = arr[0]; for (int i = 1; i < arr.length; i++) if (arr[i] < min) min = arr[i]; return min; }",
+    "comments": "Finds the minimum value in an integer array"
+  },
+  {
+    "code": "int findMax(int[] arr) { int max = arr[0]; for (int i = 1; i < arr.length; i++) if (arr[i] > max) max = arr[i]; return max; }",
+    "comments": "Finds the maximum value in an integer array"
+  },
+  {
+    "code": "String capitalize(String str) { return str.substring(0, 1).toUpperCase() + str.substring(1); }",
+    "comments": "Capitalizes the first letter of a string"
+  },
+  {
+    "code": "boolean containsDigit(String str) { for (char c : str.toCharArray()) if (Character.isDigit(c)) return true; return false; }",
+    "comments": "Checks if a string contains any digits"
+  },
+  {
+    "code": "int countOccurrences(int[] arr, int target) { int count = 0; for (int i : arr) if (i == target) count++; return count; }",
+    "comments": "Counts how many times a target value appears in an array"
+  },
+  {
+    "code": "String removeSpaces(String str) { return str.replace(\" \", \"\"); }",
+    "comments": "Removes all spaces from a string"
+  },
+  {
+    "code": "boolean startsWithVowel(String str) { return str.toLowerCase().matches(\"^[aeiou].*\"); }",
+    "comments": "Checks if a string starts with a vowel"
+  },
+  {
+    "code": "boolean isUpperCase(String str) { return str.equals(str.toUpperCase()); }",
+    "comments": "Checks if a string is entirely uppercase"
+  },
+  {
+    "code": "boolean isLowerCase(String str) { return str.equals(str.toLowerCase()); }",
+    "comments": "Checks if a string is entirely lowercase"
+  },
+  {
+    "code": "int sumOfDigits(int number) { int sum = 0; while (number != 0) { sum += number % 10; number /= 10; } return sum; }",
+    "comments": "Calculates the sum of digits in a number"
+  },
+  {
+    "code": "int square(int num) { return num * num; }",
+    "comments": "Returns the square of a number"
+  },
+  {
+    "code": "String repeatString(String str, int times) { return str.repeat(times); }",
+    "comments": "Repeats a string a specified number of times"
+  },
+  {
+    "code": "void swap(int[] arr, int i, int j) { int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; }",
+    "comments": "Swaps two elements in an array at given indices"
+  },
+  {
+    "code": "String joinStrings(String[] arr, String delimiter) { return String.join(delimiter, arr); }",
+    "comments": "Joins an array of strings with a specified delimiter"
+  },
+  {
+    "code": "boolean isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0; }",
+    "comments": "Checks if a year is a leap year"
+  },
+  {
+    "code": "int charFrequency(String str, char ch) { int count = 0; for (char c : str.toCharArray()) if (c == ch) count++; return count; }",
+    "comments": "Counts how many times a character appears in a string"
+  },
+  {
+    "code": "boolean isPalindrome(String str) { int i = 0, j = str.length() - 1; while (i < j) { if (str.charAt(i) != str.charAt(j)) return false; i++; j--; } return true; }",
+    "comments": "Checks if a string is a palindrome"
+  },
+  {
+    "code": "String reverseWords(String sentence) { String[] words = sentence.split(\" \"); Collections.reverse(Arrays.asList(words)); return String.join(\" \", words); }",
+    "comments": "Reverses the order of words in a sentence"
+  },
+  {
+    "code": "int factorial(int n) { if (n == 0) return 1; return n * factorial(n - 1); }",
+    "comments": "Recursively calculates the factorial of a number"
+  },
+  {
+    "code": "boolean isPrime(int n) { if (n <= 1) return false; for (int i = 2; i <= Math.sqrt(n); i++) if (n % i == 0) return false; return true; }",
+    "comments": "Determines whether a number is prime"
+  },
+  {
+    "code": "int fibonacci(int n) { if (n <= 1) return n; return fibonacci(n - 1) + fibonacci(n - 2); }",
+    "comments": "Recursively returns the nth Fibonacci number"
+  },
+  {
+    "code": "int[] reverseArray(int[] arr) { int left = 0, right = arr.length - 1; while (left < right) { int temp = arr[left]; arr[left] = arr[right]; arr[right] = temp; left++; right--; } return arr; }",
+    "comments": "Reverses the elements of an integer array in place"
+  },
+  {
+    "code": "boolean isEven(int n) { return n % 2 == 0; }",
+    "comments": "Returns true if the number is even"
+  },
+  {
+    "code": "boolean isOdd(int n) { return n % 2 != 0; }",
+    "comments": "Returns true if the number is odd"
+  },
+  {
+    "code": "String removeVowels(String str) { return str.replaceAll(\"[aeiouAEIOU]\", \"\"); }",
+    "comments": "Removes all vowels from a string"
+  },
+  {
+    "code": "boolean isAnagram(String s1, String s2) { char[] a = s1.toCharArray(), b = s2.toCharArray(); Arrays.sort(a); Arrays.sort(b); return Arrays.equals(a, b); }",
+    "comments": "Checks if two strings are anagrams of each other"
+  },
+  {
+    "code": "int gcd(int a, int b) { if (b == 0) return a; return gcd(b, a % b); }",
+    "comments": "Finds the greatest common divisor (GCD) using recursion"
+  },
+  {
+    "code": "int lcm(int a, int b) { return (a * b) / gcd(a, b); }",
+    "comments": "Finds the least common multiple (LCM) using GCD"
+  },
+  {
+    "code": "String toBinary(int num) { return Integer.toBinaryString(num); }",
+    "comments": "Converts an integer to a binary string"
+  },
+  {
+    "code": "int fromBinary(String bin) { return Integer.parseInt(bin, 2); }",
+    "comments": "Converts a binary string to an integer"
+  },
+  {
+    "code": "int countWords(String sentence) { if (sentence.trim().isEmpty()) return 0; return sentence.trim().split(\"\\\\s+\").length; }",
+    "comments": "Counts the number of words in a sentence"
+  },
+  {
+    "code": "int average(int[] arr) { int sum = 0; for (int i : arr) sum += i; return arr.length == 0 ? 0 : sum / arr.length; }",
+    "comments": "Calculates the average value of integers in an array"
+  },
+  {
+    "code": "int maxDifference(int[] arr) { int min = arr[0], maxDiff = 0; for (int i = 1; i < arr.length; i++) { if (arr[i] < min) min = arr[i]; else maxDiff = Math.max(maxDiff, arr[i] - min); } return maxDiff; }",
+    "comments": "Finds the maximum difference between two elements where larger comes after smaller"
+  },
+  {
+    "code": "boolean isSorted(int[] arr) { for (int i = 1; i < arr.length; i++) if (arr[i] < arr[i - 1]) return false; return true; }",
+    "comments": "Checks if an array is sorted in ascending order"
+  },
+  {
+    "code": "int countEvenNumbers(int[] arr) { int count = 0; for (int i : arr) if (i % 2 == 0) count++; return count; }",
+    "comments": "Counts the number of even integers in an array"
+  },
+  {
+    "code": "int countOddNumbers(int[] arr) { int count = 0; for (int i : arr) if (i % 2 != 0) count++; return count; }",
+    "comments": "Counts the number of odd integers in an array"
+  },
+  {
+    "code": "String reverseEachWord(String sentence) { String[] words = sentence.split(\" \"); StringBuilder result = new StringBuilder(); for (String word : words) { result.append(new StringBuilder(word).reverse()).append(\" \"); } return result.toString().trim(); }",
+    "comments": "Reverses each word in a sentence while preserving the word order"
+  },
+  {
+    "code": "int findSecondLargest(int[] arr) { int first = Integer.MIN_VALUE, second = Integer.MIN_VALUE; for (int num : arr) { if (num > first) { second = first; first = num; } else if (num > second && num != first) second = num; } return second; }",
+    "comments": "Finds the second largest number in an array"
+  },
+  {
+    "code": "int countUpperCase(String str) { int count = 0; for (char c : str.toCharArray()) if (Character.isUpperCase(c)) count++; return count; }",
+    "comments": "Counts the number of uppercase letters in a string"
+  },
+  {
+    "code": "int countLowerCase(String str) { int count = 0; for (char c : str.toCharArray()) if (Character.isLowerCase(c)) count++; return count; }",
+    "comments": "Counts the number of lowercase letters in a string"
+  },
+  {
+    "code": "boolean allUniqueChars(String str) { Set<Character> seen = new HashSet<>(); for (char c : str.toCharArray()) if (!seen.add(c)) return false; return true; }",
+    "comments": "Checks if all characters in a string are unique"
+  },
+  {
+    "code": "boolean isPerfectSquare(int n) { int sqrt = (int) Math.sqrt(n); return sqrt * sqrt == n; }",
+    "comments": "Determines if a number is a perfect square"
+  },
+  {
+    "code": "String removeDuplicateChars(String str) { StringBuilder sb = new StringBuilder(); Set<Character> seen = new HashSet<>(); for (char c : str.toCharArray()) { if (!seen.contains(c)) { seen.add(c); sb.append(c); } } return sb.toString(); }",
+    "comments": "Removes duplicate characters from a string while maintaining order"
+  },
+  {
+    "code": "boolean areAllElementsPositive(int[] arr) { for (int num : arr) if (num <= 0) return false; return true; }",
+    "comments": "Checks if all elements in an array are positive"
+  },
+  {
+    "code": "int[] mergeArrays(int[] a, int[] b) { int[] merged = new int[a.length + b.length]; System.arraycopy(a, 0, merged, 0, a.length); System.arraycopy(b, 0, merged, a.length, b.length); return merged; }",
+    "comments": "Merges two arrays into a single array"
+  },
+  {
+    "code": "boolean endsWithPunctuation(String str) { return str.matches(\".*[.!?]$\"); }",
+    "comments": "Checks if a string ends with a punctuation mark like ., !, or ?"
+  },
+  {
+    "code": "String truncate(String str, int length) { return str.length() <= length ? str : str.substring(0, length); }",
+    "comments": "Truncates a string to a specified length"
+  },
+  {
+    "code": "String toTitleCase(String str) { String[] words = str.toLowerCase().split(\" \"); StringBuilder sb = new StringBuilder(); for (String word : words) { if (word.length() > 0) sb.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(\" \"); } return sb.toString().trim(); }",
+    "comments": "Converts a sentence to title case"
+  },
+  {
+    "code": "boolean isDivisibleBy(int num, int divisor) { return divisor != 0 && num % divisor == 0; }",
+    "comments": "Checks if one number is divisible by another"
+  },
+  {
+    "code": "boolean containsOnlyLetters(String str) { return str.matches(\"[a-zA-Z]+$\"); }",
+    "comments": "Checks if a string contains only alphabetic letters"
+  },
+  {
+    "code": "int sumUntilZero(Scanner sc) { int sum = 0, num; while ((num = sc.nextInt()) != 0) sum += num; return sum; }",
+    "comments": "Reads integers from input and sums them until a zero is entered"
+  },
+  {
+    "code": "int maxOfThree(int a, int b, int c) { return Math.max(a, Math.max(b, c)); }",
+    "comments": "Returns the maximum of three integers"
+  },
+  {
+    "code": "String longestString(String[] arr) { String longest = \"\"; for (String s : arr) if (s.length() > longest.length()) longest = s; return longest; }",
+    "comments": "Finds the longest string in an array of strings"
+  },
+  {
+    "code": "String getFileExtension(String fileName) { int index = fileName.lastIndexOf('.'); return index > 0 ? fileName.substring(index + 1) : \"\"; }",
+    "comments": "Extracts the file extension from a file name"
+  },
+  {
+    "code": "boolean isArmstrong(int num) { int sum = 0, original = num, digits = String.valueOf(num).length(); while (num != 0) { int digit = num % 10; sum += Math.pow(digit, digits); num /= 10; } return sum == original; }",
+    "comments": "Checks if a number is an Armstrong number"
+  },
+  {
+    "code": "String maskEmail(String email) { int at = email.indexOf('@'); return email.charAt(0) + \"*****\" + email.substring(at - 1); }",
+    "comments": "Masks an email address for privacy"
+  },
+  {
+    "code": "boolean isLeapYear(int year) { return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0); }",
+    "comments": "Determines whether a given year is a leap year"
+  },
+  {
+    "code": "int digitSum(int n) { int sum = 0; while (n != 0) { sum += n % 10; n /= 10; } return sum; }",
+    "comments": "Calculates the sum of the digits of an integer"
+  },
+  {
+    "code": "int[] sortDescending(int[] arr) { Integer[] boxed = Arrays.stream(arr).boxed().toArray(Integer[]::new); Arrays.sort(boxed, Collections.reverseOrder()); return Arrays.stream(boxed).mapToInt(i -> i).toArray(); }",
+    "comments": "Sorts an array of integers in descending order"
+  },
+  {
+    "code": "boolean isSubstring(String str, String substr) { return str.contains(substr); }",
+    "comments": "Checks if one string is a substring of another"
+  },
+  {
+    "code": "int sumMatrix(int[][] matrix) { int sum = 0; for (int[] row : matrix) for (int val : row) sum += val; return sum; }",
+    "comments": "Calculates the sum of all elements in a 2D matrix"
+  },
+  {
+    "code": "int[] generateFibonacci(int n) { int[] fib = new int[n]; if (n > 0) fib[0] = 0; if (n > 1) fib[1] = 1; for (int i = 2; i < n; i++) fib[i] = fib[i - 1] + fib[i - 2]; return fib; }",
+    "comments": "Generates the first n Fibonacci numbers in an array"
+  },
+  {
+    "code": "String removeDigits(String str) { return str.replaceAll(\"\\\\d\", \"\"); }",
+    "comments": "Removes all numeric digits from a string"
+  },
+  {
+    "code": "boolean isPangram(String sentence) { sentence = sentence.toLowerCase(); for (char c = 'a'; c <= 'z'; c++) if (!sentence.contains(String.valueOf(c))) return false; return true; }",
+    "comments": "Checks if a sentence is a pangram (contains every letter of the alphabet)"
+  },
+  {
+    "code": "int[][] transposeMatrix(int[][] matrix) { int rows = matrix.length, cols = matrix[0].length; int[][] transposed = new int[cols][rows]; for (int i = 0; i < rows; i++) for (int j = 0; j < cols; j++) transposed[j][i] = matrix[i][j]; return transposed; }",
+    "comments": "Transposes a 2D matrix (swaps rows and columns)"
+  },
+  {
+    "code": "String repeatString(String s, int times) { return s.repeat(times); }",
+    "comments": "Repeats a given string a specified number of times"
+  },
+  {
+    "code": "boolean hasConsecutiveDuplicates(String str) { for (int i = 1; i < str.length(); i++) if (str.charAt(i) == str.charAt(i - 1)) return true; return false; }",
+    "comments": "Checks if a string has consecutive duplicate characters"
+  },
+  {
+    "code": "int countChar(String str, char ch) { int count = 0; for (char c : str.toCharArray()) if (c == ch) count++; return count; }",
+    "comments": "Counts the number of occurrences of a specific character in a string"
+  },
+  {
+    "code": "int[] removeNegatives(int[] arr) { return Arrays.stream(arr).filter(i -> i >= 0).toArray(); }",
+    "comments": "Removes all negative numbers from an array"
+  },
+  {
+    "code": "String capitalizeWords(String str) { String[] words = str.split(\" \"); StringBuilder sb = new StringBuilder(); for (String word : words) if (!word.isEmpty()) sb.append(Character.toUpperCase(word.charAt(0))).append(word.substring(1)).append(\" \"); return sb.toString().trim(); }",
+    "comments": "Capitalizes the first letter of every word in a sentence"
+  },
+  {
+    "code": "int findMissingNumber(int[] arr, int n) { int total = n * (n + 1) / 2; for (int num : arr) total -= num; return total; }",
+    "comments": "Finds the missing number in an array containing numbers from 1 to n"
+  },
+  {
+    "code": "boolean isAllDigits(String str) { return str.matches(\"\\\\d+\"); }",
+    "comments": "Checks if a string contains only digits"
+  },
+  {
+    "code": "int countWordsStartingWithVowel(String sentence) { int count = 0; for (String word : sentence.split(\" \")) if (word.matches(\"(?i)^[aeiou].*\")) count++; return count; }",
+    "comments": "Counts how many words in a sentence start with a vowel"
+  },
+  {
+    "code": "int[] squareArray(int[] arr) { return Arrays.stream(arr).map(i -> i * i).toArray(); }",
+    "comments": "Returns a new array with each element squared"
+  },
+  {
+    "code": "boolean isMonotonic(int[] arr) { boolean inc = true, dec = true; for (int i = 1; i < arr.length; i++) { if (arr[i] > arr[i - 1]) dec = false; if (arr[i] < arr[i - 1]) inc = false; } return inc || dec; }",
+    "comments": "Checks whether an array is monotonic (entirely non-increasing or non-decreasing)"
+  },
+  {
+    "code": "String intToRoman(int num) { String[] M = {\"\", \"M\", \"MM\", \"MMM\"}; String[] C = {\"\", \"C\", \"CC\", \"CCC\", \"CD\", \"D\", \"DC\", \"DCC\", \"DCCC\", \"CM\"}; String[] X = {\"\", \"X\", \"XX\", \"XXX\", \"XL\", \"L\", \"LX\", \"LXX\", \"LXXX\", \"XC\"}; String[] I = {\"\", \"I\", \"II\", \"III\", \"IV\", \"V\", \"VI\", \"VII\", \"VIII\", \"IX\"}; return M[num / 1000] + C[(num % 1000) / 100] + X[(num % 100) / 10] + I[num % 10]; }",
+    "comments": "Converts an integer to a Roman numeral"
+  },
+  {
+    "code": "boolean isValidEmail(String email) { return email.matches(\"^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$\\\"); }",
+    "comments": "Validates an email address format"
+  },
+  {
+    "code": "int[] findDuplicates(int[] arr) { Set<Integer> seen = new HashSet<>(); List<Integer> duplicates = new ArrayList<>(); for (int num : arr) { if (!seen.add(num)) duplicates.add(num); } return duplicates.stream().mapToInt(i -> i).toArray(); }",
+    "comments": "Finds and returns duplicate elements from an array"
+  },
+  {
+    "code": "int[] removeElement(int[] arr, int element) { return Arrays.stream(arr).filter(i -> i != element).toArray(); }",
+    "comments": "Removes all occurrences of a specific element from an array"
+  },
+  {
+    "code": "int countSubstrings(String str, String sub) { int count = 0, index = 0; while ((index = str.indexOf(sub, index)) != -1) { count++; index++; } return count; }",
+    "comments": "Counts the number of occurrences of a substring within a string"
+  },
+  {
+    "code": "String getFileNameWithoutExtension(String fileName) { return fileName.substring(0, fileName.lastIndexOf('.')); }",
+    "comments": "Extracts the file name without its extension"
+  },
+  {
+    "code": "boolean areAnagrams(String str1, String str2) { char[] arr1 = str1.toCharArray(); char[] arr2 = str2.toCharArray(); Arrays.sort(arr1); Arrays.sort(arr2); return Arrays.equals(arr1, arr2); }",
+    "comments": "Checks if two strings are anagrams"
+  },
+  {
+    "code": "boolean containsWhitespace(String str) { return str.contains(\" \"); }",
+    "comments": "Checks if a string contains whitespace characters"
+  },
+  {
+    "code": "int[] rotateArray(int[] arr, int k) { int n = arr.length; k = k % n; int[] rotated = new int[n]; for (int i = 0; i < n; i++) rotated[(i + k) % n] = arr[i]; return rotated; }",
+    "comments": "Rotates the elements of an array by a given number of positions"
+  },
+  {
+    "code": "String[] splitByComma(String str) { return str.split(\",\"); }",
+    "comments": "Splits a string by commas into an array of strings"
+  },
+  {
+    "code": "boolean isValidPhoneNumber(String phone) { return phone.matches(\"^\\\\+?[0-9\\\\-\\\\s()]+$\\\"); }",
+    "comments": "Validates if a phone number has a valid format"
+  },
+  {
+    "code": "boolean isBalancedParentheses(String str) { Stack<Character> stack = new Stack<>(); for (char c : str.toCharArray()) { if (c == '(') stack.push(c); else if (c == ')') { if (stack.isEmpty()) return false; stack.pop(); } } return stack.isEmpty(); }",
+    "comments": "Checks if the parentheses in a string are balanced"
+  },
+  {
+    "code": "int[] quickSort(int[] arr, int low, int high) { if (low < high) { int pi = partition(arr, low, high); quickSort(arr, low, pi - 1); quickSort(arr, pi + 1, high); } return arr; } private int partition(int[] arr, int low, int high) { int pivot = arr[high]; int i = low - 1; for (int j = low; j < high; j++) { if (arr[j] < pivot) { i++; int temp = arr[i]; arr[i] = arr[j]; arr[j] = temp; } } int temp = arr[i + 1]; arr[i + 1] = arr[high]; arr[high] = temp; return i + 1; }",
+    "comments": "Implements the quicksort algorithm for sorting an array"
+  },
+  {
+    "code": "boolean isPrime(int num) { if (num <= 1) return false; for (int i = 2; i * i <= num; i++) { if (num % i == 0) return false; } return true; }",
+    "comments": "Checks if a number is prime"
+  },
+  {
+    "code": "List<Integer> mergeSortedLists(List<Integer> list1, List<Integer> list2) { List<Integer> merged = new ArrayList<>(); int i = 0, j = 0; while (i < list1.size() && j < list2.size()) { if (list1.get(i) < list2.get(j)) merged.add(list1.get(i++)); else merged.add(list2.get(j++)); } while (i < list1.size()) merged.add(list1.get(i++)); while (j < list2.size()) merged.add(list2.get(j++)); return merged; }",
+    "comments": "Merges two sorted lists into a single sorted list"
+  },
+  {
+    "code": "int gcd(int a, int b) { while (b != 0) { int temp = b; b = a % b; a = temp; } return a; }",
+    "comments": "Finds the greatest common divisor (GCD) of two numbers using Euclid's algorithm"
+  },
+  {
+    "code": "String convertToBinary(int num) { StringBuilder binary = new StringBuilder(); while (num > 0) { binary.insert(0, num % 2); num /= 2; } return binary.toString(); }",
+    "comments": "Converts an integer to its binary representation"
+  },
+  {
+    "code": "List<List<Integer>> generatePascalTriangle(int n) { List<List<Integer>> triangle = new ArrayList<>(); for (int i = 0; i < n; i++) { List<Integer> row = new ArrayList<>(Collections.nCopies(i + 1, 1)); for (int j = 1; j < i; j++) row.set(j, triangle.get(i - 1).get(j - 1) + triangle.get(i - 1).get(j)); triangle.add(row); } return triangle; }",
+    "comments": "Generates a Pascal's triangle of size n"
+  },
+  {
+    "code": "String longestCommonPrefix(String[] strs) { if (strs.length == 0) return \"\"; String prefix = strs[0]; for (int i = 1; i < strs.length; i++) { while (strs[i].indexOf(prefix) != 0) { prefix = prefix.substring(0, prefix.length() - 1); if (prefix.isEmpty()) return \"\"; } } return prefix; }",
+    "comments": "Finds the longest common prefix among a list of strings"
+  },
+  {
+    "code": "boolean isPalindrome(String str) { int left = 0, right = str.length() - 1; while (left < right) { if (str.charAt(left) != str.charAt(right)) return false; left++; right--; } return true; }",
+    "comments": "Checks if a string is a palindrome"
+  },
+  {
+    "code": "void mergeSort(int[] arr, int left, int right) { if (left < right) { int mid = (left + right) / 2; mergeSort(arr, left, mid); mergeSort(arr, mid + 1, right); merge(arr, left, mid, right); } } private void merge(int[] arr, int left, int mid, int right) { int n1 = mid - left + 1; int n2 = right - mid; int[] leftArr = new int[n1], rightArr = new int[n2]; System.arraycopy(arr, left, leftArr, 0, n1); System.arraycopy(arr, mid + 1, rightArr, 0, n2); int i = 0, j = 0, k = left; while (i < n1 && j < n2) { if (leftArr[i] <= rightArr[j]) arr[k++] = leftArr[i++]; else arr[k++] = rightArr[j++]; } while (i < n1) arr[k++] = leftArr[i++]; while (j < n2) arr[k++] = rightArr[j++]; }",
+    "comments": "Implements the merge sort algorithm"
+  },
+  {
+    "code": "List<Integer> topKFrequent(int[] nums, int k) { Map<Integer, Integer> freqMap = new HashMap<>(); for (int num : nums) freqMap.put(num, freqMap.getOrDefault(num, 0) + 1); PriorityQueue<Map.Entry<Integer, Integer>> pq = new PriorityQueue<>((a, b) -> b.getValue() - a.getValue()); pq.addAll(freqMap.entrySet()); List<Integer> topK = new ArrayList<>(); for (int i = 0; i < k; i++) topK.add(pq.poll().getKey()); return topK; }",
+    "comments": "Finds the k most frequent elements in an array"
+  },
+  {
+    "code": "boolean isSymmetric(TreeNode root) { if (root == null) return true; return isMirror(root.left, root.right); } private boolean isMirror(TreeNode t1, TreeNode t2) { if (t1 == null && t2 == null) return true; if (t1 == null || t2 == null) return false; return (t1.val == t2.val) && isMirror(t1.left, t2.right) && isMirror(t1.right, t2.left); }",
+    "comments": "Checks if a binary tree is symmetric"
+  },
+  {
+    "code": "int[][] rotateMatrix(int[][] matrix) { int n = matrix.length; for (int i = 0; i < n / 2; i++) { for (int j = i; j < n - i - 1; j++) { int temp = matrix[i][j]; matrix[i][j] = matrix[n - j - 1][i]; matrix[n - j - 1][i] = matrix[n - i - 1][n - j - 1]; matrix[n - i - 1][n - j - 1] = matrix[j][n - i - 1]; matrix[j][n - i - 1] = temp; } } return matrix; }",
+    "comments": "Rotates a square matrix 90 degrees clockwise"
+  },
+  {
+    "code": "boolean canFormPalindrome(String str) { Map<Character, Integer> freqMap = new HashMap<>(); for (char c : str.toCharArray()) freqMap.put(c, freqMap.getOrDefault(c, 0) + 1); int oddCount = 0; for (int count : freqMap.values()) { if (count % 2 != 0) oddCount++; if (oddCount > 1) return false; } return true; }",
+    "comments": "Checks if a string can be rearranged into a palindrome"
+  },
+  {
+    "code": "List<List<Integer>> subsets(int[] nums) { List<List<Integer>> result = new ArrayList<>(); result.add(new ArrayList<>()); for (int num : nums) { int size = result.size(); for (int i = 0; i < size; i++) { List<Integer> subset = new ArrayList<>(result.get(i)); subset.add(num); result.add(subset); } } return result; }",
+    "comments": "Generates all possible subsets of a given array of integers"
+  },
+  {
+    "code": "int longestSubstring(String s, int k) { Map<Character, Integer> map = new HashMap<>(); for (char c : s.toCharArray()) map.put(c, map.getOrDefault(c, 0) + 1); if (s.length() < k) return 0; for (char c : map.keySet()) { if (map.get(c) < k) return Math.max(longestSubstring(s.substring(0, s.indexOf(c)), k), longestSubstring(s.substring(s.indexOf(c) + 1), k)); } return s.length(); }",
+    "comments": "Finds the length of the longest substring where each character appears at least k times"
+  },
+  {
+    "code": "List<String> letterCombinations(String digits) { if (digits.isEmpty()) return new ArrayList<>(); String[] mapping = {\"\", \",\", \"abc\", \"def\", \"ghi\", \"jkl\", \"mno\", \"pqrs\", \"tuv\", \"wxyz\"}; List<String> result = new ArrayList<>(); result.add(\"\"); for (char digit : digits.toCharArray()) { List<String> temp = new ArrayList<>(); for (String s : result) { for (char c : mapping[digit - '0'].toCharArray()) temp.add(s + c); } result = temp; } return result; }",
+    "comments": "Generates all possible letter combinations that the phone number could represent"
+  },
+  {
+    "code": "int trap(int[] height) { int n = height.length; if (n == 0) return 0; int leftMax = 0, rightMax = 0, left = 0, right = n - 1, water = 0; while (left <= right) { if (height[left] <= height[right]) { leftMax = Math.max(leftMax, height[left]); water += leftMax - height[left]; left++; } else { rightMax = Math.max(rightMax, height[right]); water += rightMax - height[right]; right--; } } return water; }",
+    "comments": "Calculates the total amount of water that can be trapped between the bars after raining"
+  },
+  {
+    "code": "int countIslands(char[][] grid) { if (grid == null || grid.length == 0) return 0; int count = 0; for (int i = 0; i < grid.length; i++) { for (int j = 0; j < grid[i].length; j++) { if (grid[i][j] == '1') { count++; dfs(grid, i, j); } } } return count; } private void dfs(char[][] grid, int i, int j) { if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] == '0') return; grid[i][j] = '0'; dfs(grid, i - 1, j); dfs(grid, i + 1, j); dfs(grid, i, j - 1); dfs(grid, i, j + 1); }",
+    "comments": "Counts the number of islands in a 2D grid (connected components of '1's)"
+  },
+  {
+    "code": "boolean canJump(int[] nums) { int maxReach = 0; for (int i = 0; i < nums.length; i++) { if (i > maxReach) return false; maxReach = Math.max(maxReach, i + nums[i]); } return true; }",
+    "comments": "Determines if you can reach the last index of an array starting from the first index, based on jump lengths"
+  },
+  {
+    "code": "String longestPalindrome(String s) { if (s == null || s.length() < 1) return \"\"; int start = 0, end = 0; for (int i = 0; i < s.length(); i++) { int len1 = expandFromCenter(s, i, i); int len2 = expandFromCenter(s, i, i + 1); int len = Math.max(len1, len2); if (len > end - start) { start = i - (len - 1) / 2; end = i + len / 2; } } return s.substring(start, end + 1); } private int expandFromCenter(String s, int left, int right) { while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) { left--; right++; } return right - left - 1; }",
+    "comments": "Finds the longest palindromic substring in a given string"
+  },
+  {
+    "code": "boolean hasCycle(ListNode head) { ListNode slow = head, fast = head; while (fast != null && fast.next != null) { slow = slow.next; fast = fast.next.next; if (slow == fast) return true; } return false; }",
+    "comments": "Detects if a linked list has a cycle"
+  },
+  {
+    "code": "int findMedianSortedArrays(int[] nums1, int[] nums2) { int m = nums1.length, n = nums2.length; if (m > n) return findMedianSortedArrays(nums2, nums1); int left = 0, right = m, halfLen = (m + n + 1) / 2; while (left < right) { int mid = (left + right) / 2; if (nums1[mid] < nums2[halfLen - mid - 1]) left = mid + 1; else right = mid; } int maxLeft = Math.max(nums1[left - 1], nums2[halfLen - left - 1]); if ((m + n) % 2 == 1) return maxLeft; int minRight = Math.min(nums1[left], nums2[halfLen - left]); return (maxLeft + minRight) / 2; }",
+    "comments": "Finds the median of two sorted arrays"
+  },
+  {
+    "code": "int[] sortedSquares(int[] nums) { int n = nums.length; int[] result = new int[n]; int left = 0, right = n - 1; for (int i = n - 1; i >= 0; i--) { if (Math.abs(nums[left]) > Math.abs(nums[right])) result[i] = nums[left] * nums[left++]; else result[i] = nums[right] * nums[right--]; } return result; }",
+    "comments": "Squares each number in a sorted array and returns the sorted array of squares"
+  }
+]

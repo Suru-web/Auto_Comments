@@ -1,12 +1,13 @@
 import torch
 from transformers import AutoTokenizer, T5ForConditionalGeneration, Trainer, TrainingArguments
 from sklearn.model_selection import train_test_split
-from dataset_preprocessing import load_and_preprocess_data, CodeCommentDataset
+from java_data_preprocess import load_and_preprocess_data, JavaCodeCommentDataset
+import os
 
 # Main training function
 def train_model():
     # Load data
-    data = load_and_preprocess_data("../data/code-comments.json")
+    data = load_and_preprocess_data("../data/java_code_comments.json")
     train_data, val_data = train_test_split(data, test_size=0.2, random_state=42)
 
     # Initialize model and tokenizer
@@ -19,12 +20,12 @@ def train_model():
     model.to(device)
     
     # Create datasets
-    train_dataset = CodeCommentDataset(train_data, tokenizer)
-    val_dataset = CodeCommentDataset(val_data, tokenizer)
+    train_dataset = JavaCodeCommentDataset(train_data, tokenizer)
+    val_dataset = JavaCodeCommentDataset(val_data, tokenizer)
 
     # Training arguments
     training_args = TrainingArguments(
-        output_dir="./trained-code-comment-model-1",
+        output_dir="./trained-code-comment-model-base",
         num_train_epochs=10,
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
@@ -50,8 +51,8 @@ def train_model():
     trainer.train()
 
     # Save model
-    model.save_pretrained("./trained-code-comment-model-1")
-    tokenizer.save_pretrained("./trained-code-comment-model-1")
+    model.save_pretrained("./trained-code-comment-model-base")
+    tokenizer.save_pretrained("./trained-code-comment-model-base")
 
 if __name__ == "__main__":
     train_model()

@@ -1,5 +1,7 @@
 .venv/
-python/model/__pycache__/
+__pycache__
 python/model/trained-code-comment-model/
 .DS_Store
 .gitignore
+trained-code-comment-model
+trained-code-comment-model.zip
