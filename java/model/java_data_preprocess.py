@@ -10,7 +10,7 @@ def load_and_preprocess_data(file_path):
     for item in dataset:
         processed.append({
             "input_text": item["code"].strip(),
-            "target_text": f"{item['comments'].replace('#', '').strip()}"
+            "target_text": f"{item['comment'].replace('#', '').strip()}"
         })
     return processed
 

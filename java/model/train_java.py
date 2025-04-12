@@ -7,7 +7,7 @@ import os
 # Main training function
 def train_model():
     # Load data
-    data = load_and_preprocess_data("../data/java_code_comments.json")
+    data = load_and_preprocess_data("../data/java_comment_dataset.json")
     train_data, val_data = train_test_split(data, test_size=0.2, random_state=42)
 
     # Initialize model and tokenizer
