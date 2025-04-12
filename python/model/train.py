@@ -24,7 +24,7 @@ def train_model():
 
     # Training arguments
     training_args = TrainingArguments(
-        output_dir="./trained-code-comment-model-1",
+        output_dir="./trained-code-comment-model",
         num_train_epochs=10,
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
@@ -50,8 +50,8 @@ def train_model():
     trainer.train()
 
     # Save model
-    model.save_pretrained("./trained-code-comment-model-1")
-    tokenizer.save_pretrained("./trained-code-comment-model-1")
+    model.save_pretrained("./trained-code-comment-model")
+    tokenizer.save_pretrained("./trained-code-comment-model")
 
 if __name__ == "__main__":
     train_model()

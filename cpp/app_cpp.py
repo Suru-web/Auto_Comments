@@ -1,19 +1,18 @@
-import streamlit as st
+# import streamlit as st
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import re
 
 # Load pre-trained model and tokenizer
-@st.cache_resource
+# @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("../cpp/model/model_cpp_small")
-    model = AutoModelForSeq2SeqLM.from_pretrained("../cpp/model/model_cpp_small")
+    tokenizer = AutoTokenizer.from_pretrained("cpp/model/model_cpp_small")
+    model = AutoModelForSeq2SeqLM.from_pretrained("cpp/model/model_cpp_small")
     return tokenizer, model
 
-tokenizer, model = load_model()
-
 # Function to generate comments for C++ code
-def generate_comments(code_snippet):
+def generate_comments_cpp(code_snippet):
+    tokenizer, model = load_model()
     # Preprocess the code - extract method signatures, etc.
     # This is a simplified version; you might need more sophisticated parsing
     methods = re.findall(r'(\w+\s+\w+\s*\([^)]*\)\s*\{[^}]*\})', code_snippet)
@@ -42,18 +41,18 @@ def generate_comments(code_snippet):
     return commented_code
 
 # Streamlit UI
-st.title("C++ Code Comment Generator")
-st.write("Enter C++ code snippet to generate appropriate comments")
+# st.title("C++ Code Comment Generator")
+# st.write("Enter C++ code snippet to generate appropriate comments")
 
-code_input = st.text_area("C++ Code", height=300, 
-                          placeholder="Paste your C++ code here...")
+# code_input = st.text_area("C++ Code", height=300, 
+#                           placeholder="Paste your C++ code here...")
 
-if st.button("Generate Comments"):
-    if code_input:
-        with st.spinner("Generating comments..."):
-            commented_code = generate_comments(code_input)
+# if st.button("Generate Comments"):
+#     if code_input:
+#         with st.spinner("Generating comments..."):
+#             commented_code = generate_comments(code_input)
         
-        st.subheader("Generated Comments:")
-        st.code(commented_code, language="cpp")
-    else:
-        st.warning("Please enter some C++ code first.")
+#         st.subheader("Generated Comments:")
+#         st.code(commented_code, language="cpp")
+#     else:
+#         st.warning("Please enter some C++ code first.")

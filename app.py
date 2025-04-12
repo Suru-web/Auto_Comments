@@ -1,57 +1,69 @@
 import streamlit as st
-import torch
-import ast
-from transformers import AutoTokenizer, T5ForConditionalGeneration
+import json
+from python.app_python import split_code_python
+from cpp.app_cpp import generate_comments_cpp
+from java.app_java import generate_comments_java
+from streamlit_extras.add_vertical_space import add_vertical_space
+from streamlit_lottie import st_lottie
 
-model_path = "/Users/surajmeharwade/Projects/Auto_Comments/model/trained-code-comment-model"
-tokenizer = AutoTokenizer.from_pretrained(model_path)
-model = T5ForConditionalGeneration.from_pretrained(model_path)
+st.title("Auto-Comment Generator using AI")
 
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-model.to(device)
-
-def generate_comment(code_snippet, max_length=64):
-    input_ids = tokenizer(
-        code_snippet.strip(),
-        return_tensors="pt",
-        max_length=256,
-        truncation=True,
-        padding="max_length"
-    ).input_ids.to(device)
-
-    with torch.no_grad():
-        output_ids = model.generate(input_ids, max_length=max_length, num_return_sequences=1)
-
-    comment = "# " + tokenizer.decode(output_ids[0], skip_special_tokens=True) + "\n" + code_snippet
-    return comment
+option = st.selectbox(
+    label='Select the language you want to generate the comment for -',
+    options=('Python','C++','Java'),
+    placeholder='Select language...',
+    index=None
+)
 
 
-def split_code(code_snippet):
-    tree = ast.parse(code_snippet)  # Parse the code into an AST
-    output = []
+if option:
+    if option == 'Python':
+        code_snippet = st.text_area(f"{option} Code", height=300, placeholder=f"Paste your {option} code here...")
+        if st.button("Generate Comments"):
+            if code_snippet:
+                with st.spinner("Generating comments..."):
+                    commented_code = split_code_python(code_snippet=code_snippet)
+        
+                st.subheader("Generated Comments:")
+                st.code(commented_code, language="python")
+            else:
+                st.warning("Please enter some python code first.")
+    elif option == 'C++':
+        code_snippet = st.text_area(f"{option} Code", height=300, placeholder=f"Paste your {option} code here...")
+        if st.button("Generate Comments"):
+            if code_snippet:
+                with st.spinner("Generating comments..."):
+                    commented_code = generate_comments_cpp(code_snippet=code_snippet)
+        
+                st.subheader("Generated Comments:")
+                st.code(commented_code, language="C++")
+            else:
+                st.warning("Please enter some C++ code first.")
+    elif option == 'Java':
+        code_snippet = st.text_area(f"{option} Code", height=300, placeholder=f"Paste your {option} code here...")
+        if st.button("Generate Comments"):
+            if code_snippet:
+                with st.spinner("Generating comments..."):
+                    commented_code = generate_comments_java(code_snippet=code_snippet)
+        
+                st.subheader("Generated Comments:")
+                st.code(commented_code, language="Java")
+            else:
+                st.warning("Please enter some Java code first.")
+else:
+    @st.cache_resource
+    def load_image_json(path):
+        with open(path, 'r') as j:
+            animation = json.loads(j.read())
+        return animation
+    add_vertical_space(10)
+    lottie_json = load_image_json("static/type_lottie.json")
+    left_col, center_col, right_col = st.columns([1, 2, 1])
 
-    for node in tree.body:
-        try:
-            node_code = ast.unparse(node)  # Convert AST node back into code
-            comment = generate_comment(node_code)  # Generate a comment for each statement
-            output.append(comment)
-        except Exception as e:
-            output.append(f"# [Error processing] {str(e)}\n{ast.dump(node)}")  # Handle any errors gracefully
-
-    return "\n\n".join(output)  # Join the commented code for display
-
-
-st.set_page_config(page_title="Python Code Comment Generator", layout="wide")
-st.title("💬 Python Code Comment Generator")
-st.write("Enter a Python code snippet, and the AI will generate a comment for it.")
-
-code_input = st.text_area("📝 Paste your Python code here:", height=200)
-
-if st.button("Generate Comment"):
-    if code_input.strip():
-        with st.spinner("Generating comment... ⏳"):
-            comment = split_code(code_input)
-        st.success("✅ Comment Generated!")
-        st.code(comment, language="python")
-    else:
-        st.warning("⚠️ Please enter some Python code.")
+    with center_col:
+        st_lottie(
+            lottie_json,
+            key="lottie_animation",
+            height=300,  # adjust as needed
+            width=300
+        )
