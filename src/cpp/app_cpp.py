@@ -6,8 +6,8 @@ import re
 # Load pre-trained model and tokenizer
 # @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("cpp/model/model_cpp_small")
-    model = AutoModelForSeq2SeqLM.from_pretrained("cpp/model/model_cpp_small")
+    tokenizer = AutoTokenizer.from_pretrained("src/cpp/model/model_cpp_small")
+    model = AutoModelForSeq2SeqLM.from_pretrained("src/cpp/model/model_cpp_small")
     return tokenizer, model
 
 # Function to generate comments for C++ code

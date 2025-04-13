@@ -6,8 +6,8 @@ import re
 # Load pre-trained model and tokenizer
 # @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("java/model/trained-code-comment-model")
-    model = AutoModelForSeq2SeqLM.from_pretrained("java/model/trained-code-comment-model")
+    tokenizer = AutoTokenizer.from_pretrained("src/java/model/trained-code-comment-model")
+    model = AutoModelForSeq2SeqLM.from_pretrained("src/java/model/trained-code-comment-model")
     return tokenizer, model
 
 
