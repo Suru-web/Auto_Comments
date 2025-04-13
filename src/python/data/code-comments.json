@@ -1,0 +1,2030 @@
+[
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# This function takes two numbers as input and returns their sum."
+  },
+  {
+    "code": "def subtract(a, b):\n    return a - b",
+    "comments": "# This function takes two numbers as input and returns their difference."
+  },
+  {
+    "code": "def multiply(a, b):\n    return a * b",
+    "comments": "# This function takes two numbers as input and returns their product."
+  },
+  {
+    "code": "def divide(a, b):\n    if b == 0:\n        return 'Division by zero is not allowed'\n    return a / b",
+    "comments": "# This function takes two numbers as input and returns their division. Handles division by zero."
+  },
+  {
+    "code": "def sort_list(lst):\n    return sorted(lst)",
+    "comments": "# This function takes a list as input and returns a sorted version of the list."
+  },
+  {
+    "code": "def reverse_list(lst):\n    return lst[::-1]",
+    "comments": "# This function takes a list as input and returns the reversed version of the list."
+  },
+  {
+    "code": "def search_list(lst, item):\n    return item in lst",
+    "comments": "# This function takes a list and an item as input and returns True if the item is in the list, otherwise False."
+  },
+  {
+    "code": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)",
+    "comments": "# This function calculates the factorial of a number using recursion."
+  },
+  {
+    "code": "def fibonacci(n):\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    elif n == 2:\n        return [0, 1]\n    fib = [0, 1]\n    for i in range(2, n):\n        fib.append(fib[-1] + fib[-2])\n    return fib",
+    "comments": "# This function generates a Fibonacci sequence up to the nth term."
+  },
+  {
+    "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "comments": "# This function checks if a number is prime."
+  },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# This function takes two numbers as input and returns their sum."
+  },
+  {
+    "code": "def subtract(a, b):\n    return a - b",
+    "comments": "# This function takes two numbers as input and returns their difference."
+  },
+  {
+    "code": "def multiply(a, b):\n    return a * b",
+    "comments": "# This function takes two numbers as input and returns their product."
+  },
+  {
+    "code": "def divide(a, b):\n    if b == 0:\n        return 'Division by zero is not allowed'\n    return a / b",
+    "comments": "# This function takes two numbers as input and returns their division. Handles division by zero."
+  },
+  {
+    "code": "def is_even(n):\n    return n % 2 == 0",
+    "comments": "# This function checks if a number is even."
+  },
+  {
+    "code": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)",
+    "comments": "# This function calculates the factorial of a number using recursion."
+  },
+  {
+    "code": "def fibonacci(n):\n    if n <= 0:\n        return []\n    elif n == 1:\n        return [0]\n    elif n == 2:\n        return [0, 1]\n    fib = [0, 1]\n    for i in range(2, n):\n        fib.append(fib[-1] + fib[-2])\n    return fib",
+    "comments": "# This function generates a Fibonacci sequence up to the nth term."
+  },
+  {
+    "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "comments": "# This function checks if a number is prime."
+  },
+  {
+    "code": "def reverse_string(s):\n    return s[::-1]",
+    "comments": "# This function takes a string as input and returns its reverse."
+  },
+  {
+    "code": "def count_vowels(s):\n    return sum(1 for char in s if char.lower() in 'aeiou')",
+    "comments": "# This function counts the number of vowels in a string."
+  },
+  {
+    "code": "def sort_list(lst):\n    return sorted(lst)",
+    "comments": "# This function takes a list as input and returns a sorted version of the list."
+  },
+  {
+    "code": "def binary_search(lst, target):\n    left, right = 0, len(lst) - 1\n    while left <= right:\n        mid = (left + right) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            left = mid + 1\n        else:\n            right = mid - 1\n    return -1",
+    "comments": "# This function performs a binary search on a sorted list and returns the index of the target element, or -1 if not found."
+  },
+  {
+    "code": "def merge_sort(lst):\n    if len(lst) <= 1:\n        return lst\n    mid = len(lst) // 2\n    left = merge_sort(lst[:mid])\n    right = merge_sort(lst[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] < right[j]:\n            result.append(left[i])\n            i += 1\n        else:\n            result.append(right[j])\n            j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result",
+    "comments": "# This function implements the merge sort algorithm to sort a list."
+  },
+  {
+    "code": "def quick_sort(lst):\n    if len(lst) <= 1:\n        return lst\n    pivot = lst[len(lst) // 2]\n    left = [x for x in lst if x < pivot]\n    middle = [x for x in lst if x == pivot]\n    right = [x for x in lst if x > pivot]\n    return quick_sort(left) + middle + quick_sort(right)",
+    "comments": "# This function implements the quick sort algorithm to sort a list."
+  },
+  {
+    "code": "def find_duplicates(lst):\n    seen = set()\n    duplicates = set()\n    for item in lst:\n        if item in seen:\n            duplicates.add(item)\n        else:\n            seen.add(item)\n    return list(duplicates)",
+    "comments": "# This function finds and returns duplicate elements in a list."
+  },
+  {
+    "code": "def transpose_matrix(matrix):\n    return [list(row) for row in zip(*matrix)]",
+    "comments": "# This function transposes a 2D matrix."
+  },
+  {
+    "code": "def flatten_list(lst):\n    return [item for sublist in lst for item in sublist]",
+    "comments": "# This function flattens a 2D list into a 1D list."
+  },
+  {
+    "code": "def count_words(text):\n    words = text.split()\n    return len(words)",
+    "comments": "# This function counts the number of words in a given text."
+  },
+  {
+    "code": "def most_frequent_element(lst):\n    return max(set(lst), key=lst.count)",
+    "comments": "# This function finds the most frequent element in a list."
+  },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# This function takes two numbers as input and returns their sum."
+  },
+  {
+    "code": "def subtract(a, b):\n    return a - b",
+    "comments": "# This function takes two numbers as input and returns their difference."
+  },
+  {
+    "code": "def multiply(a, b):\n    return a * b",
+    "comments": "# This function takes two numbers as input and returns their product."
+  },
+  {
+    "code": "def divide(a, b):\n    if b == 0:\n        return 'Division by zero is not allowed'\n    return a / b",
+    "comments": "# This function takes two numbers as input and returns their division. Handles division by zero."
+  },
+  {
+    "code": "def is_even(n):\n    return n % 2 == 0",
+    "comments": "# This function checks if a number is even."
+  },
+  {
+    "code": "def is_odd(n):\n    return n % 2 != 0",
+    "comments": "# This function checks if a number is odd."
+  },
+  {
+    "code": "def max_of_three(a, b, c):\n    return max(a, b, c)",
+    "comments": "# This function returns the maximum of three numbers."
+  },
+  {
+    "code": "def min_of_three(a, b, c):\n    return min(a, b, c)",
+    "comments": "# This function returns the minimum of three numbers."
+  },
+  {
+    "code": "def factorial_iterative(n):\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result",
+    "comments": "# This function calculates the factorial of a number using iteration."
+  },
+  {
+    "code": "def power(base, exponent):\n    return base ** exponent",
+    "comments": "# This function calculates the power of a base raised to an exponent."
+  },
+  {
+    "code": "def is_palindrome(s):\n    return s == s[::-1]",
+    "comments": "# This function checks if a string is a palindrome."
+  },
+  {
+    "code": "def remove_duplicates(lst):\n    return list(set(lst))",
+    "comments": "# This function removes duplicate elements from a list."
+  },
+  {
+    "code": "def merge_dicts(d1, d2):\n    return {**d1, **d2}",
+    "comments": "# This function merges two dictionaries into one."
+  },
+  {
+    "code": "def char_frequency(s):\n    return {char: s.count(char) for char in set(s)}",
+    "comments": "# This function calculates the frequency of each character in a string."
+  },
+  {
+    "code": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+    "comments": "# This function calculates the greatest common divisor (GCD) of two numbers."
+  },
+  {
+    "code": "def lcm(a, b):\n    return abs(a * b) // gcd(a, b)",
+    "comments": "# This function calculates the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "def sum_of_squares(lst):\n    return sum(x**2 for x in lst)",
+    "comments": "# This function calculates the sum of squares of elements in a list."
+  },
+  {
+    "code": "def is_anagram(s1, s2):\n    return sorted(s1) == sorted(s2)",
+    "comments": "# This function checks if two strings are anagrams."
+  },
+  {
+    "code": "def count_occurrences(lst, item):\n    return lst.count(item)",
+    "comments": "# This function counts the occurrences of an item in a list."
+  },
+  {
+    "code": "def sum_of_digits(n):\n    return sum(int(digit) for digit in str(n))",
+    "comments": "# This function calculates the sum of digits of a number."
+  },
+  {
+    "code": "def is_perfect_square(n):\n    return int(n**0.5)**2 == n",
+    "comments": "# This function checks if a number is a perfect square."
+  },
+  {
+    "code": "def matrix_multiplication(A, B):\n    result = [[sum(a * b for a, b in zip(A_row, B_col)) for B_col in zip(*B)] for A_row in A]\n    return result",
+    "comments": "# This function performs matrix multiplication of two 2D matrices."
+  },
+  {
+    "code": "def unique_elements(lst):\n    return list(set(lst))",
+    "comments": "# This function returns the unique elements in a list."
+  },
+  {
+    "code": "def caesar_cipher_encrypt(text, shift):\n    result = ''\n    for char in text:\n        if char.isalpha():\n            shift_base = ord('A') if char.isupper() else ord('a')\n            result += chr((ord(char) - shift_base + shift) % 26 + shift_base)\n        else:\n            result += char\n    return result",
+    "comments": "# This function encrypts a string using the Caesar cipher."
+  },
+  {
+    "code": "def caesar_cipher_decrypt(text, shift):\n    return caesar_cipher_encrypt(text, -shift)",
+    "comments": "# This function decrypts a string encrypted using the Caesar cipher."
+  },
+  {
+    "code": "def remove_whitespace(s):\n    return ''.join(s.split())",
+    "comments": "# This function removes all whitespace from a string."
+  },
+  {
+    "code": "def rotate_list(lst, k):\n    k = k % len(lst)\n    return lst[-k:] + lst[:-k]",
+    "comments": "# This function rotates a list to the right by k positions."
+  },
+  {
+    "code": "def transpose_matrix(matrix):\n    return [list(row) for row in zip(*matrix)]",
+    "comments": "# This function transposes a 2D matrix."
+  },
+  {
+    "code": "def count_uppercase(s):\n    return sum(1 for char in s if char.isupper())",
+    "comments": "# This function counts the number of uppercase letters in a string."
+  },
+  {
+    "code": "def count_lowercase(s):\n    return sum(1 for char in s if char.islower())",
+    "comments": "# This function counts the number of lowercase letters in a string."
+  },
+  {
+    "code": "def reverse_words(s):\n    return ' '.join(s.split()[::-1])",
+    "comments": "# This function reverses the order of words in a string."
+  },
+  {
+    "code": "def find_longest_word(words):\n    return max(words, key=len)",
+    "comments": "# This function finds the longest word in a list of words."
+  },
+  {
+    "code": "def generate_primes(n):\n    primes = []\n    for i in range(2, n + 1):\n        if all(i % p != 0 for p in primes):\n            primes.append(i)\n    return primes",
+    "comments": "# This function generates all prime numbers up to n."
+  },
+
+  {
+    "code": "def calculate_area_of_circle(radius):\n    import math\n    return math.pi * radius**2",
+    "comments": "# This function calculates the area of a circle given its radius."
+  },
+  {
+    "code": "def count_vowels(s):\n    vowels = 'aeiouAEIOU'\n    return sum(1 for char in s if char in vowels)",
+    "comments": "# This function counts the number of vowels in a given string."
+  },
+  {
+    "code": "def find_duplicates(lst):\n    return [item for item in set(lst) if lst.count(item) > 1]",
+    "comments": "# This function returns a list of duplicate elements in the input list."
+  },
+  {
+    "code": "def flatten_list(nested_list):\n    return [item for sublist in nested_list for item in sublist]",
+    "comments": "# This function flattens a nested list into a single list."
+  },
+  {
+    "code": "def binary_search(lst, target):\n    low, high = 0, len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+    "comments": "# This function performs binary search on a sorted list and returns the index of the target if found, otherwise -1."
+  },
+  {
+    "code": "def calculate_fibonacci_recursive(n):\n    if n <= 1:\n        return n\n    return calculate_fibonacci_recursive(n-1) + calculate_fibonacci_recursive(n-2)",
+    "comments": "# This function calculates the nth Fibonacci number using recursion."
+  },
+  {
+    "code": "def is_leap_year(year):\n    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)",
+    "comments": "# This function checks if a given year is a leap year."
+  },
+  {
+    "code": "def remove_punctuation(s):\n    import string\n    return ''.join(char for char in s if char not in string.punctuation)",
+    "comments": "# This function removes all punctuation from a string."
+  },
+  {
+    "code": "def count_words(s):\n    return len(s.split())",
+    "comments": "# This function counts the number of words in a string."
+  },
+  {
+    "code": "def sum_of_cubes(lst):\n    return sum(x**3 for x in lst)",
+    "comments": "# This function calculates the sum of cubes of elements in a list."
+  },
+  {
+    "code": "def find_second_largest(lst):\n    unique_lst = list(set(lst))\n    unique_lst.sort()\n    return unique_lst[-2] if len(unique_lst) > 1 else None",
+    "comments": "# This function finds the second largest number in a list."
+  },
+  {
+    "code": "def convert_to_binary(n):\n    return bin(n)[2:]",
+    "comments": "# This function converts a decimal number to its binary representation."
+  },
+  {
+    "code": "def convert_to_hexadecimal(n):\n    return hex(n)[2:]",
+    "comments": "# This function converts a decimal number to its hexadecimal representation."
+  },
+  {
+    "code": "def convert_to_octal(n):\n    return oct(n)[2:]",
+    "comments": "# This function converts a decimal number to its octal representation."
+  },
+  {
+    "code": "def reverse_string(s):\n    return s[::-1]",
+    "comments": "# This function reverses a given string."
+  },
+  {
+    "code": "def calculate_average(lst):\n    return sum(lst) / len(lst) if lst else 0",
+    "comments": "# This function calculates the average of numbers in a list."
+  },
+  {
+    "code": "def is_valid_email(email):\n    import re\n    return bool(re.match(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$', email))",
+    "comments": "# This function checks if a given string is a valid email address."
+  },
+  {
+    "code": "def calculate_median(lst):\n    lst.sort()\n    n = len(lst)\n    mid = n // 2\n    return (lst[mid] + lst[mid - 1]) / 2 if n % 2 == 0 else lst[mid]",
+    "comments": "# This function calculates the median of a list of numbers."
+  },
+  {
+    "code": "def is_substring(sub, main):\n    return sub in main",
+    "comments": "# This function checks if a string is a substring of another string."
+  },
+  {
+    "code": "def remove_duplicates_ordered(lst):\n    seen = set()\n    return [x for x in lst if not (x in seen or seen.add(x))]",
+    "comments": "# This function removes duplicates from a list while preserving order."
+  },
+  {
+    "code": "def calculate_hypotenuse(a, b):\n    import math\n    return math.sqrt(a**2 + b**2)",
+    "comments": "# This function calculates the hypotenuse of a right triangle given the other two sides."
+  },
+  {
+    "code": "def merge_sorted_lists(lst1, lst2):\n    return sorted(lst1 + lst2)",
+    "comments": "# This function merges two sorted lists into a single sorted list."
+  },
+  {
+    "code": "def find_largest_element(lst):\n    return max(lst) if lst else None",
+    "comments": "# This function finds the largest element in a list."
+  },
+  {
+    "code": "def find_smallest_element(lst):\n    return min(lst) if lst else None",
+    "comments": "# This function finds the smallest element in a list."
+  },
+  {
+    "code": "def calculate_modulus(a, b):\n    return a % b",
+    "comments": "# This function calculates the modulus of two numbers."
+  },
+  {
+    "code": "def is_symmetric_matrix(matrix):\n    return matrix == [list(row) for row in zip(*matrix)]",
+    "comments": "# This function checks if a matrix is symmetric."
+  },
+  {
+    "code": "def calculate_standard_deviation(lst):\n    import math\n    mean = sum(lst) / len(lst)\n    return math.sqrt(sum((x - mean)**2 for x in lst) / len(lst))",
+    "comments": "# This function calculates the standard deviation of a list of numbers."
+  },
+  {
+    "code": "def convert_to_uppercase(s):\n    return s.upper()",
+    "comments": "# This function converts a string to uppercase."
+  },
+  {
+    "code": "def convert_to_lowercase(s):\n    return s.lower()",
+    "comments": "# This function converts a string to lowercase."
+  },
+  {
+    "code": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+    "comments": "# This function calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm."
+  },
+  {
+    "code": "def lcm(a, b):\n    def gcd(a, b):\n        while b:\n            a, b = b, a % b\n        return a\n    return abs(a * b) // gcd(a, b)",
+    "comments": "# This function calculates the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "def is_palindrome(s):\n    return s == s[::-1]",
+    "comments": "# This function checks if a string is a palindrome."
+  },
+  {
+    "code": "def remove_whitespace(s):\n    return s.replace(' ', '')",
+    "comments": "# This function removes all whitespace from a string."
+  },
+  {
+    "code": "def factorial_iterative(n):\n    result = 1\n    for i in range(2, n + 1):\n        result *= i\n    return result",
+    "comments": "# This function calculates the factorial of a number iteratively."
+  },
+  {
+    "code": "def count_occurrences(lst, value):\n    return lst.count(value)",
+    "comments": "# This function counts the occurrences of a value in a list."
+  },
+  {
+    "code": "def merge_dicts(dict1, dict2):\n    return {**dict1, **dict2}",
+    "comments": "# This function merges two dictionaries into one."
+  },
+  {
+    "code": "def reverse_words(s):\n    return ' '.join(word[::-1] for word in s.split())",
+    "comments": "# This function reverses each word in a given string."
+  },
+  {
+    "code": "def is_anagram(s1, s2):\n    return sorted(s1) == sorted(s2)",
+    "comments": "# This function checks if two strings are anagrams of each other."
+  },
+  {
+    "code": "def find_max_in_matrix(matrix):\n    return max(max(row) for row in matrix)",
+    "comments": "# This function finds the maximum value in a 2D matrix."
+  },
+  {
+    "code": "def transpose_matrix(matrix):\n    return [list(row) for row in zip(*matrix)]",
+    "comments": "# This function transposes a 2D matrix."
+  },
+  {
+    "code": "def remove_keys_with_value(d, value):\n    return {k: v for k, v in d.items() if v != value}",
+    "comments": "# This function removes all key-value pairs from a dictionary where the value matches the given value."
+  },
+  {
+    "code": "def is_power_of_two(n):\n    return n > 0 and (n & (n - 1)) == 0",
+    "comments": "# This function checks if a number is a power of two."
+  },
+  {
+    "code": "def sum_of_digits(n):\n    return sum(int(digit) for digit in str(abs(n)))",
+    "comments": "# This function calculates the sum of the digits of a number."
+  },
+  {
+    "code": "def generate_pascal_triangle(n):\n    triangle = []\n    for i in range(n):\n        row = [1] * (i + 1)\n        for j in range(1, i):\n            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]\n        triangle.append(row)\n    return triangle",
+    "comments": "# This function generates Pascal's triangle up to n rows."
+  },
+  {
+    "code": "def read_file(filepath):\n    with open(filepath, 'r') as file:\n        return file.read()",
+    "comments": "# This function reads the contents of a file and returns it as a string."
+  },
+  {
+    "code": "def write_to_file(filepath, content):\n    with open(filepath, 'w') as file:\n        file.write(content)",
+    "comments": "# This function writes the given content to a file."
+  },
+  {
+    "code": "def count_lines_in_file(filepath):\n    with open(filepath, 'r') as file:\n        return sum(1 for _ in file)",
+    "comments": "# This function counts the number of lines in a file."
+  },
+  {
+    "code": "def calculate_percentage(part, whole):\n    return (part / whole) * 100 if whole != 0 else 0",
+    "comments": "# This function calculates the percentage of a part relative to the whole."
+  },
+  {
+    "code": "def get_unique_elements(lst):\n    return list(set(lst))",
+    "comments": "# This function returns a list of unique elements from the input list."
+  },
+  {
+    "code": "def find_intersection(lst1, lst2):\n    return list(set(lst1) & set(lst2))",
+    "comments": "# This function finds the intersection of two lists."
+  },
+  {
+    "code": "def find_union(lst1, lst2):\n    return list(set(lst1) | set(lst2))",
+    "comments": "# This function finds the union of two lists."
+  },
+  {
+    "code": "def find_difference(lst1, lst2):\n    return list(set(lst1) - set(lst2))",
+    "comments": "# This function finds the difference between two lists."
+  },
+  {
+    "code": "def is_valid_parentheses(s):\n    stack = []\n    mapping = {')': '(', '}': '{', ']': '['}\n    for char in s:\n        if char in mapping:\n            top_element = stack.pop() if stack else '#'\n            if mapping[char] != top_element:\n                return False\n        else:\n            stack.append(char)\n    return not stack",
+    "comments": "# This function checks if a string of parentheses is valid."
+  },
+  {
+    "code": "def get_file_extension(filename):\n    return filename.split('.')[-1] if '.' in filename else ''",
+    "comments": "# This function extracts the file extension from a filename."
+  },
+  {
+    "code": "def count_characters(s):\n    from collections import Counter\n    return dict(Counter(s))",
+    "comments": "# This function counts the occurrences of each character in a string."
+  },
+  {
+    "code": "def generate_random_string(length):\n    import random\n    import string\n    return ''.join(random.choices(string.ascii_letters + string.digits, k=length))",
+    "comments": "# This function generates a random string of the specified length."
+  },
+  {
+    "code": "def get_even_numbers(lst):\n    return [x for x in lst if x % 2 == 0]",
+    "comments": "# This function returns a list of even numbers from the input list."
+  },
+  {
+    "code": "def get_odd_numbers(lst):\n    return [x for x in lst if x % 2 != 0]",
+    "comments": "# This function returns a list of odd numbers from the input list."
+  },
+  {
+    "code": "def convert_to_title_case(s):\n    return s.title()",
+    "comments": "# This function converts a string to title case."
+  },
+  {
+    "code": "def is_symmetric(lst):\n    return lst == lst[::-1]",
+    "comments": "# This function checks if a list is symmetric (palindromic)."
+  },
+  {
+    "code": "def merge_sort(lst):\n    if len(lst) <= 1:\n        return lst\n    mid = len(lst) // 2\n    left = merge_sort(lst[:mid])\n    right = merge_sort(lst[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    while left and right:\n        if left[0] < right[0]:\n            result.append(left.pop(0))\n        else:\n            result.append(right.pop(0))\n    result.extend(left)\n    result.extend(right)\n    return result",
+    "comments": "# This function implements the merge sort algorithm."
+  },
+  {
+    "code": "def quick_sort(lst):\n    if len(lst) <= 1:\n        return lst\n    pivot = lst[0]\n    left = [x for x in lst[1:] if x < pivot]\n    right = [x for x in lst[1:] if x >= pivot]\n    return quick_sort(left) + [pivot] + quick_sort(right)",
+    "comments": "# This function implements the quick sort algorithm."
+  },
+  {
+    "code": "def bubble_sort(lst):\n    n = len(lst)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if lst[j] > lst[j + 1]:\n                lst[j], lst[j + 1] = lst[j + 1], lst[j]",
+    "comments": "# This function implements the bubble sort algorithm."
+  },
+  {
+    "code": "def is_valid_email(email):\n    import re\n    pattern = r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+'\n    return bool(re.match(pattern, email))",
+    "comments": "# This function checks if an email address is valid using regular expressions."
+  },
+  {
+    "code": "def find_duplicates(lst):\n    return [item for item in set(lst) if lst.count(item) > 1]",
+    "comments": "# This function finds duplicates in a list."
+  },
+  {
+    "code": "def flatten_list(nested_list):\n    result = []\n    for item in nested_list:\n        if isinstance(item, list):\n            result.extend(flatten_list(item))\n        else:\n            result.append(item)\n    return result",
+    "comments": "# This function flattens a nested list into a single list."
+  },
+  {
+    "code": "def is_sublist(lst1, lst2):\n    return all(item in lst2 for item in lst1)",
+    "comments": "# This function checks if one list is a sublist of another."
+  },
+  {
+    "code": "def reverse_string(s):\n    return s[::-1]",
+    "comments": "# This function reverses a string."
+  },
+  {
+    "code": "def get_max_value(lst):\n    return max(lst)",
+    "comments": "# This function returns the maximum value in a list."
+  },
+  {
+    "code": "def get_min_value(lst):\n    return min(lst)",
+    "comments": "# This function returns the minimum value in a list."
+  },
+  {
+    "code": "def is_sorted(lst):\n    return lst == sorted(lst)",
+    "comments": "# This function checks if a list is sorted."
+  },
+  {
+    "code": "def is_perfect_square(n):\n    return int(n**0.5) ** 2 == n",
+    "comments": "# This function checks if a number is a perfect square."
+  },
+  {
+    "code": "def convert_to_binary(n):\n    return bin(n)[2:]",
+    "comments": "# This function converts a number to binary."
+  },
+  {
+    "code": "def convert_to_decimal(binary_str):\n    return int(binary_str, 2)",
+    "comments": "# This function converts a binary string to decimal."
+  },
+  {
+    "code": "def count_vowels(s):\n    return sum(1 for char in s if char.lower() in 'aeiou')",
+    "comments": "# This function counts the number of vowels in a string."
+  },
+  {
+    "code": "def count_consonants(s):\n    return sum(1 for char in s if char.isalpha() and char.lower() not in 'aeiou')",
+    "comments": "# This function counts the number of consonants in a string."
+  },
+  {
+    "code": "def find_longest_word(words):\n    return max(words, key=len)",
+    "comments": "# This function finds the longest word in a list of words."
+  },
+  {
+    "code": "def merge_dicts(dict1, dict2):\n    result = dict1.copy()\n    result.update(dict2)\n    return result",
+    "comments": "# This function merges two dictionaries and returns the result."
+  },
+  {
+    "code": "def sort_dict_by_value(d):\n    return dict(sorted(d.items(), key=lambda item: item[1]))",
+    "comments": "# This function sorts a dictionary by its values."
+  },
+  {
+    "code": "def flatten_dict(d):\n    result = {}\n    for key, value in d.items():\n        if isinstance(value, dict):\n            for sub_key, sub_value in flatten_dict(value).items():\n                result[f'{key}.{sub_key}'] = sub_value\n        else:\n            result[key] = value\n    return result",
+    "comments": "# This function flattens a nested dictionary."
+  },
+  {
+    "code": "def count_words(s):\n    return len(s.split())",
+    "comments": "# This function counts the number of words in a string."
+  },
+  {
+    "code": "def capitalize_words(s):\n    return ' '.join(word.capitalize() for word in s.split())",
+    "comments": "# This function capitalizes the first letter of each word in a string."
+  },
+  {
+    "code": "def remove_duplicates(lst):\n    return list(set(lst))",
+    "comments": "# This function removes duplicates from a list."
+  },
+  {
+    "code": "def get_file_size(filepath):\n    import os\n    return os.path.getsize(filepath)",
+    "comments": "# This function returns the size of a file in bytes."
+  },
+  {
+    "code": "def get_file_lines(filepath):\n    with open(filepath, 'r') as file:\n        return file.readlines()",
+    "comments": "# This function reads all lines from a file and returns them as a list."
+  },
+  {
+    "code": "def write_lines_to_file(filepath, lines):\n    with open(filepath, 'w') as file:\n        file.writelines(lines)",
+    "comments": "# This function writes a list of lines to a file."
+  },
+  {
+    "code": "def get_current_time():\n    import datetime\n    return datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')",
+    "comments": "# This function returns the current date and time as a string."
+  },
+  {
+    "code": "def is_leap_year(year):\n    return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)",
+    "comments": "# This function checks if a year is a leap year."
+  },
+  {
+    "code": "def find_missing_number(lst):\n    n = len(lst) + 1\n    total_sum = n * (n + 1) // 2\n    return total_sum - sum(lst)",
+    "comments": "# This function finds the missing number in a list of consecutive numbers."
+  },
+  {
+    "code": "def get_unique_words(s):\n    return list(set(s.split()))",
+    "comments": "# This function returns a list of unique words from a string."
+  },
+  {
+    "code": "def count_occurrences_in_dict(d, value):\n    return sum(1 for v in d.values() if v == value)",
+    "comments": "# This function counts the occurrences of a value in a dictionary."
+  },
+  {
+    "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "comments": "# This function checks if a number is prime."
+  },
+  {
+    "code": "def sum_of_squares(lst):\n    return sum(x**2 for x in lst)",
+    "comments": "# This function calculates the sum of squares of elements in a list."
+  },
+  {
+    "code": "def get_even_indexed_elements(lst):\n    return lst[::2]",
+    "comments": "# This function returns elements at even indices from a list."
+  },
+  {
+    "code": "def get_odd_indexed_elements(lst):\n    return lst[1::2]",
+    "comments": "# This function returns elements at odd indices from a list."
+  },
+  {
+    "code": "def rotate_list(lst, n):\n    return lst[n:] + lst[:n]",
+    "comments": "# This function rotates a list by n positions."
+  },
+  {
+    "code": "def is_subset(lst1, lst2):\n    return set(lst1).issubset(lst2)",
+    "comments": "# This function checks if one list is a subset of another."
+  },
+  {
+    "code": "def is_superset(lst1, lst2):\n    return set(lst1).issuperset(lst2)",
+    "comments": "# This function checks if one list is a superset of another."
+  },
+  {
+    "code": "def binary_search(lst, target):\n    low, high = 0, len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+    "comments": "# This function implements binary search to find the index of a target value in a sorted list."
+  },
+  {
+    "code": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+    "comments": "# This function calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm."
+  },
+  {
+    "code": "def lcm(a, b):\n    return abs(a * b) // gcd(a, b)",
+    "comments": "# This function calculates the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "def count_substrings(s, substring):\n    return s.count(substring)",
+    "comments": "# This function counts the occurrences of a substring in a string."
+  },
+  {
+    "code": "def find_longest_substring_without_repeating_chars(s):\n    start, max_length = 0, 0\n    char_map = {}\n    for end in range(len(s)):\n        if s[end] in char_map:\n            start = max(start, char_map[s[end]] + 1)\n        char_map[s[end]] = end\n        max_length = max(max_length, end - start + 1)\n    return max_length",
+    "comments": "# This function finds the length of the longest substring without repeating characters."
+  },
+  {
+    "code": "def reverse_words_in_sentence(s):\n    return ' '.join(s.split()[::-1])",
+    "comments": "# This function reverses the words in a sentence."
+  },
+  {
+    "code": "def is_palindrome(s):\n    return s == s[::-1]",
+    "comments": "# This function checks if a string is a palindrome."
+  },
+  {
+    "code": "def get_fibonacci_number(n):\n    if n <= 1:\n        return n\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+    "comments": "# This function returns the nth Fibonacci number."
+  },
+  {
+    "code": "def merge_dicts(dict1, dict2):\n    return {**dict1, **dict2}",
+    "comments": "# This function merges two dictionaries into one."
+  },
+  {
+    "code": "def is_anagram(s1, s2):\n    return sorted(s1) == sorted(s2)",
+    "comments": "# This function checks if two strings are anagrams."
+  },
+  {
+    "code": "def count_occurrences(lst, item):\n    return lst.count(item)",
+    "comments": "# This function counts how many times an item appears in a list."
+  },
+  {
+    "code": "def get_prime_factors(n):\n    factors = []\n    for i in range(2, int(n**0.5) + 1):\n        while n % i == 0:\n            factors.append(i)\n            n //= i\n    if n > 1:\n        factors.append(n)\n    return factors",
+    "comments": "# This function returns the prime factors of a number."
+  },
+  {
+    "code": "def remove_duplicates_from_list(lst):\n    return list(set(lst))",
+    "comments": "# This function removes duplicate elements from a list."
+  },
+  {
+    "code": "def flatten_list(lst):\n    result = []\n    for item in lst:\n        if isinstance(item, list):\n            result.extend(flatten_list(item))\n        else:\n            result.append(item)\n    return result",
+    "comments": "# This function flattens a nested list into a single list."
+  },
+  {
+    "code": "def fibonacci_sequence(n):\n    fib = [0, 1]\n    while len(fib) < n:\n        fib.append(fib[-1] + fib[-2])\n    return fib",
+    "comments": "# This function generates a Fibonacci sequence up to the nth term."
+  },
+  {
+    "code": "def sum_of_elements(lst):\n    return sum(lst)",
+    "comments": "# This function calculates the sum of all elements in a list."
+  },
+  {
+    "code": "def find_max_value(lst):\n    return max(lst)",
+    "comments": "# This function finds the maximum value in a list."
+  },
+  {
+    "code": "def find_min_value(lst):\n    return min(lst)",
+    "comments": "# This function finds the minimum value in a list."
+  },
+  {
+    "code": "def rotate_list(lst, n):\n    return lst[n:] + lst[:n]",
+    "comments": "# This function rotates a list by n positions."
+  },
+  {
+    "code": "def merge_sort(lst):\n    if len(lst) <= 1:\n        return lst\n    mid = len(lst) // 2\n    left = merge_sort(lst[:mid])\n    right = merge_sort(lst[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    while left and right:\n        if left[0] < right[0]:\n            result.append(left.pop(0))\n        else:\n            result.append(right.pop(0))\n    result.extend(left)\n    result.extend(right)\n    return result",
+    "comments": "# This function implements the merge sort algorithm."
+  },
+  {
+    "code": "def quick_sort(lst):\n    if len(lst) <= 1:\n        return lst\n    pivot = lst[0]\n    left = [x for x in lst[1:] if x < pivot]\n    right = [x for x in lst[1:] if x >= pivot]\n    return quick_sort(left) + [pivot] + quick_sort(right)",
+    "comments": "# This function implements the quick sort algorithm."
+  },
+  {
+    "code": "def bubble_sort(lst):\n    n = len(lst)\n    for i in range(n):\n        for j in range(0, n - i - 1):\n            if lst[j] > lst[j + 1]:\n                lst[j], lst[j + 1] = lst[j + 1], lst[j]",
+    "comments": "# This function implements the bubble sort algorithm."
+  },
+  {
+    "code": "def is_valid_email(email):\n    import re\n    pattern = r'[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+'\n    return bool(re.match(pattern, email))",
+    "comments": "# This function checks if an email address is valid using regular expressions."
+  },
+  {
+    "code": "def flatten_dict(d):\n    result = {}\n    for key, value in d.items():\n        if isinstance(value, dict):\n            for sub_key, sub_value in flatten_dict(value).items():\n                result[f'{key}.{sub_key}'] = sub_value\n        else:\n            result[key] = value\n    return result",
+    "comments": "# This function flattens a nested dictionary."
+  },
+  {
+    "code": "def is_prime(n):\n    if n <= 1:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "comments": "# This function checks if a number is prime."
+  },
+  {
+    "code": "def sum_of_squares(lst):\n    return sum(x**2 for x in lst)",
+    "comments": "# This function calculates the sum of squares of elements in a list."
+  },
+  {
+    "code": "def get_even_indexed_elements(lst):\n    return lst[::2]",
+    "comments": "# This function returns elements at even indices from a list."
+  },
+  {
+    "code": "def get_odd_indexed_elements(lst):\n    return lst[1::2]",
+    "comments": "# This function returns elements at odd indices from a list."
+  },
+  {
+    "code": "def rotate_list(lst, n):\n    return lst[n:] + lst[:n]",
+    "comments": "# This function rotates a list by n positions."
+  },
+  {
+    "code": "def is_subset(lst1, lst2):\n    return set(lst1).issubset(lst2)",
+    "comments": "# This function checks if one list is a subset of another."
+  },
+  {
+    "code": "def is_superset(lst1, lst2):\n    return set(lst1).issuperset(lst2)",
+    "comments": "# This function checks if one list is a superset of another."
+  },
+  {
+    "code": "def binary_search(lst, target):\n    low, high = 0, len(lst) - 1\n    while low <= high:\n        mid = (low + high) // 2\n        if lst[mid] == target:\n            return mid\n        elif lst[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+    "comments": "# This function implements binary search to find the index of a target value in a sorted list."
+  },
+  {
+    "code": "def gcd(a, b):\n    while b:\n        a, b = b, a % b\n    return a",
+    "comments": "# This function calculates the greatest common divisor (GCD) of two numbers using the Euclidean algorithm."
+  },
+  {
+    "code": "def lcm(a, b):\n    return abs(a * b) // gcd(a, b)",
+    "comments": "# This function calculates the least common multiple (LCM) of two numbers."
+  },
+  {
+    "code": "def count_substrings(s, substring):\n    return s.count(substring)",
+    "comments": "# This function counts the occurrences of a substring in a string."
+  },
+  {
+    "code": "def find_longest_substring_without_repeating_chars(s):\n    start, max_length = 0, 0\n    char_map = {}\n    for end in range(len(s)):\n        if s[end] in char_map:\n            start = max(start, char_map[s[end]] + 1)\n        char_map[s[end]] = end\n        max_length = max(max_length, end - start + 1)\n    return max_length",
+    "comments": "# This function finds the length of the longest substring without repeating characters."
+  },
+  {
+    "code": "def reverse_words_in_sentence(s):\n    return ' '.join(s.split()[::-1])",
+    "comments": "# This function reverses the words in a sentence."
+  },
+  {
+    "code": "def is_palindrome(s):\n    return s == s[::-1]",
+    "comments": "# This function checks if a string is a palindrome."
+  },
+  { "code": "age = 45", "comments": "# An integer assignment" },
+  { "code": "salary = 1456.8", "comments": "# A floating point assignment" },
+  { "code": "name = 'John'", "comments": "# A string assignment" },
+  { "code": "is_student = True", "comments": "# A boolean variable" },
+  { "code": "print(age)", "comments": "# Printing the value of age" },
+  { "code": "print(salary)", "comments": "# Printing the value of salary" },
+  { "code": "print(name)", "comments": "# Printing the value of name" },
+  { "code": "x, y = 5, 10", "comments": "# Assigning multiple variables" },
+  { "code": "z = x + y", "comments": "# Adding two variables" },
+  {
+    "code": "nums = [1, 2, 3, 4, 5]",
+    "comments": "# A list containing integers"
+  },
+  {
+    "code": "print(nums[0])",
+    "comments": "# Accessing the first element of the list"
+  },
+  {
+    "code": "nums.append(6)",
+    "comments": "# Appending an element to the list"
+  },
+  {
+    "code": "person = {'name': 'Alice', 'age': 30}",
+    "comments": "# A dictionary storing name and age"
+  },
+  {
+    "code": "print(person['name'])",
+    "comments": "# Accessing value from dictionary"
+  },
+  {
+    "code": "def greet():\n    print('Hello!')",
+    "comments": "# Defining a function to print a greeting"
+  },
+  { "code": "greet()", "comments": "# Calling the greet function" },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# Function to add two numbers"
+  },
+  {
+    "code": "result = add(3, 4)",
+    "comments": "# Storing the result of function call"
+  },
+  {
+    "code": "if age > 18:\n    print('Adult')",
+    "comments": "# Checking if age is greater than 18"
+  },
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Looping through numbers from 0 to 4"
+  },
+  {
+    "code": "while age < 60:\n    age += 5",
+    "comments": "# Incrementing age in a while loop"
+  },
+  {
+    "code": "class Car:\n    def __init__(self, model):\n        self.model = model",
+    "comments": "# A class representing a Car"
+  },
+  {
+    "code": "car1 = Car('Tesla')",
+    "comments": "# Creating an object of Car class"
+  },
+
+  { "code": "x = 10", "comments": "# Assigning an integer value to x" },
+  { "code": "y = 20.5", "comments": "# Assigning a floating-point value to y" },
+  {
+    "code": "name = \"Alice\"",
+    "comments": "# Assigning a string value to name"
+  },
+  { "code": "is_valid = False", "comments": "# Assigning a boolean value" },
+  {
+    "code": "numbers = [1, 2, 3, 4]",
+    "comments": "# Creating a list of numbers"
+  },
+  {
+    "code": "print(numbers[2])",
+    "comments": "# Accessing the third element of the list"
+  },
+  {
+    "code": "numbers.append(5)",
+    "comments": "# Adding an element to the list"
+  },
+  {
+    "code": "numbers.remove(3)",
+    "comments": "# Removing an element from the list"
+  },
+  {
+    "code": "numbers.sort()",
+    "comments": "# Sorting the list in ascending order"
+  },
+  {
+    "code": "info = {'name': 'Bob', 'age': 25}",
+    "comments": "# Creating a dictionary with key-value pairs"
+  },
+  {
+    "code": "print(info['age'])",
+    "comments": "# Accessing a value from a dictionary"
+  },
+  {
+    "code": "info['city'] = 'New York'",
+    "comments": "# Adding a new key-value pair to dictionary"
+  },
+  {
+    "code": "a, b = 5, 10",
+    "comments": "# Assigning multiple values in one line"
+  },
+  {
+    "code": "temp = a\n a = b\n b = temp",
+    "comments": "# Swapping two variables using a temporary variable"
+  },
+  {
+    "code": "a, b = b, a",
+    "comments": "# Swapping two variables without a temporary variable"
+  },
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Looping through numbers from 0 to 4"
+  },
+  {
+    "code": "for num in numbers:\n    print(num)",
+    "comments": "# Iterating through a list"
+  },
+  {
+    "code": "while x > 0:\n    x -= 1",
+    "comments": "# Decrementing x in a while loop"
+  },
+  {
+    "code": "if age >= 18:\n    print('Adult')",
+    "comments": "# Checking if age is 18 or more"
+  },
+  {
+    "code": "elif age > 12:\n    print('Teenager')",
+    "comments": "# Checking if age is between 13 and 17"
+  },
+  {
+    "code": "else:\n    print('Child')",
+    "comments": "# Executed if age is less than 13"
+  },
+  {
+    "code": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handling division by zero exception"
+  },
+  {
+    "code": "def greet():\n    print('Hello!')",
+    "comments": "# Defining a function to print a greeting"
+  },
+  {
+    "code": "def square(n):\n    return n * n",
+    "comments": "# Function to calculate square of a number"
+  },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# Function to add two numbers"
+  },
+  {
+    "code": "result = add(4, 6)",
+    "comments": "# Storing function result in a variable"
+  },
+  {
+    "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)",
+    "comments": "# Recursive function to calculate factorial"
+  },
+  {
+    "code": "class Animal:\n    def __init__(self, name):\n        self.name = name",
+    "comments": "# Defining a class with a constructor"
+  },
+  {
+    "code": "dog = Animal('Buddy')",
+    "comments": "# Creating an object of the Animal class"
+  },
+  {
+    "code": "class Dog(Animal):\n    def bark(self):\n        print('Woof!')",
+    "comments": "# Defining a subclass inheriting from Animal"
+  },
+  {
+    "code": "with open('file.txt', 'w') as f:\n    f.write('Hello, World!')",
+    "comments": "# Writing to a file using with statement"
+  },
+  {
+    "code": "with open('file.txt', 'r') as f:\n    content = f.read()",
+    "comments": "# Reading content from a file"
+  },
+  {
+    "code": "import math\nprint(math.sqrt(16))",
+    "comments": "# Importing math module and calculating square root"
+  },
+  {
+    "code": "import random\nprint(random.randint(1, 100))",
+    "comments": "# Generating a random number between 1 and 100"
+  },
+  {
+    "code": "import time\ntime.sleep(2)",
+    "comments": "# Pausing execution for 2 seconds"
+  },
+  {
+    "code": "lambda_square = lambda x: x * x",
+    "comments": "# Defining a lambda function to calculate square"
+  },
+  {
+    "code": "result = (lambda x, y: x + y)(4, 5)",
+    "comments": "# Using a lambda function to add two numbers"
+  },
+  {
+    "code": "nums = list(map(int, ['1', '2', '3']))",
+    "comments": "# Using map to convert string list to integer list"
+  },
+  {
+    "code": "filtered = list(filter(lambda x: x > 2, [1, 2, 3, 4]))",
+    "comments": "# Filtering elements greater than 2"
+  },
+  {
+    "code": "from functools import reduce\nsum_all = reduce(lambda x, y: x + y, [1, 2, 3, 4])",
+    "comments": "# Using reduce to calculate sum of a list"
+  },
+  {
+    "code": "import numpy as np\narr = np.array([1, 2, 3])",
+    "comments": "# Creating a NumPy array"
+  },
+  {
+    "code": "import pandas as pd\ndf = pd.DataFrame({'A': [1, 2], 'B': [3, 4]})",
+    "comments": "# Creating a Pandas DataFrame"
+  },
+  {
+    "code": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "comments": "# Plotting a simple line graph"
+  },
+  {
+    "code": "import seaborn as sns\nsns.histplot([1, 2, 3, 3, 2, 1])",
+    "comments": "# Creating a histogram using seaborn"
+  },
+  {
+    "code": "class Singleton:\n    _instance = None\n    def __new__(cls):\n        if cls._instance is None:\n            cls._instance = super(Singleton, cls).__new__(cls)\n        return cls._instance",
+    "comments": "# Implementing Singleton pattern"
+  },
+  {
+    "code": "def decorator(func):\n    def wrapper():\n        print('Before function call')\n        func()\n        print('After function call')\n    return wrapper",
+    "comments": "# Defining a simple decorator"
+  },
+  {
+    "code": "@decorator\ndef say_hello():\n    print('Hello!')",
+    "comments": "# Applying a decorator to a function"
+  },
+  {
+    "code": "from threading import Thread\ndef run():\n    print('Thread running')\nth = Thread(target=run)\nth.start()",
+    "comments": "# Creating and starting a thread"
+  },
+  {
+    "code": "import asyncio\nasync def main():\n    print('Async function')\nasyncio.run(main())",
+    "comments": "# Running an asynchronous function"
+  },
+
+  {
+    "code": "counter = 100",
+    "comments": "# Assigning an integer value to counter"
+  },
+  {
+    "code": "temperature = 36.5",
+    "comments": "# Assigning a floating-point value"
+  },
+  { "code": "message = 'Hello, World!'", "comments": "# Assigning a string" },
+  { "code": "is_active = True", "comments": "# Assigning a boolean value" },
+
+  {
+    "code": "fruits = ['apple', 'banana', 'cherry']",
+    "comments": "# Creating a list of fruits"
+  },
+  {
+    "code": "fruits.append('orange')",
+    "comments": "# Adding an element to the list"
+  },
+  {
+    "code": "fruits.remove('banana')",
+    "comments": "# Removing an element from the list"
+  },
+  {
+    "code": "fruits.sort()",
+    "comments": "# Sorting the list in ascending order"
+  },
+  {
+    "code": "sliced_fruits = fruits[1:3]",
+    "comments": "# Slicing the list from index 1 to 2"
+  },
+
+  {
+    "code": "coordinates = (10.5, 20.3)",
+    "comments": "# Defining a tuple for coordinates"
+  },
+  {
+    "code": "x, y = coordinates",
+    "comments": "# Unpacking tuple values into variables"
+  },
+
+  {
+    "code": "person = {'name': 'Alice', 'age': 25}",
+    "comments": "# Creating a dictionary"
+  },
+  {
+    "code": "person['city'] = 'New York'",
+    "comments": "# Adding a new key-value pair"
+  },
+  { "code": "del person['age']", "comments": "# Removing a key-value pair" },
+
+  {
+    "code": "if score >= 90:\n    print('Excellent!')",
+    "comments": "# Checking if score is 90 or above"
+  },
+  {
+    "code": "elif score >= 50:\n    print('Pass')",
+    "comments": "# Checking if score is 50 or above"
+  },
+  {
+    "code": "else:\n    print('Fail')",
+    "comments": "# If score is below 50, print 'Fail'"
+  },
+
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Iterating over a range of numbers"
+  },
+  {
+    "code": "for char in 'Python':\n    print(char)",
+    "comments": "# Iterating over characters in a string"
+  },
+  {
+    "code": "while counter > 0:\n    counter -= 1",
+    "comments": "# Looping until counter reaches zero"
+  },
+
+  {
+    "code": "def greet(name):\n    return f'Hello, {name}!'",
+    "comments": "# Function to generate a greeting message"
+  },
+  {
+    "code": "def multiply(a, b):\n    return a * b",
+    "comments": "# Function to multiply two numbers"
+  },
+
+  {
+    "code": "with open('data.txt', 'r') as file:\n    content = file.read()",
+    "comments": "# Reading content from a file"
+  },
+  {
+    "code": "with open('output.txt', 'w') as file:\n    file.write('Hello, File!')",
+    "comments": "# Writing to a file"
+  },
+
+  {
+    "code": "class Car:\n    def __init__(self, brand, model):\n        self.brand = brand\n        self.model = model",
+    "comments": "# Defining a class with attributes"
+  },
+  {
+    "code": "my_car = Car('Toyota', 'Camry')",
+    "comments": "# Creating an instance of the Car class"
+  },
+
+  {
+    "code": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handling division by zero exception"
+  },
+
+  {
+    "code": "import re\npattern = re.compile(r'\\d+')",
+    "comments": "# Compiling a regex pattern to match digits"
+  },
+
+  {
+    "code": "import requests\nresponse = requests.get('https://api.github.com')",
+    "comments": "# Sending a GET request to GitHub API"
+  },
+
+  {
+    "code": "from bs4 import BeautifulSoup\nsoup = BeautifulSoup('<html></html>', 'html.parser')",
+    "comments": "# Parsing HTML with BeautifulSoup"
+  },
+
+  {
+    "code": "from threading import Thread\ndef task():\n    print('Thread running')\nth = Thread(target=task)\nth.start()",
+    "comments": "# Creating and starting a new thread"
+  },
+
+  {
+    "code": "from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()",
+    "comments": "# Creating a linear regression model"
+  },
+
+  {
+    "code": "import pandas as pd\ndf = pd.read_csv('data.csv')",
+    "comments": "# Loading a CSV file into a DataFrame"
+  },
+
+  {
+    "code": "import numpy as np\narr = np.array([1, 2, 3, 4])",
+    "comments": "# Creating a NumPy array"
+  },
+
+  {
+    "code": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "comments": "# Plotting a simple line graph"
+  },
+  {
+    "code": "x = 10",
+    "comments": "# Assigns the value 10 to the variable x"
+  },
+  {
+    "code": "y = x + 5",
+    "comments": "# Adds 5 to x and stores the result in y"
+  },
+  {
+    "code": "name = 'Alice'",
+    "comments": "# Assigns the string 'Alice' to the variable name"
+  },
+  {
+    "code": "is_valid = True",
+    "comments": "# Assigns the boolean value True to is_valid"
+  },
+  {
+    "code": "if x > y:",
+    "comments": "# Checks if x is greater than y"
+  },
+  {
+    "code": "if name == 'Alice':\n    print('Hello Alice!')",
+    "comments": "# Prints a greeting if the name is 'Alice'"
+  },
+  {
+    "code": "for i in range(5):",
+    "comments": "# Loops through numbers from 0 to 4"
+  },
+  {
+    "code": "while x > 0:\n    x -= 1",
+    "comments": "# Loops while x is greater than 0 and decrements x"
+  },
+  {
+    "code": "def add(a, b):\n    return a + b",
+    "comments": "# Defines a function that adds two numbers and returns the result"
+  },
+  {
+    "code": "def greet():\n    print('Hello!')",
+    "comments": "# Defines a function that prints 'Hello!'"
+  },
+  {
+    "code": "with open('file.txt', 'r') as f:\n    data = f.read()",
+    "comments": "# Opens 'file.txt' in read mode and reads its contents"
+  },
+  {
+    "code": "with open('output.txt', 'w') as f:\n    f.write('Hello, World!')",
+    "comments": "# Opens 'output.txt' in write mode and writes 'Hello, World!'"
+  },
+  {
+    "code": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handles division by zero exception"
+  },
+  {
+    "code": "try:\n    f = open('nonexistent.txt', 'r')\nexcept FileNotFoundError:\n    print('File not found')",
+    "comments": "# Handles file not found exception"
+  },
+  {
+    "code": "import numpy as np",
+    "comments": "# Imports the NumPy library and aliases it as np"
+  },
+  {
+    "code": "import pandas as pd",
+    "comments": "# Imports the Pandas library and aliases it as pd"
+  },
+  {
+    "code": "import os",
+    "comments": "# Imports the OS module for interacting with the operating system"
+  },
+  {
+    "code": "my_list = [1, 2, 3, 4]",
+    "comments": "# Creates a list with four elements"
+  },
+  {
+    "code": "my_list.append(5)",
+    "comments": "# Appends the value 5 to my_list"
+  },
+  {
+    "code": "my_list.pop()",
+    "comments": "# Removes and returns the last element from my_list"
+  },
+  {
+    "code": "my_tuple = (1, 2, 3)",
+    "comments": "# Creates a tuple with three elements"
+  },
+  {
+    "code": "my_dict = {'name': 'Alice', 'age': 25}",
+    "comments": "# Creates a dictionary with keys 'name' and 'age'"
+  },
+  {
+    "code": "my_dict['city'] = 'New York'",
+    "comments": "# Adds a new key-value pair to the dictionary"
+  },
+  {
+    "code": "del my_dict['age']",
+    "comments": "# Deletes the 'age' key from my_dict"
+  },
+  {
+    "code": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age",
+    "comments": "# Defines a class Person with attributes name and age"
+  },
+  {
+    "code": "p = Person('Alice', 25)",
+    "comments": "# Creates an instance of the Person class with name 'Alice' and age 25"
+  },
+  {
+    "code": "import random\nrandom.randint(1, 10)",
+    "comments": "# Generates a random integer between 1 and 10"
+  },
+  {
+    "code": "import math\nmath.sqrt(25)",
+    "comments": "# Calculates the square root of 25"
+  },
+  {
+    "code": "lambda x: x * 2",
+    "comments": "# Creates an anonymous function that doubles the input value"
+  },
+  {
+    "code": "map(lambda x: x * 2, [1, 2, 3])",
+    "comments": "# Applies a lambda function to double each element in the list"
+  },
+  {
+    "code": "filter(lambda x: x % 2 == 0, [1, 2, 3, 4])",
+    "comments": "# Filters the list to include only even numbers"
+  },
+  {
+    "code": "list_comprehension = [x * 2 for x in range(5)]",
+    "comments": "# Creates a list by doubling numbers from 0 to 4 using list comprehension"
+  },
+  {
+    "code": "set_example = {1, 2, 3, 4}",
+    "comments": "# Creates a set with unique values"
+  },
+  {
+    "code": "set_example.add(5)",
+    "comments": "# Adds 5 to the set"
+  },
+  {
+    "code": "set_example.remove(3)",
+    "comments": "# Removes 3 from the set"
+  },
+  {
+    "code": "from datetime import datetime\ndatetime.now()",
+    "comments": "# Gets the current date and time"
+  },
+  {
+    "code": "from collections import Counter\nCounter([1, 1, 2, 3, 3, 3])",
+    "comments": "# Counts occurrences of each element in the list"
+  },
+  {
+    "code": "assert x > 0, 'x must be positive'",
+    "comments": "# Raises an AssertionError if x is not positive"
+  },
+  {
+    "code": "enumerate(['a', 'b', 'c'])",
+    "comments": "# Returns an enumerate object for iterating with index and value"
+  },
+  {
+    "code": "zip([1, 2, 3], ['a', 'b', 'c'])",
+    "comments": "# Combines two lists into a list of tuples"
+  },
+  {
+    "code": "def generator():\n    yield 1\n    yield 2",
+    "comments": "# Defines a generator function that yields values one by one"
+  },
+  {
+    "code": "next(generator())",
+    "comments": "# Retrieves the next value from the generator"
+  },
+  {
+    "code": "isinstance(5, int)",
+    "comments": "# Checks if 5 is an instance of int"
+  },
+  {
+    "code": "sorted([3, 1, 2])",
+    "comments": "# Returns a sorted version of the list"
+  },
+  {
+    "code": "open('example.txt', 'a')",
+    "comments": "# Opens 'example.txt' in append mode"
+  },
+  {
+    "code": "str(123)",
+    "comments": "# Converts the integer 123 to a string"
+  },
+  {
+    "code": "int('456')",
+    "comments": "# Converts the string '456' to an integer"
+  },
+  {
+    "code": "float('3.14')",
+    "comments": "# Converts the string '3.14' to a float"
+  },
+  {
+    "code": "x = 10",
+    "comments": "# Assigns the value 10 to the variable x"
+  },
+  {
+    "code": "y = x + 5",
+    "comments": "# Adds 5 to x and stores the result in y"
+  },
+  {
+    "code": "name = 'Alice'",
+    "comments": "# Assigns the string 'Alice' to the variable name"
+  },
+  {
+    "code": "is_valid = True",
+    "comments": "# Assigns the boolean value True to is_valid"
+  },
+  {
+    "code": "z = 3.14",
+    "comments": "# Assigns the float value 3.14 to the variable z"
+  },
+  {
+    "code": "numbers = [1, 2, 3, 4, 5]",
+    "comments": "# Creates a list of numbers"
+  },
+  {
+    "code": "sum_numbers = sum(numbers)",
+    "comments": "# Calculates the sum of all elements in the list"
+  },
+  {
+    "code": "max_number = max(numbers)",
+    "comments": "# Finds the maximum value in the list"
+  },
+  {
+    "code": "min_number = min(numbers)",
+    "comments": "# Finds the minimum value in the list"
+  },
+  {
+    "code": "a, b = 5, 10",
+    "comments": "# Assigns 5 to a and 10 to b in a single line"
+  },
+  {
+    "code": "a, b = b, a",
+    "comments": "# Swaps the values of a and b"
+  },
+  {
+    "code": "result = 'Even' if x % 2 == 0 else 'Odd'",
+    "comments": "# Assigns 'Even' if x is even, otherwise assigns 'Odd'"
+  },
+  {
+    "code": "if x > 0:\n    print('Positive')\nelif x < 0:\n    print('Negative')\nelse:\n    print('Zero')",
+    "comments": "# Checks if x is positive, negative, or zero and prints the result"
+  },
+  {
+    "code": "for i in range(1, 11):\n    print(i)",
+    "comments": "# Prints numbers from 1 to 10"
+  },
+  {
+    "code": "while x > 0:\n    x -= 1",
+    "comments": "# Loops while x is greater than 0 and decrements x"
+  },
+  {
+    "code": "def factorial(n):\n    if n == 0:\n        return 1\n    return n * factorial(n - 1)",
+    "comments": "# Recursively calculates the factorial of a number"
+  },
+  {
+    "code": "def fibonacci(n):\n    a, b = 0, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a",
+    "comments": "# Calculates the nth Fibonacci number"
+  },
+  {
+    "code": "with open('data.txt', 'w') as f:\n    f.write('Hello, World!')",
+    "comments": "# Opens 'data.txt' in write mode and writes 'Hello, World!'"
+  },
+  {
+    "code": "with open('data.txt', 'r') as f:\n    content = f.read()",
+    "comments": "# Opens 'data.txt' in read mode and reads its content"
+  },
+  {
+    "code": "try:\n    print(10 / 0)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Catches and handles division by zero error"
+  },
+  {
+    "code": "import random\nrandom.shuffle(numbers)",
+    "comments": "# Shuffles the elements of the list randomly"
+  },
+  {
+    "code": "import string\nalphabet = string.ascii_lowercase",
+    "comments": "# Gets a string containing all lowercase letters"
+  },
+  {
+    "code": "import datetime\nnow = datetime.datetime.now()",
+    "comments": "# Gets the current date and time"
+  },
+  {
+    "code": "from itertools import permutations\nlist(permutations([1, 2, 3]))",
+    "comments": "# Generates all permutations of the list [1, 2, 3]"
+  },
+  {
+    "code": "from itertools import combinations\nlist(combinations([1, 2, 3], 2))",
+    "comments": "# Generates all possible pairs from the list [1, 2, 3]"
+  },
+  {
+    "code": "list(filter(lambda x: x % 2 == 0, numbers))",
+    "comments": "# Filters out even numbers from the list"
+  },
+  {
+    "code": "list(map(lambda x: x ** 2, numbers))",
+    "comments": "# Maps each element of the list to its square"
+  },
+  {
+    "code": "set_example = {1, 2, 3, 4, 5}",
+    "comments": "# Creates a set containing unique elements"
+  },
+  {
+    "code": "set_example.add(6)",
+    "comments": "# Adds an element to the set"
+  },
+  {
+    "code": "set_example.remove(2)",
+    "comments": "# Removes an element from the set"
+  },
+  {
+    "code": "person = {'name': 'Alice', 'age': 30}",
+    "comments": "# Creates a dictionary with name and age"
+  },
+  {
+    "code": "for key, value in person.items():\n    print(key, value)",
+    "comments": "# Iterates over key-value pairs in the dictionary"
+  },
+  {
+    "code": "class Animal:\n    def speak(self):\n        pass",
+    "comments": "# Defines an Animal class with a placeholder method speak"
+  },
+  {
+    "code": "class Dog(Animal):\n    def speak(self):\n        return 'Woof!'",
+    "comments": "# Defines a Dog class inheriting from Animal and implementing speak"
+  },
+  {
+    "code": "dog = Dog()\nprint(dog.speak())",
+    "comments": "# Creates a Dog object and calls its speak method"
+  },
+  {
+    "code": "def square(x):\n    return x ** 2",
+    "comments": "# Defines a function to compute the square of a number"
+  },
+  {
+    "code": "from functools import reduce\nreduce(lambda x, y: x * y, numbers)",
+    "comments": "# Uses reduce to compute the product of all numbers in the list"
+  },
+  {
+    "code": "import sys\nprint(sys.version)",
+    "comments": "# Prints the current Python version"
+  },
+  {
+    "code": "sorted_list = sorted(numbers, reverse=True)",
+    "comments": "# Sorts the list in descending order"
+  },
+  {
+    "code": "enumerate_list = list(enumerate(['a', 'b', 'c']))",
+    "comments": "# Creates an enumerated list with index-value pairs"
+  },
+  {
+    "code": "zip_list = list(zip([1, 2, 3], ['a', 'b', 'c']))",
+    "comments": "# Combines two lists into a list of tuples"
+  },
+  {
+    "code": "def decorator(func):\n    def wrapper():\n        print('Before function call')\n        func()\n        print('After function call')\n    return wrapper",
+    "comments": "# Defines a decorator that wraps a function execution"
+  },
+  {
+    "code": "@decorator\ndef say_hello():\n    print('Hello!')",
+    "comments": "# Applies the decorator to the function"
+  },
+  {
+    "code": "assert 5 > 2, 'This should not fail'",
+    "comments": "# Asserts that 5 is greater than 2"
+  },
+  {
+    "code": "print('Python'.upper())",
+    "comments": "# Converts the string 'Python' to uppercase"
+  },
+  {
+    "code": "print('Hello World'.replace('World', 'Python'))",
+    "comments": "# Replaces 'World' with 'Python' in the string"
+  },
+  {
+    "code": "x = 2 ** 3",
+    "comments": "# Computes 2 raised to the power of 3"
+  },
+  {
+    "code": "print('Hello, World!')",
+    "comments": "# Prints 'Hello, World!' to the console"
+  },
+  {
+    "code": "n = int(input('Enter a number: '))",
+    "comments": "# Takes an integer input from the user"
+  },
+  {
+    "code": "float_num = float('3.14')",
+    "comments": "# Converts the string '3.14' into a float"
+  },
+  {
+    "code": "hex_value = hex(255)",
+    "comments": "# Converts 255 into a hexadecimal string"
+  },
+  {
+    "code": "bin_value = bin(10)",
+    "comments": "# Converts 10 into a binary string"
+  },
+  {
+    "code": "oct_value = oct(8)",
+    "comments": "# Converts 8 into an octal string"
+  },
+  {
+    "code": "x += 5",
+    "comments": "# Increments x by 5"
+  },
+  {
+    "code": "print(isinstance(10, int))",
+    "comments": "# Checks if 10 is an instance of the int class"
+  },
+  {
+    "code": "import math\nprint(math.sqrt(16))",
+    "comments": "# Computes the square root of 16"
+  },
+  {
+    "code": "from math import factorial\nprint(factorial(5))",
+    "comments": "# Computes the factorial of 5"
+  },
+  {
+    "code": "a, *b, c = [1, 2, 3, 4, 5]",
+    "comments": "# Uses unpacking to store first and last elements separately"
+  },
+  {
+    "code": "x, y, z = map(int, input().split())",
+    "comments": "# Takes multiple space-separated integer inputs"
+  },
+  {
+    "code": "nums = list(range(1, 11))",
+    "comments": "# Creates a list of numbers from 1 to 10"
+  },
+  {
+    "code": "nums.reverse()",
+    "comments": "# Reverses the list in place"
+  },
+  {
+    "code": "nums.sort()",
+    "comments": "# Sorts the list in ascending order"
+  },
+  {
+    "code": "new_list = [x * 2 for x in range(5)]",
+    "comments": "# List comprehension that doubles numbers from 0 to 4"
+  },
+  {
+    "code": "even_nums = [x for x in range(10) if x % 2 == 0]",
+    "comments": "# List comprehension to filter even numbers"
+  },
+  {
+    "code": "squares = {x: x**2 for x in range(5)}",
+    "comments": "# Dictionary comprehension creating a mapping of numbers to their squares"
+  },
+  {
+    "code": "def greet(name='Guest'):\n    print(f'Hello, {name}!')",
+    "comments": "# Defines a function with a default argument"
+  },
+  {
+    "code": "lambda_func = lambda x, y: x + y",
+    "comments": "# Defines a lambda function to add two numbers"
+  },
+  {
+    "code": "def add(*args):\n    return sum(args)",
+    "comments": "# Function that accepts a variable number of arguments"
+  },
+  {
+    "code": "def info(**kwargs):\n    print(kwargs)",
+    "comments": "# Function that accepts keyword arguments"
+  },
+  {
+    "code": "import os\nprint(os.getcwd())",
+    "comments": "# Prints the current working directory"
+  },
+  {
+    "code": "os.mkdir('new_folder')",
+    "comments": "# Creates a new directory named 'new_folder'"
+  },
+  {
+    "code": "os.remove('file.txt')",
+    "comments": "# Deletes the file named 'file.txt'"
+  },
+  {
+    "code": "import shutil\nshutil.rmtree('folder_name')",
+    "comments": "# Deletes a directory and its contents"
+  },
+  {
+    "code": "from collections import Counter\nc = Counter('hello world')",
+    "comments": "# Counts occurrences of characters in a string"
+  },
+  {
+    "code": "from collections import deque\nd = deque([1, 2, 3])",
+    "comments": "# Creates a double-ended queue"
+  },
+  {
+    "code": "d.appendleft(0)",
+    "comments": "# Adds an element to the left end of the deque"
+  },
+  {
+    "code": "d.pop()",
+    "comments": "# Removes and returns the rightmost element of the deque"
+  },
+  {
+    "code": "import time\ntime.sleep(2)",
+    "comments": "# Pauses execution for 2 seconds"
+  },
+  {
+    "code": "from datetime import datetime\ndt = datetime.strptime('2024-02-02', '%Y-%m-%d')",
+    "comments": "# Converts a string into a datetime object"
+  },
+  {
+    "code": "from datetime import timedelta\ndelta = timedelta(days=7)",
+    "comments": "# Creates a timedelta representing 7 days"
+  },
+  {
+    "code": "import random\nprint(random.randint(1, 100))",
+    "comments": "# Generates a random integer between 1 and 100"
+  },
+  {
+    "code": "random.choice(['apple', 'banana', 'cherry'])",
+    "comments": "# Randomly selects an item from a list"
+  },
+  {
+    "code": "random.sample(range(10), 3)",
+    "comments": "# Selects 3 unique random numbers from 0 to 9"
+  },
+  {
+    "code": "import json\ndata = json.loads('{\"name\": \"Alice\"}')",
+    "comments": "# Parses a JSON string into a Python dictionary"
+  },
+  {
+    "code": "json_str = json.dumps(data)",
+    "comments": "# Converts a Python dictionary to a JSON string"
+  },
+  {
+    "code": "try:\n    assert 2 + 2 == 5\nexcept AssertionError:\n    print('Assertion failed')",
+    "comments": "# Demonstrates assertion error handling"
+  },
+  {
+    "code": "try:\n    open('nonexistent.txt')\nexcept FileNotFoundError:\n    print('File not found')",
+    "comments": "# Handles a missing file exception"
+  },
+  {
+    "code": "import re\nmatch = re.search(r'\\d+', 'abc123')",
+    "comments": "# Searches for digits in a string using regex"
+  },
+  {
+    "code": "pattern = re.compile(r'[A-Z]+')",
+    "comments": "# Compiles a regex pattern for uppercase letters"
+  },
+  {
+    "code": "import threading\ndef worker():\n    print('Thread running')",
+    "comments": "# Defines a worker function for threading"
+  },
+  {
+    "code": "thread = threading.Thread(target=worker)\nthread.start()",
+    "comments": "# Starts a new thread executing worker function"
+  },
+  {
+    "code": "import multiprocessing\np = multiprocessing.Process(target=worker)",
+    "comments": "# Creates a new process executing worker function"
+  },
+  {
+    "code": "import requests\nr = requests.get('https://example.com')",
+    "comments": "# Sends an HTTP GET request"
+  },
+  {
+    "code": "from urllib.request import urlopen\nresponse = urlopen('https://example.com')",
+    "comments": "# Opens a URL and fetches its contents"
+  },
+  {
+    "code": "try:\n    1 / 0\nexcept ZeroDivisionError as e:\n    print(e)",
+    "comments": "# Catches and prints a ZeroDivisionError"
+  },
+  {
+    "code": "import hashlib\nhash_obj = hashlib.sha256(b'hello')",
+    "comments": "# Computes the SHA-256 hash of 'hello'"
+  },
+  {
+    "code": "a, b = 5, 10",
+    "comments": "# Assigns 5 to a and 10 to b in a single line"
+  },
+  {
+    "code": "c = a + b",
+    "comments": "# Adds a and b, stores result in c"
+  },
+  {
+    "code": "d = a * b",
+    "comments": "# Multiplies a and b, stores result in d"
+  },
+  {
+    "code": "e = a / b",
+    "comments": "# Divides a by b, result is a float"
+  },
+  {
+    "code": "f = a // b",
+    "comments": "# Floor division, result is an integer"
+  },
+  {
+    "code": "g = a % b",
+    "comments": "# Computes remainder of a divided by b"
+  },
+  {
+    "code": "h = abs(-10)",
+    "comments": "# Computes absolute value of -10"
+  },
+  {
+    "code": "i = round(3.14159, 2)",
+    "comments": "# Rounds 3.14159 to 2 decimal places"
+  },
+  {
+    "code": "j = pow(2, 3)",
+    "comments": "# Computes 2 raised to the power of 3"
+  },
+  {
+    "code": "k = divmod(10, 3)",
+    "comments": "# Returns quotient and remainder as a tuple"
+  },
+  {
+    "code": "if x > 0:\n    print('Positive')",
+    "comments": "# Checks if x is positive"
+  },
+  {
+    "code": "elif x < 0:\n    print('Negative')",
+    "comments": "# Checks if x is negative"
+  },
+  {
+    "code": "else:\n    print('Zero')",
+    "comments": "# Executes when x is zero"
+  },
+  {
+    "code": "print('Even') if x % 2 == 0 else print('Odd')",
+    "comments": "# Prints 'Even' if x is even, else prints 'Odd'"
+  },
+  {
+    "code": "while x > 0:\n    x -= 1",
+    "comments": "# Decreases x until it reaches 0"
+  },
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Prints numbers from 0 to 4"
+  },
+  {
+    "code": "for i in range(2, 10, 2):\n    print(i)",
+    "comments": "# Prints even numbers from 2 to 8"
+  },
+  {
+    "code": "for char in 'hello':\n    print(char)",
+    "comments": "# Iterates over each character in 'hello'"
+  },
+  {
+    "code": "for key, value in {'a': 1, 'b': 2}.items():\n    print(key, value)",
+    "comments": "# Iterates over dictionary items"
+  },
+  {
+    "code": "def greet(name):\n    return f'Hello, {name}!'",
+    "comments": "# Function that returns a greeting message"
+  },
+  {
+    "code": "def add(a, b=5):\n    return a + b",
+    "comments": "# Function with a default parameter value"
+  },
+  {
+    "code": "def multiply(*args):\n    result = 1\n    for num in args:\n        result *= num\n    return result",
+    "comments": "# Function that accepts multiple arguments"
+  },
+  {
+    "code": "def user_info(**kwargs):\n    return kwargs",
+    "comments": "# Function that accepts keyword arguments"
+  },
+  {
+    "code": "with open('file.txt', 'w') as f:\n    f.write('Hello, World!')",
+    "comments": "# Writes 'Hello, World!' to file.txt"
+  },
+  {
+    "code": "with open('file.txt', 'r') as f:\n    data = f.read()",
+    "comments": "# Reads the entire contents of file.txt"
+  },
+  {
+    "code": "with open('file.txt', 'a') as f:\n    f.write('\\nAppended text')",
+    "comments": "# Appends 'Appended text' to file.txt"
+  },
+  {
+    "code": "import os\nos.remove('file.txt')",
+    "comments": "# Deletes file.txt"
+  },
+  {
+    "code": "my_list = [1, 2, 3]",
+    "comments": "# Creates a list with three elements"
+  },
+  {
+    "code": "my_list.append(4)",
+    "comments": "# Appends 4 to the list"
+  },
+  {
+    "code": "my_tuple = (1, 2, 3)",
+    "comments": "# Creates a tuple with three elements"
+  },
+  {
+    "code": "my_set = {1, 2, 3}",
+    "comments": "# Creates a set with unique elements"
+  },
+  {
+    "code": "my_dict = {'name': 'Alice', 'age': 25}",
+    "comments": "# Creates a dictionary with two key-value pairs"
+  },
+  {
+    "code": "my_dict['city'] = 'New York'",
+    "comments": "# Adds a new key-value pair to the dictionary"
+  },
+  {
+    "code": "del my_dict['age']",
+    "comments": "# Deletes the 'age' key from the dictionary"
+  },
+  {
+    "code": "if x > 0:\n    print('Positive')",
+    "comments": "# Checks if x is positive"
+  },
+  {
+    "code": "elif x < 0:\n    print('Negative')",
+    "comments": "# Checks if x is negative"
+  },
+  {
+    "code": "else:\n    print('Zero')",
+    "comments": "# Executes when x is zero"
+  },
+  {
+    "code": "for i in range(5):\n    print(i)",
+    "comments": "# Prints numbers from 0 to 4"
+  },
+  {
+    "code": "for char in 'Python':\n    print(char)",
+    "comments": "# Prints each character in the string 'Python'"
+  },
+  {
+    "code": "while counter > 0:\n    counter -= 1",
+    "comments": "# Decrements counter until it reaches 0"
+  },
+  {
+    "code": "def greet(name):\n    return f'Hello, {name}!'",
+    "comments": "# Function that returns a greeting message"
+  },
+  {
+    "code": "def multiply(a, b):\n    return a * b",
+    "comments": "# Function that multiplies two numbers"
+  },
+  {
+    "code": "with open('data.txt', 'r') as file:\n    content = file.read()",
+    "comments": "# Reads the content of 'data.txt' into a variable"
+  },
+  {
+    "code": "with open('output.txt', 'w') as file:\n    file.write('Hello, File!')",
+    "comments": "# Writes 'Hello, File!' to 'output.txt'"
+  },
+  {
+    "code": "class Car:\n    def __init__(self, brand, model):\n        self.brand = brand\n        self.model = model",
+    "comments": "# Defines a Car class with brand and model attributes"
+  },
+  {
+    "code": "my_car = Car('Toyota', 'Camry')",
+    "comments": "# Creates an instance of the Car class"
+  },
+  {
+    "code": "print(my_car.brand)",
+    "comments": "# Prints the brand of the car"
+  },
+  {
+    "code": "print(my_car.model)",
+    "comments": "# Prints the model of the car"
+  },
+  {
+    "code": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handles division by zero exception"
+  },
+  {
+    "code": "import re\npattern = re.compile(r'\\d+')",
+    "comments": "# Compiles a regex pattern to match digits"
+  },
+  {
+    "code": "import requests\nresponse = requests.get('https://api.github.com')",
+    "comments": "# Sends a GET request to the GitHub API"
+  },
+  {
+    "code": "from bs4 import BeautifulSoup\nsoup = BeautifulSoup('<html></html>', 'html.parser')",
+    "comments": "# Parses HTML content with BeautifulSoup"
+  },
+  {
+    "code": "from threading import Thread\ndef task():\n    print('Thread running')\nth = Thread(target=task)\nth.start()",
+    "comments": "# Creates and starts a new thread"
+  },
+  {
+    "code": "from sklearn.linear_model import LinearRegression\nmodel = LinearRegression()",
+    "comments": "# Creates a linear regression model"
+  },
+  {
+    "code": "import pandas as pd\ndf = pd.read_csv('data.csv')",
+    "comments": "# Reads a CSV file into a Pandas DataFrame"
+  },
+  {
+    "code": "import numpy as np\narr = np.array([1, 2, 3, 4])",
+    "comments": "# Creates a NumPy array"
+  },
+  {
+    "code": "import matplotlib.pyplot as plt\nplt.plot([1, 2, 3], [4, 5, 6])\nplt.show()",
+    "comments": "# Plots a simple line graph"
+  },
+  {
+    "code": "x = 10",
+    "comments": "# Assigns the value 10 to the variable x"
+  },
+  {
+    "code": "class Animal:\n    def __init__(self, name):\n        self.name = name",
+    "comments": "# Defines a class with an initializer"
+  },
+  {
+    "code": "class Dog(Animal):\n    def bark(self):\n        return 'Woof!'",
+    "comments": "# Defines a subclass that inherits from Animal"
+  },
+  {
+    "code": "try:\n    result = 10 / 0\nexcept ZeroDivisionError:\n    print('Cannot divide by zero')",
+    "comments": "# Handles division by zero"
+  },
+  {
+    "code": "import random\nprint(random.choice(['red', 'green', 'blue']))",
+    "comments": "# Randomly selects a color"
+  },
+  {
+    "code": "from itertools import permutations\nprint(list(permutations([1, 2, 3])))",
+    "comments": "# Generates all possible permutations of a list"
+  },
+  {
+    "code": "import threading\ndef task():\n    print('Thread running')\nthread = threading.Thread(target=task)\nthread.start()",
+    "comments": "# Starts a new thread"
+  },
+  {
+    "code": "import multiprocessing\ndef worker():\n    print('Worker process')\np = multiprocessing.Process(target=worker)\np.start()",
+    "comments": "# Creates and starts a new process"
+  }
+]
