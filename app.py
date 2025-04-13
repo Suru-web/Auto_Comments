@@ -1,8 +1,8 @@
 import streamlit as st
 import json
-from python.app_python import split_code_python
-from cpp.app_cpp import generate_comments_cpp
-from java.app_java import generate_comments_java
+from src.python.app_python import split_code_python
+from src.cpp.app_cpp import generate_comments_cpp
+from src.java.app_java import generate_comments_java
 from streamlit_extras.add_vertical_space import add_vertical_space
 from streamlit_lottie import st_lottie
 
