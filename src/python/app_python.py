@@ -2,7 +2,7 @@ import torch
 import ast
 from transformers import AutoTokenizer, T5ForConditionalGeneration
 
-model_path = "src/python/model/trained-code-comment-model"
+model_path = "Suru-web/python_codet5-small"
 tokenizer = AutoTokenizer.from_pretrained(model_path)
 model = T5ForConditionalGeneration.from_pretrained(model_path)
 
