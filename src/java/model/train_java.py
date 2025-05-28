@@ -7,7 +7,7 @@ import os
 # Main training function
 def train_model():
     # Load data
-    data = load_and_preprocess_data("../data/java_comment_dataset.json")
+    data = load_and_preprocess_data("../data/java_code_comments.json")
     train_data, val_data = train_test_split(data, test_size=0.2, random_state=42)
 
     # Initialize model and tokenizer
@@ -30,13 +30,9 @@ def train_model():
         per_device_train_batch_size=4,
         per_device_eval_batch_size=4,
         warmup_steps=500,
-        weight_decay=0.01,
-        logging_dir="./logs",
-        logging_steps=100,
         eval_strategy="epoch",
         save_strategy="epoch",
-        load_best_model_at_end=True,
-        fp16=False,  # Enable if using GPU
+        load_best_model_at_end=True
     )
 
     # Create trainer

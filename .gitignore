@@ -4,6 +4,7 @@ python/model/trained-code-comment-model/
 .DS_Store
 .gitignore
 trained-code-comment-model
+trained-code-comment-model-base
 trained-code-comment-model.zip
 model_cpp_small
 model_cpp_small.zip
