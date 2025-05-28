@@ -6,8 +6,8 @@ import re
 # Load pre-trained model and tokenizer
 # @st.cache_resource
 def load_model():
-    tokenizer = AutoTokenizer.from_pretrained("src/java/model/model_java_small")
-    model = AutoModelForSeq2SeqLM.from_pretrained("src/java/model/model_java_small")
+    tokenizer = AutoTokenizer.from_pretrained("Suru-web/java_codet5-small")
+    model = AutoModelForSeq2SeqLM.from_pretrained("Suru-web/java_codet5-small")
     return tokenizer, model
 
 
